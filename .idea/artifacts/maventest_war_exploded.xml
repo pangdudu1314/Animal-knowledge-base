@@ -1,10 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="animal:war exploded">
-    <output-path>$PROJECT_DIR$/target/animal</output-path>
+  <artifact type="exploded-war" name="maventest:war exploded">
+    <output-path>$PROJECT_DIR$/target/maventest</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="animal" />
+          <element id="module-output" name="maventest" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: junit:junit:4.11" />
@@ -30,6 +30,9 @@
           <element id="library" level="project" name="Maven: net.sourceforge.owlapi:owlapi-oboformat:5.1.0" />
           <element id="library" level="project" name="Maven: net.sourceforge.owlapi:owlapi-tools:5.1.0" />
           <element id="library" level="project" name="Maven: net.sourceforge.owlapi:owlapi-rio:5.1.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.5" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.5" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.5" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-rdf-api:0.3.0-incubating" />
           <element id="library" level="project" name="Maven: org.tukaani:xz:1.6" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.22" />
@@ -69,13 +72,10 @@
           <element id="library" level="project" name="Maven: com.google.inject.extensions:guice-multibindings:4.1.0" />
           <element id="library" level="project" name="Maven: com.google.code.findbugs:jsr305:3.0.1" />
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.5" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.8" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.8" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.8" />
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/animal/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/maventest/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="animal/web/Web" />
     </root>
