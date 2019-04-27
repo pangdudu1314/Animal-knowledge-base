@@ -5,13 +5,11 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.io.StringDocumentSource;
-import org.semanticweb.owlapi.io.StringDocumentTarget;
 import org.semanticweb.owlapi.model.AddAxiom;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLClass;
@@ -67,7 +65,6 @@ public class RdfOwlDao {
         InputStreamReader read = new InputStreamReader(new FileInputStream(file), encoding);//输入流等信息
         BufferedReader bufferedReader = new BufferedReader(read);//读取流
         String lineTxt = null;
-        Set<String> set = new HashSet<String>();
         while ((lineTxt = bufferedReader.readLine()) != null) {//一行一行读取 当读取完毕会返回null结束
           string.append(lineTxt).append("\r\n");//拼接字符串
         }
@@ -305,15 +302,15 @@ public class RdfOwlDao {
   public static void main(String [] str){
     RdfOwlDao rdfOwlDao=new RdfOwlDao();
     //查询
-    System.out.println(rdfOwlDao.getIndividualInfo("黑长尾雉"));
+  //  System.out.println(rdfOwlDao.getIndividualInfo("黑长尾雉"));
     //增加
   //  rdfOwlDao.addIndividualInfo("黑鹇",RdfOwlDao.INDIVIDUAL_LINK,"similarity","测试");
     //删除\
-  //  rdfOwlDao.removeIndividualInfo("黑鹇",RdfOwlDao.INDIVIDUAL_LINK,"similarity","测试");
+   //rdfOwlDao.removeIndividualInfo("黑鹇",RdfOwlDao.INDIVIDUAL_LINK,"similarity","测试");
     //修改
-   // rdfOwlDao.updateIndividualInfo("黑鹇",RdfOwlDao.INDIVIDUAL_PROPERTY,"image",null,"测试");
+  // rdfOwlDao.updateIndividualInfo("黑鹇",RdfOwlDao.INDIVIDUAL_PROPERTY,"image",null,"测试11");
     //查询级联关系
-  // System.out.println(rdfOwlDao.queryLink("鸟类"));
+   System.out.println(rdfOwlDao.queryLink("鸟类"));
   }
 
 }
