@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="maventest:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="maventest.war">
-      <element id="artifact" artifact-name="maventest:war exploded" />
-    </root>
-  </artifact>
-</component>

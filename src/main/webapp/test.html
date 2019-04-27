@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        .colorred{
+            background-color: coral;
+        }
+        .colorred1{
+            background-color: #ffffff;
+        }
+    </style>
+    <script type="text/javascript">
+        function chang(index) {
+            alert(index);
+            if($("#td"+index).html()!="使用"){
+                $("#td"+index).html("使用");
+                $("#td"+index).addClass("colorred");
+            }else {
+                $("#td"+index).html("空");
+                $("#td"+index).addClass("colorred1");
+            }
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td id="td1">空</td>
+            <td><a href="javascript:void(0);" onclick="chang(1);">修改</a></td>
+        </tr>
+        <tr>
+            <td id="td2">空</td>
+            <td><a href="javascript:void(0);" onclick="chang(2);">修改</a></td>
+        </tr>
+        <tr>
+            <td id="td3">空</td>
+            <td><a href="javascript:void(0);" onclick="chang(3);">修改</a></td>
+        </tr>
+        <tr>
+            <td id="td4">空</td>
+            <td><a href="javascript:void(0);" onclick="chang(4);">修改</a></td>
+        </tr>
+    </table>
+</body>
+</html>
