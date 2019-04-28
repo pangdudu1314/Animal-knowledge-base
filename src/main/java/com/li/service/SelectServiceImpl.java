@@ -46,6 +46,8 @@ public class SelectServiceImpl implements SelectService {
 
    //查询动物或者科目信息
     private List<AnimalInfo> getAnimalInfos(List<AnimalInfo> animalInfos) throws UnsupportedEncodingException {
+      /*此处报错不知怎么修改
+      * List<AnimalInfo> kindsQuery = new ArrayList<>()；*/
         List<AnimalInfo> kindsQuery = new ArrayList<AnimalInfo>();
         //如果有关联信息，那就查询
         for (int i = 0; i < animalInfos.size(); i++) {
