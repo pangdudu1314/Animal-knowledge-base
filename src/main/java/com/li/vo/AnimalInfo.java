@@ -10,8 +10,6 @@ public class AnimalInfo {
     List<AnimalInfo> similartys;//相似度
     String image;//图片信息
     String intro;//描述
-    String xiang;//相关鸟类
-    String guan;//雉科动物
     List<AnimalInfo> siblings;//雉科动物的图片
 
     public List<AnimalInfo> getSiblings() {
@@ -21,25 +19,12 @@ public class AnimalInfo {
     public void setSiblings(List<AnimalInfo> siblings) {
         this.siblings = siblings;
     }
-
-    public String getXiang() {
-        return xiang;
+    public void addSiblings(AnimalInfo siblings) {
+        if (this.siblings == null) {
+            this.siblings = new ArrayList<AnimalInfo>();
+        }
+        this.similartys.add(siblings);
     }
-
-    public void setXiang(String xiang) {
-        this.xiang = xiang;
-    }
-
-    public String getGuan() {
-        return guan;
-    }
-
-    public void setGuan(String guan) {
-        this.guan = guan;
-    }
-
-
-
     @Override
     public String toString() {
         return "AnimalInfo{" +
@@ -48,8 +33,7 @@ public class AnimalInfo {
                 ", similartys=" + similartys +
                 ", image='" + image + '\'' +
                 ", intro='" + intro + '\'' +
-                ", xiang='" + xiang + '\'' +
-                ", guan='" + guan + '\'' +
+                ", siblings=" + siblings +
                 '}';
     }
 
@@ -107,8 +91,5 @@ public class AnimalInfo {
     public void setIntro(String intro) {
         this.intro = intro;
     }
-
-
-
 
 }

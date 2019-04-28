@@ -1,5 +1,6 @@
 package com.li.controller;
 
+import com.li.dao.RdfOwlDao;
 import com.li.service.SelectService;
 import com.li.utils.JsonUtils;
 import com.li.vo.AnimalInfo;
@@ -20,6 +21,8 @@ import java.util.List;
 public class SelectController {
     @Autowired
     public SelectService selectService;
+    @Autowired
+    public RdfOwlDao rdfOwlDao;
     @RequestMapping("/queryClassLevel")
     public void spinnerName(String name, String level, HttpServletResponse response) throws IOException {
         selectService.spinnerName(name,level,response);
@@ -31,9 +34,10 @@ public class SelectController {
         System.out.println("name===============" + name);
         request.setAttribute("key",name);
         AnimalInfo animalInfo = selectService.selectName(name);
+
         /*     System.out.println("animalInfo========================" + animalInfo);*/
 
-        if (animalInfo.getKinds() != null) {
+        if (animalInfo.getKinds() != null) {//如果当前查询的是动物，那么动物对应的kinds是科，但是科没有图片啊？？？
             //name对应的动物或者科目节点信息
             JSONObject animalNode = new JSONObject();
             animalNode.put("category", 0);

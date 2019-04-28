@@ -25,6 +25,11 @@ public class SelectDao {
     //查询所有信息
     public AnimalInfo selectAllInfo(String name) throws UnsupportedEncodingException {
         Map<String, List<String>> mapListInfo = rdfOwlDao.getIndividualInfo(name);
+        if(mapListInfo.keySet().size()==0){
+            // 没有结果，说明查询的是科
+        }else{
+            //有结果说明查询的是动物
+        }
         AnimalInfo animalInfo = new AnimalInfo();
         animalInfo.setName(name);
         //这里如果查询的是猫科，name返回的是猫科和kind等信息集合
@@ -33,9 +38,9 @@ public class SelectDao {
             for (String value : values) {
                 System.out.println("type=" + type + ",value=" + value);//打印确认看一下
                 if (type.startsWith("image")) {//以kind开头的类别
-                    animalInfo.setImage(value.replaceFirst("image://", ""));
+                    animalInfo.setImage(value);
 
-                } else if (type.startsWith("kind")) {
+                } else if (type.startsWith("CLASS_")) {//如果查询的是动物，那么class_显示的是动物对应的科
                     AnimalInfo kind = new AnimalInfo();
                     //value是对应<uni:name>value</uni：name>
                     kind.setName(value);
@@ -43,26 +48,21 @@ public class SelectDao {
                 } else if (type.startsWith("intro")) {
                     animalInfo.setIntro(value);
 
-                } else if (type.startsWith("xiang")) {
-                    animalInfo.setXiang(value);
-                } else if (type.startsWith("guan")) {
-                    animalInfo.setGuan(value);
                 } else if (type.startsWith("similarty")) {
 
                     AnimalInfo similarty = new AnimalInfo();
                     similarty.setName(value);
                     animalInfo.addSimilarty(similarty);
-                } else if (type.startsWith("similartys")) {
+                } else if (type.startsWith("siblings")) {
 
-                    AnimalInfo similartys = new AnimalInfo();
-                    similartys.setName(value);
-                    animalInfo.addSimilarty(similartys);
+                    AnimalInfo siblings = new AnimalInfo();
+                    siblings.setName(value);
+                    animalInfo.addSiblings(siblings);
                 }
             }
         }
         return animalInfo;
     }
-
 
     public void spinner(String name, String queryClassLevel, HttpServletResponse resp) throws IOException {
         List list = rdfOwlDao.queryLink(name);
@@ -70,6 +70,7 @@ public class SelectDao {
         System.out.println(json);
         resp.setContentType("text/javascript;charset=utf-8");
         resp.getWriter().write(json);
+
 
     }
 

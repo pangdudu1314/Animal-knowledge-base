@@ -37,6 +37,7 @@ import org.semanticweb.owlapi.model.RemoveAxiom;
 import org.semanticweb.owlapi.util.AutoIRIMapper;
 import org.semanticweb.owlapi.util.OWLEntityRemover;
 import org.semanticweb.owlapi.util.PriorityCollection;
+import org.springframework.stereotype.Component;
 import uk.ac.manchester.cs.owl.owlapi.OWLClassAssertionAxiomImpl;
 import uk.ac.manchester.cs.owl.owlapi.OWLClassImpl;
 import uk.ac.manchester.cs.owl.owlapi.OWLDataPropertyAssertionAxiomImpl;
@@ -45,7 +46,7 @@ import uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString;
 import uk.ac.manchester.cs.owl.owlapi.OWLNamedIndividualImpl;
 import uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyAssertionAxiomImpl;
 import uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyImpl;
-
+@Component("rdfOwlDao")
 public class RdfOwlDao {
 
   //文件路径
@@ -407,7 +408,8 @@ public class RdfOwlDao {
   public static void main(String[] str) {
     RdfOwlDao rdfOwlDao = new RdfOwlDao();
     //查询
-    //  System.out.println(rdfOwlDao.getIndividualInfo("黑长尾雉"));
+    System.out.println(rdfOwlDao.getIndividualInfo("稚科"));
+    System.out.println(rdfOwlDao.getIndividualInfo("矮脚鸡"));
     //增加
     //  rdfOwlDao.addIndividualInfo("黑鹇",RdfOwlDao.INDIVIDUAL_LINK,"similarity","测试");
     //删除\
@@ -415,13 +417,15 @@ public class RdfOwlDao {
     //修改
     // rdfOwlDao.updateIndividualInfo("黑鹇",RdfOwlDao.INDIVIDUAL_PROPERTY,"image",null,"测试11");
     //查询级联关系
-    // System.out.println(rdfOwlDao.queryLink("鸟类"));
+    //System.out.println(rdfOwlDao.queryLink("鸟类"));
     //查询稚科下面的动物
-    // System.out.println(rdfOwlDao.queryIndividualsType("稚科"));;
+     //System.out.println(rdfOwlDao.queryIndividualsType("矮脚鸡"));;
     //添加测试个体挂在稚科下面
-    // rdfOwlDao.addIndividualInfo("测试","稚科");
+      // rdfOwlDao.addIndividualInfo("测试","稚科");
+       //rdfOwlDao.addIndividualInfo("测试",RdfOwlDao.INDIVIDUAL_PROPERTY,"image","测试图片");
+      //rdfOwlDao.addIndividualInfo("测试",RdfOwlDao.INDIVIDUAL_PROPERTY,"intro","测试wenzi ");
     //删除个体
-    // rdfOwlDao.removeIndividualInfo("测试");
+   //  rdfOwlDao.removeIndividualInfo("测试");
     //添加类关系
     //rdfOwlDao.addClass("动物", "两栖动物");
     //删除类关系
