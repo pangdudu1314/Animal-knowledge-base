@@ -52,11 +52,11 @@ public class SelectDao {
                     AnimalInfo similarty = new AnimalInfo();
                     similarty.setName(value);
                     animalInfo.addSimilarty(similarty);
-                } else if (type.startsWith("dongwu")) {
+                } else if (type.startsWith("similartys")) {
 
-                    AnimalInfo dongwu = new AnimalInfo();
-                    dongwu.setName(value);
-                    animalInfo.addDongwus(dongwu);
+                    AnimalInfo similartys = new AnimalInfo();
+                    similartys.setName(value);
+                    animalInfo.addSimilarty(similartys);
                 }
             }
         }
