@@ -38,20 +38,7 @@ public class AnimalInfo {
         this.guan = guan;
     }
 
-    public List<AnimalInfo> getDongwus() {
-        return dongwus;
-    }
 
-    public void setDongwus(List<AnimalInfo> dongwus) {
-        this.dongwus = dongwus;
-    }
-
-    public void addDongwus(AnimalInfo dongwu){
-        if (this.dongwus == null) {
-            this.dongwus = new ArrayList<AnimalInfo>();
-        }
-        this.dongwus.add(dongwu);
-    }
 
     @Override
     public String toString() {
@@ -62,7 +49,6 @@ public class AnimalInfo {
                 ", image='" + image + '\'' +
                 ", intro='" + intro + '\'' +
                 ", xiang='" + xiang + '\'' +
-                ", dongwus='" + dongwus + '\'' +
                 ", guan='" + guan + '\'' +
                 '}';
     }
