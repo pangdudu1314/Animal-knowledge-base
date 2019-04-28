@@ -12,7 +12,15 @@ public class AnimalInfo {
     String intro;//描述
     String xiang;//相关鸟类
     String guan;//雉科动物
-    List<AnimalInfo> dongwus;//雉科动物的图片
+    List<AnimalInfo> siblings;//雉科动物的图片
+
+    public List<AnimalInfo> getSiblings() {
+        return siblings;
+    }
+
+    public void setSiblings(List<AnimalInfo> siblings) {
+        this.siblings = siblings;
+    }
 
     public String getXiang() {
         return xiang;
@@ -44,18 +52,6 @@ public class AnimalInfo {
         }
         this.dongwus.add(dongwu);
     }
-
-    /*@Override
-    public String toString() {
-        return "AnimalInfo{" +
-                "name='" + name + '\'' +
-                ", kinds=" + kinds +
-                ", similartys=" + similartys +
-                ", image='" + image + '\'' +
-                ", intro='" + intro + '\'' +
-                ", from='" + from + '\'' +
-                '}';
-    }*/
 
     @Override
     public String toString() {
