@@ -37,14 +37,14 @@ public class SelectController {
 
         /*     System.out.println("animalInfo========================" + animalInfo);*/
 
-        if (animalInfo.getKinds() != null) {//如果当前查询的是动物，那么动物对应的kinds是科，但是科没有图片啊？？？
+        if (animalInfo.getKinds() != null) {
             //name对应的动物或者科目节点信息
             JSONObject animalNode = new JSONObject();
             animalNode.put("category", 0);
             animalNode.put("name", animalInfo.getName());
             animalNode.put("value", 80);
             animalNode.put("symbol", animalInfo.getImage());
-            animalNode.put("symbolSize", "[80, 80]");
+            animalNode.put("symbolSize", "[50, 50]");
             nodes.add(animalNode);
             //关系
             List<AnimalInfo> kinds = animalInfo.getKinds();
@@ -55,9 +55,9 @@ public class SelectController {
                     JSONObject node = new JSONObject();
                     node.put("category", 0);
                     node.put("name", k.getName());
-                    node.put("value", 80);
+                    node.put("value", 60);
                     node.put("symbol", k.getImage());
-                    node.put("symbolSize", "[40, 40]");
+                    node.put("symbolSize", "[30, 30]");
 
                     nodes.add(node);
 
@@ -65,7 +65,7 @@ public class SelectController {
                     JSONObject LinkNode = new JSONObject();
                     LinkNode.put("source", animalInfo.getName());
                     LinkNode.put("target", k.getName());
-                    LinkNode.put("weight", 0.0000000000000000000000000001);
+                   // LinkNode.put("weight", 0.0000000000000000000000000001);
                     links.add(LinkNode);
                 }
             }
@@ -87,7 +87,14 @@ public class SelectController {
         request.setAttribute("links", links);
         request.setAttribute("animalInfo", animalInfo);
         System.out.println("animalInfo="+ JsonUtils.getString(animalInfo));
-        return "dongwu";
+        if (animalInfo.getKinds() != null) {
+            //科
+            return "kemu";
+        }else{
+            //动物
+            return "dongwu1";
+        }
+
     }
 
     @RequestMapping("/gotoFrame")

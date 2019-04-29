@@ -22,7 +22,7 @@
     <title>ECharts</title>
     <style type="text/css">
         body{
-          /*  background: url("images/beijingtupian.jpg");*/
+            /*  background: url("images/beijingtupian.jpg");*/
             background-color: #ccc;
         }
         #main{
@@ -145,10 +145,10 @@
                             emphasis: {
                                 label: {
                                     show: false,
-                                   // textStyle: null      // 默认使用全局文本样式，详见TEXTSTYLE
+                                    // textStyle: null      // 默认使用全局文本样式，详见TEXTSTYLE
                                 },
                                 nodeStyle : {
-                                   // r: 30
+                                    // r: 30
                                 },
                                 linkStyle : {}
                             }
@@ -159,7 +159,7 @@
                         gravity: 1.1,
                         scaling: 1.1,
                         roam: 'move',
-                       /* roam:'scale',*/
+                        /* roam:'scale',*/
                         nodes:${nodes},
                         links : ${links}
                     }
@@ -194,10 +194,10 @@
                 }
 
             }
-          /*  myChart.on(ecConfig.EVENT.CLICK, focus);
-            myChart.on(ecConfig.EVENT.FORCE_LAYOUT_END, function () {
-                console.log(myChart.chart.force.getPosition());
-            });*/
+            /*  myChart.on(ecConfig.EVENT.CLICK, focus);
+              myChart.on(ecConfig.EVENT.FORCE_LAYOUT_END, function () {
+                  console.log(myChart.chart.force.getPosition());
+              });*/
             //两个参数  ，第一个是监听的事件类别，第二个是实现方法名称
             myChart.on(ecConfig.EVENT.CLICK, focus)
 
@@ -218,11 +218,12 @@
 
             <c:forEach items="${animalInfo.similartys}" var="item">
                 <c:if test="${item.name!=null}" >
-                <div style="float: left;width: 82px;height: 100px;cursor: pointer;"  onclick="queryAnimal('${item.name}')">
-                    <img src="${item.image}" style="width: 80px;height: 80px;float: left">
-                    <span style="height: 20px;width: 80px;float: left">${item.name}</span>
+                    <div style="float: left;width: 82px;height: 100px;cursor: pointer;"  onclick="queryAnimal('${item.name}')">
 
-                </div>
+                        <img src="${item.image}" style="width: 80px;height: 80px;float: left">
+                        <span style="height: 20px;width: 80px;float: left">${item.name}</span>
+
+                    </div>
                 </c:if>
             </c:forEach>
         </div>
@@ -248,9 +249,8 @@
         <input id="nameid" type="hidden" value="${key}">
         <H2 style="color:#4b1cff; display: inline-block;" >动物简介:</H2>
 
-        <input id="submitView1" onclick="tiaozhuan();" type="button" name="sub" value="编辑" style="display: inline-block;"   />
         <p>
-           <%-- <% out.println(request.getAttribute("Animal_info"));%>--%>
+            <%-- <% out.println(request.getAttribute("Animal_info"));%>--%>
             ${animalInfo.intro}
         </p>
     </div>
@@ -304,7 +304,7 @@
         var name=$("#nameid").val();
         /*收集最后一个字*/
         var  b  = name.substr(name.length-1,1);
-       // window.location.href="bianji.jsp";
+        // window.location.href="bianji.jsp";
         if(b=="科"){
             alert("动物的所属科目不能修改");
         }else{

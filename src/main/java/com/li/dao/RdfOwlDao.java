@@ -405,11 +405,11 @@ public class RdfOwlDao {
     }
   }
 
-  public static void main(String[] str) {
+ /* public static void main(String[] str) {
     RdfOwlDao rdfOwlDao = new RdfOwlDao();
     //查询
-    System.out.println(rdfOwlDao.getIndividualInfo("稚科"));
-    System.out.println(rdfOwlDao.getIndividualInfo("矮脚鸡"));
+    //System.out.println(rdfOwlDao.getIndividualInfo("稚科"));
+   // System.out.println(rdfOwlDao.getIndividualInfo("矮脚鸡"));
     //增加
     //  rdfOwlDao.addIndividualInfo("黑鹇",RdfOwlDao.INDIVIDUAL_LINK,"similarity","测试");
     //删除\
@@ -432,5 +432,5 @@ public class RdfOwlDao {
    // rdfOwlDao.removeClass("动物", "两栖动物");
 
   }
-
+*/
 }

@@ -19,11 +19,11 @@ public class AnimalInfo {
     public void setSiblings(List<AnimalInfo> siblings) {
         this.siblings = siblings;
     }
-    public void addSiblings(AnimalInfo siblings) {
+    public void addSibling(AnimalInfo siblings) {
         if (this.siblings == null) {
             this.siblings = new ArrayList<AnimalInfo>();
         }
-        this.similartys.add(siblings);
+        this.siblings.add(siblings);
     }
     @Override
     public String toString() {
