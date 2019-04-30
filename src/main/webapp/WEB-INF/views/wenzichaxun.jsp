@@ -64,7 +64,7 @@
                         $('#cc2').combobox('reload', url);
                     }"
             />--%>
-            <input class="easyui-combobox" name="language" style="width:50%"
+            <input id="kemu" class="easyui-combobox" name="language" style="width:50%"
                    data-options="
 				<%--url: 'combobox_data2.json',--%>
 				url:'${ctx}/queryClass/queryClassLevel?name=',

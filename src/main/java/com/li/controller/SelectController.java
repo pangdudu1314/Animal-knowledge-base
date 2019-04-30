@@ -27,6 +27,10 @@ public class SelectController {
     public void spinnerName(String name,  HttpServletResponse response) throws IOException {
         selectService.spinnerName(name,response);
     }
+    @RequestMapping("/queryClassLevel1")
+    public void spinnerKe(String name,HttpServletResponse response) throws IOException {
+        selectService.spinnerKe(name,response);
+    }
     @RequestMapping("/selectAdmin")
     public String selectAdmin(String name, HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
         JSONArray nodes = new JSONArray();
@@ -96,6 +100,7 @@ public class SelectController {
         }
 
     }
+
 
     @RequestMapping("/gotoFrame")
     public String gotoFrame() {

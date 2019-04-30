@@ -106,4 +106,9 @@ public class SelectDao {
         resp.setContentType("text/javascript;charset=utf-8");
         resp.getWriter().write(json);
     }
+
+    public void spinnerKe(String name, HttpServletResponse resp) throws IOException {
+        spinner(name,resp);
+    }
+
 }

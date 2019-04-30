@@ -15,4 +15,5 @@ public interface SelectService {
     /*, HttpServletRequest req,*/
     public AnimalInfo selectName(String name ) throws UnsupportedEncodingException;
     public void spinnerName(String name,HttpServletResponse resp) throws IOException;
+    public void spinnerKe(String name,HttpServletResponse response) throws IOException;
 }

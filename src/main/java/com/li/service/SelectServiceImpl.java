@@ -70,6 +70,11 @@ public class SelectServiceImpl implements SelectService {
         selectDao.spinner(name,resp);
     }
 
+    @Override
+    public void spinnerKe(String name, HttpServletResponse response) throws IOException {
+        selectDao.spinnerKe(name,response);
+    }
+
     //获取要查找的动物信息
 
 }

@@ -40,7 +40,7 @@
     </h1>
     <center>
         <a href="${ctx}/queryClass/frame_a" class="shitu-btn">查询</a>
-        <a href="${ctx}/queryClass/frame_a" class="shitu-btn">修改</a>
+        <a href="${ctx}/frame_b.jsp"  class="shitu-btn">修改</a>
     </center>
 </div>
 </body>

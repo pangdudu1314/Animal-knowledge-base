@@ -11,32 +11,62 @@
     <title>Title</title>
     <style type="text/css">
         body{
-            /*background: url("images/beijingtupian.jpg") no-repeat 0 0;*/
             background-color: #ccc;
         }
-
     </style>
-    <link rel="stylesheet" type="text/css" href="../../themes/default/easyui.css">
-    <link rel="stylesheet" type="text/css" href="../../themes/icon.css">
-    <link rel="stylesheet" type="text/css" href="../demo.css">
     <script src="${ctx}/js/jquery.min.js" type="text/javascript"></script>
     <script src="${ctx}/js/ajaxfileupload.js" type="text/javascript"></script>
+    <style type="text/css">
+        thml body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
     <script src="${ctx}/js/jquery-easyui-1.7.0/jquery.min.js" type="text/javascript"></script>
     <script src="${ctx}/js/jquery-easyui-1.7.0/jquery.easyui.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $("#kemu").combobox({});
+        function search() {
+            var s1 = $("#kemu").val();
+            var s2 = $("#cc2").val();
+            if(s1==""||s1==undefined){
+                alert("请选中动物类别");
+                return;
+            }
+
+            if(s2==""||s2==undefined){
+
+                /* window.parent.location.href = "/queryClass/queryClassLevel?queryClassLevel=1&name=" + s1;*/
+                window.parent.location.href = "${ctx}/queryClass/selectAdmin?name=" + encodeURI(s1);
+            }else {
+                /*  window.parent.location.href = "/tuxiangzhanshi/selectAdmin?name=" + s2;*/
+                /* window.parent.location.href = /queryClass/queryClassLevel?queryClassLevel=2&name=" + s2;*/
+                window.parent.location.href = "${ctx}/queryClass/selectAdmin?name=" + encodeURI(s2);
+            }
+        }
+    </script>
     <link rel="stylesheet" type="text/css" href="${ctx}/js/jquery-easyui-1.7.0/themes/default/easyui.css">
 </head>
 <body>
 <div>
     <h1 style="color:#0000FF;text-align:center; width: 100%;">动物名称和所属科目搜索</h1>
     <div style="width: 100%;height:50px;">
-        动物类别：<input class="easyui-combobox" name="browser" style="width:280px;" data-options="
-				url: '${ctx}/queryClass/queryClassLevel1?name=',
+        动物类别：   <input id="kemu" class="easyui-combobox" name="language" style="width:260px"
+                       data-options="
+				<%--url: 'combobox_data2.json',--%>
+				url:'${ctx}/queryClass/queryClassLevel?name=',
 				method: 'get',
-				valueField:'value',
+				valueField:'id',
 				textField:'text',
-				groupField:'group'
+				groupField:'group',
+
+				onSelect: function(rec){
+					$('#cc2').combobox('clear');
+                        var url = '${ctx}/queryClass/queryClassLevel?name='+rec.id;
+                        $('#cc2').combobox('reload', url);
+                    }
 			">
-        动物名称：<input id="name" type="text">
+        动物名称：<input id="cc2" type="text">
 
         <div class="yanzRight">
             <input name="evidence" onchange="uploadImg(this,'preview')" id="file"  type="file"/>
