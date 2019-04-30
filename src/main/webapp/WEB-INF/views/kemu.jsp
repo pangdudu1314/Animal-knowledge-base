@@ -139,7 +139,7 @@
                                 },
                                 linkStyle: {
                                     type: 'line',
-                                    width: 3.5,
+                                    width: 1,
                                     color:"green"
                                 }
                             },
@@ -157,8 +157,8 @@
                         useWorker: false,
                         minRadius : 30,
                         maxRadius : 50,
-                        gravity: 1.1,
-                        scaling: 1.1,
+                        gravity: 0.1,
+                        scaling: 1.5,
                         roam: 'move',
                        /* roam:'scale',*/
                         nodes:${nodes},
