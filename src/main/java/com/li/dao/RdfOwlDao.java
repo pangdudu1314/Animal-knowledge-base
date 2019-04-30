@@ -305,7 +305,7 @@ public class RdfOwlDao {
   /**
    * 查询科对应的动物
    */
-  public List<String> queryIndividualsType(String name) {
+  public List<String> queryIndividualsByType(String name) {
     List<String> resultList = new ArrayList<String>();
     try {
       OWLOntologyManager m = create();
@@ -405,7 +405,7 @@ public class RdfOwlDao {
     }
   }
 
- /* public static void main(String[] str) {
+  /*public static void main(String[] str) {
     RdfOwlDao rdfOwlDao = new RdfOwlDao();
     //查询
     //System.out.println(rdfOwlDao.getIndividualInfo("稚科"));
@@ -417,7 +417,7 @@ public class RdfOwlDao {
     //修改
     // rdfOwlDao.updateIndividualInfo("黑鹇",RdfOwlDao.INDIVIDUAL_PROPERTY,"image",null,"测试11");
     //查询级联关系
-    //System.out.println(rdfOwlDao.queryLink("鸟类"));
+    System.out.println(rdfOwlDao.queryLink("鸟类"));
     //查询稚科下面的动物
      //System.out.println(rdfOwlDao.queryIndividualsType("矮脚鸡"));;
     //添加测试个体挂在稚科下面
@@ -431,6 +431,6 @@ public class RdfOwlDao {
     //删除类关系
    // rdfOwlDao.removeClass("动物", "两栖动物");
 
-  }
-*/
+  }*/
+
 }

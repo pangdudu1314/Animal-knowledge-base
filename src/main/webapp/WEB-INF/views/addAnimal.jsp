@@ -23,26 +23,19 @@
 <div>
     <h1 style="color:#0000FF;text-align:center; width: 100%;">动物名称和所属科目搜索</h1>
     <div style="width: 100%;height:50px;">
-        动物类别：<input id="kemu" type="text" class="easyui-combobox"
-            data-options="
-					url:'${ctx}/queryClass/queryClassLevel?level=1&name=',
-					method:'post',
-					valueField:'id',
-					textField:'text',
-					panelHeight:'auto',
-
-					onSelect: function(rec){
-					$('#cc2').combobox('clear');
-                        var url = '${ctx}/queryClass/queryClassLevel?level=2&name='+rec.id;
-                        $('#cc2').combobox('reload', url);
-                    }"
-/>
+        动物类别：<input class="easyui-combobox" name="browser" style="width:280px;" data-options="
+				url: 'combobox_data2.json',
+				method: 'get',
+				valueField:'value',
+				textField:'text',
+				groupField:'group'
+			">
         动物名称：<input id="name" type="text">
 
         <div class="yanzRight">
             <input name="evidence" onchange="uploadImg(this,'preview')" id="file"  type="file"/>
             <span class="dui" id="imgOrder_dui" style="display: none;"></span>
-            <input  type="button" onclick="upload();" value="提交">
+
         </div>
         <div id="preview">
             <img src="" alt="" id="imghead5" height="200" width="200" />
@@ -52,7 +45,7 @@
     </div>
 
 
-
+    <input  type="button" onclick="upload();" value="提交"><a href="../../index.jsp">取消</a>
 </div>
 <script>
     function uploadImg(file,imgNum){

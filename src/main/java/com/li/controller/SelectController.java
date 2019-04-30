@@ -24,8 +24,8 @@ public class SelectController {
     @Autowired
     public RdfOwlDao rdfOwlDao;
     @RequestMapping("/queryClassLevel")
-    public void spinnerName(String name, String level, HttpServletResponse response) throws IOException {
-        selectService.spinnerName(name,level,response);
+    public void spinnerName(String name,  HttpServletResponse response) throws IOException {
+        selectService.spinnerName(name,response);
     }
     @RequestMapping("/selectAdmin")
     public String selectAdmin(String name, HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {

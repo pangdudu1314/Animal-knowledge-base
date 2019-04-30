@@ -1,6 +1,5 @@
 package com.li.service;
 
-import com.li.dao.RdfOwlDao;
 import com.li.dao.SelectDao;
 import com.li.vo.AnimalInfo;
 import org.apache.log4j.Logger;
@@ -67,8 +66,8 @@ public class SelectServiceImpl implements SelectService {
     }
 
     @Override
-    public void spinnerName(String name, String queryClassLevel, HttpServletResponse resp) throws IOException {
-        selectDao.spinner(name,queryClassLevel,resp);
+    public void spinnerName(String name, HttpServletResponse resp) throws IOException {
+        selectDao.spinner(name,resp);
     }
 
     //获取要查找的动物信息

@@ -50,7 +50,7 @@
     <div style="width: 100%;height:50px;">
     <%----%>
         <div style="width: 800px; height: 50px;float: left;margin-left: 330px;">
-            动物类别：<input id="kemu" type="text" class="easyui-combobox"
+            动物类别：<%--<input id="kemu" type="text" class="easyui-combobox"
                         data-options="
 					url:'${ctx}/queryClass/queryClassLevel?level=1&name=',
 					method:'post',
@@ -63,8 +63,22 @@
                         var url = '${ctx}/queryClass/queryClassLevel?level=2&name='+rec.id;
                         $('#cc2').combobox('reload', url);
                     }"
-            />
+            />--%>
+            <input class="easyui-combobox" name="language" style="width:50%"
+                   data-options="
+				<%--url: 'combobox_data2.json',--%>
+				url:'${ctx}/queryClass/queryClassLevel?name=',
+				method: 'get',
+				valueField:'id',
+				textField:'text',
+				groupField:'group',
 
+				onSelect: function(rec){
+					$('#cc2').combobox('clear');
+                        var url = '${ctx}/queryClass/queryClassLevel?name='+rec.id;
+                        $('#cc2').combobox('reload', url);
+                    }
+			">
             动物名称：<input id="cc2" class="easyui-combobox"  data-options="method:'post',valueField:'id',textField:'text'"/>
            <%-- <a href="javascript:;" class="easyui-linkbutton" style="width:80px" onclick="search()">查询</a>--%>
             <%--<a href="#" class="easyui-linkbutton" style="width:80px" onclick="search()">查询</a>--%>
