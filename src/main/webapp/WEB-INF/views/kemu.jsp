@@ -81,7 +81,7 @@
             // 基于准备好的dom，初始化echarts图表
             var myChart = ec.init(document.getElementById('main'));
             option = {
-                
+
                 title : {
                     text: '动物关系：${name}',
                     subtext: '数据来自百度百科',
@@ -208,7 +208,5 @@
             myChart.setOption(option);
         }
     );</script>
-
-
 </body>
 </html>
