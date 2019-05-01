@@ -26,14 +26,21 @@ public class SelectDao {
         AnimalInfo animalInfo = new AnimalInfo();
         animalInfo.setName(name);
         Map<String, List<String>> mapListInfo = rdfOwlDao.getIndividualInfo(name);
+        //如果查询的动物名称不存在，那么结果也是0，科目也是0，怎么区分呢？
+
         if (mapListInfo.keySet().size() == 0) {
             // 没有结果，说明查询的是科
             //查询科目对应的动物名称 返回的是集合 并没有图片信息
             List<String> animalnames = rdfOwlDao.queryIndividualsByType(name);
+            //如果animalnames 也没有信息，能说明查的什么都没有哈
             //循环动物名称集合查询对应动物信息
-            for (String animalname : animalnames) {
-                AnimalInfo animalInfoTemp = selectAllInfo(animalname);
-                animalInfo.addKind(animalInfoTemp);
+            if (animalnames != null && animalnames.size() > 0) {
+                for (String animalname : animalnames) {
+                    AnimalInfo animalInfoTemp = selectAllInfo(animalname);
+                    animalInfo.addKind(animalInfoTemp);
+                }
+            } else {
+                animalInfo.setName(null);//什么都没有，对名称设置null
             }
         } else {
             //有结果说明查询的是动物
@@ -96,7 +103,7 @@ public class SelectDao {
                     Map map = new HashMap();
                     map.put("id", type);
                     map.put("text", type);
-                    map.put("group", species);
+                    map.put("group", species);//为什么有group 是因为分组的那个下拉框需要group分组
                     resultList.add(map);
                 }
             }
@@ -108,7 +115,20 @@ public class SelectDao {
     }
 
     public void spinnerKe(String name, HttpServletResponse resp) throws IOException {
-        spinner(name,resp);
+        spinner(name, resp);
     }
 
+    public void deleteAnimalByName(String name) {
+        rdfOwlDao.removeIndividualInfo(name);
+    }
+
+    public void addAnimal(AnimalInfo animalInfo, String type) {
+        rdfOwlDao.addIndividualInfo(animalInfo.getName(), type);
+        rdfOwlDao.addIndividualInfo(animalInfo.getName(), RdfOwlDao.INDIVIDUAL_PROPERTY, "image", animalInfo.getImage());
+        rdfOwlDao.addIndividualInfo(animalInfo.getName(), RdfOwlDao.INDIVIDUAL_PROPERTY, "intro", animalInfo.getIntro());
+    }
+    public void updateAnimal(String name,String image,String intro){
+        rdfOwlDao.updateIndividualInfo(name,RdfOwlDao.INDIVIDUAL_PROPERTY,"image",null,image);
+        rdfOwlDao.updateIndividualInfo(name,RdfOwlDao.INDIVIDUAL_PROPERTY,"intro",null,intro);
+    }
 }

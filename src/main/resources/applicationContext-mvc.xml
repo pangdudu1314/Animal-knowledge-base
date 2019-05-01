@@ -27,4 +27,15 @@
             </props>
         </property>
     </bean>
+    <!--上传文件工具类-->
+    <bean
+            class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
+            id="multipartResolver">
+        <property name="maxUploadSize">
+            <value>104857600</value>
+        </property>
+        <property name="defaultEncoding">
+            <value>utf-8</value>
+        </property>
+    </bean>
 </beans>

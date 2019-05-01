@@ -10,7 +10,7 @@
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
-    <title>Title</title>
+    <title>修改</title>
     <style type="text/css">
         .shitu-btn{
             display: inline-block;
@@ -25,23 +25,23 @@
             text-decoration: none;
         }
         body{
-           /* background: url("images/beijingtupian.jpg") no-repeat 0 0;*/
+            /* background: url("images/beijingtupian.jpg") no-repeat 0 0;*/
             background-color: #ccc;
         }
 
     </style>
 </head>
 <body >
-    <div style="margin:100px">
-        <h1 >
-            <center>
-                <font  style="color:#0000FF">动物领域多模态知识库查询系统</font>
-            </center>
-        </h1>
+<div style="margin:100px">
+    <h1 >
         <center>
-            <a href="${ctx}/queryClass/wenzi" class="shitu-btn">文字查询</a>
-            <a href="${ctx}/queryClass/tupian" class="shitu-btn">图片查询</a>
+            <font  style="color:#0000FF">动物领域多模态知识库查询系统</font>
         </center>
-    </div>
+    </h1>
+    <center>
+        <a href="${ctx}/queryClass/addAnimal" class="shitu-btn">添加动物</a>
+        <a href="${ctx}/queryClass/deleteAnimal" class="shitu-btn">删除动物</a>
+    </center>
+</div>
 </body>
 </html>

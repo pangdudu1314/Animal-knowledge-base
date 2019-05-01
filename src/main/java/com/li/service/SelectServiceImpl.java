@@ -75,6 +75,18 @@ public class SelectServiceImpl implements SelectService {
         selectDao.spinnerKe(name,response);
     }
 
-    //获取要查找的动物信息
+    @Override
+    public void deleteAnimalByName(String name) {
+        selectDao.deleteAnimalByName(name);
+    }
 
+    //获取要查找的动物信息
+    public void addAnimal(AnimalInfo animalInfo,String type){
+        selectDao.addAnimal(animalInfo, type);
+    }
+
+    @Override
+    public void updateAnimal(String name, String image, String intro) {
+        selectDao.updateAnimal(name,image,intro);
+    }
 }

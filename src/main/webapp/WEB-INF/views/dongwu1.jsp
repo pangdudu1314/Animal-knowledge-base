@@ -19,7 +19,7 @@
 <html>
 <head>
     <base href="<%=basePath%>">
-    <title>ECharts</title>
+    <title>动物信息</title>
     <style type="text/css">
         body{
             /*  background: url("images/beijingtupian.jpg");*/
@@ -248,7 +248,7 @@
         <%--   <p id="migcheng" name="${name}"></p>--%>
         <input id="nameid" type="hidden" value="${key}">
         <H2 style="color:#4b1cff; display: inline-block;" >动物简介:</H2>
-
+            <input id="submitView1" onclick="tiaozhuan();" type="button" name="sub" value="编辑" style="display: inline-block;"   />
         <p>
             <%-- <% out.println(request.getAttribute("Animal_info"));%>--%>
             ${animalInfo.intro}

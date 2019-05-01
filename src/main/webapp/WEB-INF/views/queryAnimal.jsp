@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
-  Date: 2019/3/24 0024
-  Time: 下午 8:39
+  Date: 2019/3/5 0005
+  Time: 上午 9:44
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -10,7 +10,7 @@
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
-    <title>查询与修改</title>
+    <title>查询</title>
     <style type="text/css">
         .shitu-btn{
             display: inline-block;
@@ -25,24 +25,23 @@
             text-decoration: none;
         }
         body{
-            /* background: url("images/beijingtupian.jpg") no-repeat 0 0;*/
+           /* background: url("images/beijingtupian.jpg") no-repeat 0 0;*/
             background-color: #ccc;
         }
 
     </style>
 </head>
 <body >
-<div style="margin:100px">
-    <h1 >
+    <div style="margin:100px">
+        <h1 >
+            <center>
+                <font  style="color:#0000FF">动物领域多模态知识库查询系统</font>
+            </center>
+        </h1>
         <center>
-            <p  style="color:#0000FF">动物领域多模态知识库查询系统</p>
+            <a href="${ctx}/queryClass/wenzi" class="shitu-btn">文字查询</a>
+            <a href="${ctx}/queryClass/tupian" class="shitu-btn">图片查询</a>
         </center>
-    </h1>
-    <center>
-        <a href="${ctx}/queryClass/queryAnimal" class="shitu-btn">查询</a>
-        <a href="${ctx}/queryClass/updateAnimal"  class="shitu-btn">修改</a>
-    </center>
-</div>
+    </div>
 </body>
 </html>
-

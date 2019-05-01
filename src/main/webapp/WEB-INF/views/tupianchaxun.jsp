@@ -10,7 +10,7 @@
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
-    <title>Title</title>
+    <title>图片查询</title>
     <style type="text/css">
         body{
             /*background: url("images/beijingtupian.jpg") no-repeat 0 0;*/

@@ -16,4 +16,8 @@ public interface SelectService {
     public AnimalInfo selectName(String name ) throws UnsupportedEncodingException;
     public void spinnerName(String name,HttpServletResponse resp) throws IOException;
     public void spinnerKe(String name,HttpServletResponse response) throws IOException;
+    public void deleteAnimalByName(String name);
+    public void addAnimal(AnimalInfo animalInfo,String type);
+    public void updateAnimal(String name,String image,String intro);
+
 }

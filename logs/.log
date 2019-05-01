@@ -1,2 +1,194 @@
 2019-04-26 21:45:24,859 DEBUG TestController:17 - 跳转页面
 2019-04-28 20:59:22,230 DEBUG TestController:17 - 跳转页面
+2019-05-01 16:20:27,760  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 16:20:45,913  INFO FileUploadController:125 - save file success
+2019-05-01 16:21:35,776  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 16:21:35,798  INFO FileUploadController:125 - save file success
+2019-05-01 16:25:11,697  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 16:25:11,704  INFO FileUploadController:126 - save file success
+2019-05-01 16:33:34,776  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 16:33:34,833  INFO FileUploadController:126 - save file success
+2019-05-01 16:52:17,867  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 16:52:17,907  INFO FileUploadController:126 - save file success
+2019-05-01 16:53:28,733  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 16:53:28,747  INFO FileUploadController:126 - save file success
+2019-05-01 16:55:48,795  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 16:55:48,799  INFO FileUploadController:128 - save file error
+java.io.IOException: File 'E:\git\Animal-knowledge-base\src\main\webapp\images' exists but is a directory
+	at org.apache.commons.io.FileUtils.openOutputStream(FileUtils.java:354)
+	at org.apache.commons.io.FileUtils.openOutputStream(FileUtils.java:326)
+	at org.apache.commons.io.FileUtils.copyInputStreamToFile(FileUtils.java:1510)
+	at com.li.controller.FileUploadController.uploadImage2ImageDr(FileUploadController.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:936)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-05-01 17:04:07,130  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 17:04:07,143  INFO FileUploadController:126 - save file success
+2019-05-01 17:05:21,922  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 17:05:21,923  INFO FileUploadController:128 - save file error
+java.io.IOException: File 'E:\git\Animal-knowledge-base\src\main\webapp\images' exists but is a directory
+	at org.apache.commons.io.FileUtils.openOutputStream(FileUtils.java:354)
+	at org.apache.commons.io.FileUtils.openOutputStream(FileUtils.java:326)
+	at org.apache.commons.io.FileUtils.copyInputStreamToFile(FileUtils.java:1510)
+	at com.li.controller.FileUploadController.uploadImage2ImageDr(FileUploadController.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:936)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-05-01 17:05:34,483  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 17:05:34,485  INFO FileUploadController:128 - save file error
+java.io.IOException: File 'E:\git\Animal-knowledge-base\src\main\webapp\images' exists but is a directory
+	at org.apache.commons.io.FileUtils.openOutputStream(FileUtils.java:354)
+	at org.apache.commons.io.FileUtils.openOutputStream(FileUtils.java:326)
+	at org.apache.commons.io.FileUtils.copyInputStreamToFile(FileUtils.java:1510)
+	at com.li.controller.FileUploadController.uploadImage2ImageDr(FileUploadController.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:936)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-05-01 17:22:41,880  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 17:22:41,919  INFO FileUploadController:130 - save file success
+2019-05-01 17:23:12,001  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 17:23:20,803  INFO FileUploadController:130 - save file success
+2019-05-01 17:24:36,648  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 17:24:36,689  INFO FileUploadController:130 - save file success
+2019-05-01 17:41:55,589  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 17:41:55,660  INFO FileUploadController:130 - save file success
+2019-05-01 17:42:31,766  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 17:42:31,776  INFO FileUploadController:130 - save file success
+2019-05-01 17:46:04,618  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 17:46:04,658  INFO FileUploadController:130 - save file success
+2019-05-01 17:46:54,899  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 17:46:54,929  INFO FileUploadController:130 - save file success
+2019-05-01 17:46:59,049  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 17:46:59,053  INFO FileUploadController:130 - save file success
+2019-05-01 17:47:15,240  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 17:47:15,257  INFO FileUploadController:130 - save file success
+2019-05-01 17:47:48,519  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 17:47:48,526  INFO FileUploadController:130 - save file success
+2019-05-01 22:47:20,358  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 22:47:21,433  INFO FileUploadController:130 - save file success
+2019-05-01 22:51:57,590  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 22:51:57,623  INFO FileUploadController:130 - save file success
+2019-05-01 22:57:25,276  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 22:57:25,282  INFO FileUploadController:130 - save file success
+2019-05-01 22:58:57,364  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 22:58:57,366  INFO FileUploadController:130 - save file success
+2019-05-01 22:59:32,115  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 22:59:32,119  INFO FileUploadController:130 - save file success
+2019-05-01 22:59:36,925  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 22:59:36,930  INFO FileUploadController:130 - save file success
+2019-05-01 23:00:50,101  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 23:00:56,721  INFO FileUploadController:130 - save file success
+2019-05-01 23:02:35,580  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 23:02:35,586  INFO FileUploadController:130 - save file success
+2019-05-01 23:05:49,304  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 23:05:49,309  INFO FileUploadController:130 - save file success
+2019-05-01 23:07:03,760  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 23:07:03,770  INFO FileUploadController:130 - save file success
+2019-05-01 23:07:44,322  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 23:07:44,327  INFO FileUploadController:130 - save file success
+2019-05-01 23:12:27,728  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 23:12:28,566  INFO FileUploadController:130 - save file success
+2019-05-01 23:13:36,531  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
+2019-05-01 23:13:36,570  INFO FileUploadController:130 - save file success

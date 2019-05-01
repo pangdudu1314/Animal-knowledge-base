@@ -24,6 +24,8 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
+
 /**
  * 上传控制类
  *
@@ -85,6 +87,53 @@ public class FileUploadController   {
 
    }
 
+    /**
+     * 上传图片到图片路径下
+     */
+    @SuppressWarnings("rawtypes")
+    @RequestMapping(value = "uploadImage2ImageDr", method = RequestMethod.POST)
+    public void  uploadImage2ImageDr(MultipartHttpServletRequest multipartRequest,
+                              HttpServletResponse response, HttpSession session ) {
+        response.setContentType("text/html;charset=UTF-8");
+        try {
+            for (Iterator it = multipartRequest.getFileNames(); it.hasNext(); ) {
+                String key = (String) it.next();
+                MultipartFile file = multipartRequest.getFile(key);
+                String originalFilename = file.getOriginalFilename();
+                HashMap<String, String> options = new HashMap<String, String>();
+                options.put("top_num", "3");
+                options.put("baike_num", "5");
+
+                //上传文件路径
+                String absolutePath = "E:\\git\\Animal-knowledge-base\\src\\main\\webapp\\images";
+                logger.info("save file path=" + absolutePath);
+                File savedir = new File(absolutePath);
+                //判断是否存在，不存在新建
+                if (!savedir.exists()) {
+                    savedir.mkdirs();
+                }
+                //上传文件名
+                InputStream inputFile = file.getInputStream();
+                File existFile=new File(absolutePath+File.separator+originalFilename);
+                Map map = new HashMap();
+                 if(existFile.exists()){
+                     map.put("result", "文件已存在");
+                }else {
+                    File saveFile = new File(absolutePath, originalFilename);
+                    //将文件放到一个文件目录中去
+                    FileUtils.copyInputStreamToFile(inputFile, saveFile);
+                     map.put("result", "上传成功");
+                    inputFile.close();
+                }
+                response.getWriter().write(JsonUtils.getString(map));
+            }
+            logger.info("save file success");
+        } catch (Exception e) {
+            logger.info("save file error",e);
+        }
+
+    }
+
    public AnimalInfo getBaiduAnimalInfo(String originalFilename)throws Exception {
        AnimalInfo animalInfo=new AnimalInfo();
         // 初始化一个AipImageClassifyClient
@@ -123,8 +172,8 @@ public class FileUploadController   {
         return animalInfo;
 
     }
-    public static void main(String []aa)throws Exception{
+    /*public static void main(String []aa)throws Exception{
         FileUploadController fileUploadController=new FileUploadController();
         fileUploadController.getBaiduAnimalInfo("baixian.jpg");
-    }
+    }*/
 }

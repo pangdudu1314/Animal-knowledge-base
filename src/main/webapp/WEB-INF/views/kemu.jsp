@@ -19,7 +19,7 @@
 <html>
 <head>
     <base href="<%=basePath%>">
-    <title>ECharts</title>
+    <title>科目查询</title>
     <style type="text/css">
         body{
           /*  background: url("images/beijingtupian.jpg");*/

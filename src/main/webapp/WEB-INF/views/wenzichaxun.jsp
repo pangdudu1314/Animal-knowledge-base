@@ -5,7 +5,7 @@
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <head>
-    <title>Title</title>
+    <title>文字查询</title>
     <style type="text/css">
         thml body {
             margin: 0;

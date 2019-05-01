@@ -12,9 +12,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/queryClass")
@@ -23,20 +26,23 @@ public class SelectController {
     public SelectService selectService;
     @Autowired
     public RdfOwlDao rdfOwlDao;
+
     @RequestMapping("/queryClassLevel")
-    public void spinnerName(String name,  HttpServletResponse response) throws IOException {
-        selectService.spinnerName(name,response);
+    public void spinnerName(String name, HttpServletResponse response) throws IOException {
+        selectService.spinnerName(name, response);
     }
+
     @RequestMapping("/queryClassLevel1")
-    public void spinnerKe(String name,HttpServletResponse response) throws IOException {
-        selectService.spinnerKe(name,response);
+    public void spinnerKe(String name, HttpServletResponse response) throws IOException {
+        selectService.spinnerKe(name, response);
     }
+
     @RequestMapping("/selectAdmin")
     public String selectAdmin(String name, HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
         JSONArray nodes = new JSONArray();
         JSONArray links = new JSONArray();
         System.out.println("name===============" + name);
-        request.setAttribute("key",name);
+        request.setAttribute("key", name);
         AnimalInfo animalInfo = selectService.selectName(name);
 
         /*     System.out.println("animalInfo========================" + animalInfo);*/
@@ -69,11 +75,10 @@ public class SelectController {
                     JSONObject LinkNode = new JSONObject();
                     LinkNode.put("source", animalInfo.getName());
                     LinkNode.put("target", k.getName());
-                   // LinkNode.put("weight", 0.0000000000000000000000000001);
+                    // LinkNode.put("weight", 0.0000000000000000000000000001);
                     links.add(LinkNode);
                 }
             }
-
 
 
         } else {
@@ -90,11 +95,11 @@ public class SelectController {
         request.setAttribute("nodes", nodes);
         request.setAttribute("links", links);
         request.setAttribute("animalInfo", animalInfo);
-        System.out.println("animalInfo="+ JsonUtils.getString(animalInfo));
+        System.out.println("animalInfo=" + JsonUtils.getString(animalInfo));
         if (animalInfo.getKinds() != null) {
             //科
             return "kemu";
-        }else{
+        } else {
             //动物
             return "dongwu1";
         }
@@ -107,24 +112,121 @@ public class SelectController {
         return "frame";
     }
 
-    @RequestMapping("/frame_a")
-    public String frame_a()  {
-        return "frame_a";
+    @RequestMapping("/deleteAnimal")
+    public String deleteAnimal() {
+        return "deleteAnimal";
     }
 
-    @RequestMapping("/frame_b")
-    public String frame_b()  {
-        return "frame_b";
+    @RequestMapping("/addAnimal")
+    public String addAnimal() {
+        return "addAnimal";
+    }
+
+    @RequestMapping("/queryAnimal")
+    public String frame_a() {
+        return "queryAnimal";
+    }
+
+    @RequestMapping("/updateAnimal")
+    public String frame_b() {
+        return "updateAnimal";
     }
 
     @RequestMapping("/wenzi")
-    public String wenzi()  {
+    public String wenzi() {
         return "wenzichaxun";
     }
 
     @RequestMapping("/tupian")
-    public String  tupian()  {
+    public String tupian() {
         return "tupianchaxun";
+    }
+
+    @RequestMapping("/bianji")
+    public String bianji(String name, HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+        System.out.println("name===============" + name);
+
+        AnimalInfo animalInfo = selectService.selectName(name);
+        request.setAttribute("animalInfo", animalInfo);
+
+        return "bianji";
+    }
+
+    @RequestMapping("/updateAnimalMethod")
+    public void updateAnimalMethod(String name, String file, String intro, HttpServletResponse response) {
+        try {
+            //查询一下名称是否存在，存在就不再进行添加
+            Map map = new HashMap();
+
+            selectService.updateAnimal(name,"images//" + file,intro);
+            map.put("result", "修改成功");
+            //传给前台json数据
+            String json = JsonUtils.getString(map);
+            System.out.println(json);
+            response.setContentType("text/javascript;charset=utf-8");
+            response.getWriter().write(json);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    @RequestMapping("/deleteAnimalMethod")
+    public void deleteAnimalMethod(String name, HttpServletRequest request, HttpServletResponse response) {
+        try {
+            Map map = new HashMap();
+            selectService.deleteAnimalByName(name);
+            map.put("result", "删除成功");
+            //传给前台json数据
+            String json = JsonUtils.getString(map);
+            System.out.println(json);
+            response.setContentType("text/javascript;charset=utf-8");
+            response.getWriter().write(json);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @RequestMapping("/addAnimalMethod")
+    public void addAnimalMethod(String kemu, String name, String file, String message, HttpServletRequest request, HttpServletResponse response) {
+        try {
+
+            //查询一下名称是否存在，存在就不再进行添加
+            Map map = new HashMap();
+            AnimalInfo existAnimalInfo = selectService.selectName(name);
+            if (existAnimalInfo.getName() != null) {
+                //动物存在
+                map.put("result", "动物已存在");
+                //原来上传的 文件，也需要删除掉，因为已经先上传了图片，再添加的动物，动物没添加上，图片是不是需要删除呢？
+                //但是动物没上传成功
+                //一般都是需要做一下删除的，我修改一下动物名称，不换图片，就不能上传了吗，必须换图片吗？对不对,所以要删除原来上传的图片
+                String absolutePath = "E:\\git\\Animal-knowledge-base\\src\\main\\webapp\\images";
+                File existFile = new File(absolutePath + File.separator + file);
+                existFile.delete();
+            } else {
+                //动物不存在
+
+
+                //  selectService.deleteAnimalByName(name);
+                AnimalInfo animalInfo = new AnimalInfo();
+                animalInfo.setName(name);
+                animalInfo.setImage("images//" + file);
+                animalInfo.setIntro(message);
+                selectService.addAnimal(animalInfo, kemu);
+                map.put("result", "添加成功");
+            }
+            //传给前台json数据
+            String json = JsonUtils.getString(map);
+            System.out.println(json);
+            response.setContentType("text/javascript;charset=utf-8");
+            response.getWriter().write(json);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
 
