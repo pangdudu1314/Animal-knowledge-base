@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间应该是接口的包名+接口名-->
+<mapper namespace="com.li.dao.AnimalVisitMybatisDao">
+    <select id="queryAnimalVisitByNameAndWeek" resultType="com.li.entities.AnimalVisit">
+        SELECT  animal_name as animalName,animal_visits as animalVisits,week_day as weekDay FROM animal_visits where
+        animal_name=#{animalName} AND week_day=#{weekDay}
+    </select>
+    <select id="queryAnimalVisitByName" resultType="com.li.entities.AnimalVisit">
+         select animal_name as animalName,animal_visits as animalVisits,week_day as weekDay from animal_visits where animal_name=#{animalName}
+    </select>
+    <!--添加-->
+    <insert id="addAnimalVisit">
+        insert into animal_visits(animal_name,animal_visits,week_day)
+        VALUE (#{animalName},#{animalVisits},#{weekDay})
+    </insert>
+    <!--更新-->
+    <update id="updateAnimalVisit">
+        update animal_visits set animal_visits=#{animalVisits}
+        where animal_name=#{animalName} and week_day=#{weekDay}
+    </update>
+</mapper>

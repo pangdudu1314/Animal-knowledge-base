@@ -1,6 +1,9 @@
 package com.li.service;
 
+import com.li.dao.AnimalVisitMybatisDao;
 import com.li.dao.SelectDao;
+import com.li.entities.AnimalVisit;
+import com.li.utils.DateUtils;
 import com.li.vo.AnimalInfo;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +20,29 @@ public class SelectServiceImpl implements SelectService {
     private Logger logger=Logger.getLogger(SelectServiceImpl.class);
     @Autowired
    private SelectDao selectDao;
-
+    @Autowired
+    private AnimalVisitMybatisDao animalVisitMybatisDao;
     @Override
     public AnimalInfo selectName(String name) throws UnsupportedEncodingException {
         //创建AnimalInfo对象
         AnimalInfo animalInfo=selectDao.selectAllInfo(name);
+        //判断如果animalInfo有图片信息，那么认为是访问的动物，需要更新动物访问量
+        if (animalInfo.getImage() != null || animalInfo.getImage().trim().length() > 0) {
+            //更新动物访问量
+            String weekDay= DateUtils.getWeekOfDate();
+            AnimalVisit animalVisit = animalVisitMybatisDao.queryAnimalVisitByNameAndWeek(name,weekDay);
+            if (animalVisit == null) {
+                //首次访问，返回结果为空
+                animalVisit = new AnimalVisit();
+                animalVisit.setAnimalName(name);
+                animalVisit.setAnimalVisits(0);
+                animalVisit.setWeekDay(weekDay);
+                animalVisitMybatisDao.addAnimalVisit(animalVisit);
+            }
+            animalVisit.setAnimalVisits(animalVisit.getAnimalVisits() + 1);
+            animalVisitMybatisDao.updateAnimalVisit(animalVisit);
+
+        }
         //相似信息
         List<AnimalInfo> similaryts= animalInfo.getSimilartys();
         if(similaryts!=null&&similaryts.size()>0){
@@ -88,5 +109,47 @@ public class SelectServiceImpl implements SelectService {
     @Override
     public void updateAnimal(String name, String image, String intro) {
         selectDao.updateAnimal(name,image,intro);
+    }
+
+    @Override
+    public List<String> queryAnimalVisit(String name){
+        List<String> result=new ArrayList<String>();
+        result.add("0");//周1
+        result.add("0");//周2
+        result.add("0");//周3
+        result.add("0");//周4
+        result.add("0");//周5
+        result.add("0");//周6
+        result.add("0");//周7
+
+
+        List<AnimalVisit>  animalVisitList=animalVisitMybatisDao.queryAnimalVisitByName(name);
+        for(AnimalVisit animalVisit:animalVisitList){
+            String weekDay=animalVisit.getWeekDay();
+            int animalVisits=animalVisit.getAnimalVisits();
+            if("周一".equals(weekDay)){
+                result.set(0,animalVisits+"");
+            }
+            if("周二".equals(weekDay)){
+                result.set(1,animalVisits+"");
+            }
+            if("周三".equals(weekDay)){
+                result.set(2,animalVisits+"");
+            }
+            if("周四".equals(weekDay)){
+                result.set(3,animalVisits+"");
+            }
+            if("周五".equals(weekDay)){
+                result.set(4,animalVisits+"");
+            }
+            if("周六".equals(weekDay)){
+                result.set(5,animalVisits+"");
+            }
+            if("周日".equals(weekDay)){
+                result.set(6,animalVisits+"");
+            }
+        }
+
+        return result;
     }
 }

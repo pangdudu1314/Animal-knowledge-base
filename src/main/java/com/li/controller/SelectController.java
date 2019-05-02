@@ -91,7 +91,9 @@ public class SelectController {
             animalNode.put("symbolSize", "[150, 150]");
             nodes.add(animalNode);
         }
-
+//访问量
+        List<String> anialVisits=  selectService.queryAnimalVisit(name);
+        request.setAttribute("anialVisits", anialVisits);
         request.setAttribute("nodes", nodes);
         request.setAttribute("links", links);
         request.setAttribute("animalInfo", animalInfo);

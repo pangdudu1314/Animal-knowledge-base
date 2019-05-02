@@ -5,6 +5,7 @@ import com.li.vo.AnimalInfo;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 public interface SelectService {
     /**
@@ -19,5 +20,6 @@ public interface SelectService {
     public void deleteAnimalByName(String name);
     public void addAnimal(AnimalInfo animalInfo,String type);
     public void updateAnimal(String name,String image,String intro);
+    public List<String> queryAnimalVisit(String name);
 
 }

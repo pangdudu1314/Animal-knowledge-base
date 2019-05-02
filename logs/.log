@@ -192,3 +192,1288 @@ java.io.IOException: File 'E:\git\Animal-knowledge-base\src\main\webapp\images' 
 2019-05-01 23:12:28,566  INFO FileUploadController:130 - save file success
 2019-05-01 23:13:36,531  INFO FileUploadController:109 - save file path=E:\git\Animal-knowledge-base\src\main\webapp\images
 2019-05-01 23:13:36,570  INFO FileUploadController:130 - save file success
+2019-05-02 10:53:14,008  INFO MLog:80 - MLog clients using log4j logging.
+2019-05-02 10:53:14,059  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2019-05-02 10:53:14,094 DEBUG DynamicPooledDataSourceManagerMBean:236 - MBean: com.mchange.v2.c3p0:type=PooledDataSource[31unxka2wv9l191quc2yp|5c757fad] registered.
+2019-05-02 10:53:14,400 DEBUG ActiveManagementCoordinator:133 - MBean: com.mchange.v2.c3p0:type=PooledDataSource[31unxka2wv9l191quc2yp|5c757fad] unregistered.
+2019-05-02 10:53:14,401 DEBUG ActiveManagementCoordinator:85 - C3P0Registry mbean unregistered.
+2019-05-02 10:53:14,402 DEBUG AbstractPoolBackedDataSource:417 - com.mchange.v2.c3p0.ComboPooledDataSource@5c757fad has been closed. 
+java.lang.Exception: DEBUG STACK TRACE for PoolBackedDataSource.close().
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.close(AbstractPoolBackedDataSource.java:417)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:337)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:271)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1055)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1062)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:562)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:400)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:291)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4797)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5291)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-05-02 11:23:50,635  INFO MLog:80 - MLog clients using log4j logging.
+2019-05-02 11:23:50,726  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2019-05-02 11:23:50,778 DEBUG DynamicPooledDataSourceManagerMBean:236 - MBean: com.mchange.v2.c3p0:type=PooledDataSource[31unxka2wwcy7nyrl0r8|73f495ea] registered.
+2019-05-02 11:23:54,369  INFO MLog:80 - MLog clients using log4j logging.
+2019-05-02 11:23:54,470  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2019-05-02 11:23:54,527 DEBUG DynamicPooledDataSourceManagerMBean:236 - MBean: com.mchange.v2.c3p0:type=PooledDataSource[31unxka2wwd13i66wk73|ba61d03] registered.
+2019-05-02 11:24:45,695  INFO MLog:80 - MLog clients using log4j logging.
+2019-05-02 11:24:45,756  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2019-05-02 11:24:45,808 DEBUG DynamicPooledDataSourceManagerMBean:236 - MBean: com.mchange.v2.c3p0:type=PooledDataSource[31unxka2wwe4o7sws4pr|3a4de147] registered.
+2019-05-02 12:16:13,784  INFO MLog:80 - MLog clients using log4j logging.
+2019-05-02 12:16:13,854  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2019-05-02 12:16:13,915 DEBUG DynamicPooledDataSourceManagerMBean:236 - MBean: com.mchange.v2.c3p0:type=PooledDataSource[31unxka2wy8bgn2hngut|455c8fdb] registered.
+2019-05-02 12:19:03,611  INFO MLog:80 - MLog clients using log4j logging.
+2019-05-02 12:19:03,717  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2019-05-02 12:19:03,802 DEBUG DynamicPooledDataSourceManagerMBean:236 - MBean: com.mchange.v2.c3p0:type=PooledDataSource[31unxka2wybyit1yy25tc|57065599] registered.
+2019-05-02 12:19:18,966 DEBUG BasicResourcePool:404 - incremented pending_acquires: 1
+2019-05-02 12:19:18,983 DEBUG BasicResourcePool:404 - incremented pending_acquires: 2
+2019-05-02 12:19:18,991 DEBUG BasicResourcePool:404 - incremented pending_acquires: 3
+2019-05-02 12:19:18,997 DEBUG BasicResourcePool:404 - incremented pending_acquires: 4
+2019-05-02 12:19:19,001 DEBUG BasicResourcePool:404 - incremented pending_acquires: 5
+2019-05-02 12:19:19,006 DEBUG BasicResourcePool:404 - incremented pending_acquires: 6
+2019-05-02 12:19:19,013 DEBUG BasicResourcePool:404 - incremented pending_acquires: 7
+2019-05-02 12:19:19,021 DEBUG BasicResourcePool:404 - incremented pending_acquires: 8
+2019-05-02 12:19:19,028 DEBUG BasicResourcePool:404 - incremented pending_acquires: 9
+2019-05-02 12:19:19,034 DEBUG BasicResourcePool:404 - incremented pending_acquires: 10
+2019-05-02 12:19:19,042 DEBUG BasicResourcePool:289 - com.mchange.v2.resourcepool.BasicResourcePool@55ce7883 config: [start -> 10; min -> 3; max -> 20; inc -> 5; num_acq_attempts -> 30; acq_attempt_delay -> 1000; check_idle_resources_delay -> 0; mox_resource_age -> 0; max_idle_time -> 0; excess_max_idle_time -> 0; destroy_unreturned_resc_time -> 0; expiration_enforcement_delay -> 0; break_on_acquisition_failure -> false; debug_store_checkout_exceptions -> false]
+2019-05-02 12:19:19,072  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31unxka2wybyit1yy25tc|57065599, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31unxka2wybyit1yy25tc|57065599, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> root, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2019-05-02 12:19:19,090 DEBUG BasicResourcePool:538 - acquire test -- pool size: 0; target_pool_size: 10; desired target? 1
+2019-05-02 12:19:19,105 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:19,106 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:19,105 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:19,131 DEBUG BasicResourcePool:1291 - awaitAvailable(): [unknown]
+2019-05-02 12:19:19,236 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@55ce7883 [managed: 0, unused: 0, excluded: 0]
+2019-05-02 12:19:20,242 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:20,243 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:20,243 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:21,250 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:21,252 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:21,254 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:22,252 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:22,254 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:22,258 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:23,255 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:23,256 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:23,260 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:24,257 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:24,260 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:24,264 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:25,259 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:25,262 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:25,270 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:26,261 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:26,275 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:26,275 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:27,274 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:27,285 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:27,289 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:28,278 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:28,288 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:28,299 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:29,281 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:29,289 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:29,304 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:30,288 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:30,290 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:30,307 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:31,290 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:31,292 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:31,309 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:32,291 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:32,294 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:19:32,310 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:23:58,759  INFO MLog:80 - MLog clients using log4j logging.
+2019-05-02 12:23:58,825  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2019-05-02 12:23:58,875 DEBUG DynamicPooledDataSourceManagerMBean:236 - MBean: com.mchange.v2.c3p0:type=PooledDataSource[31unxka2wyia8pi2qiqh|67b08f0a] registered.
+2019-05-02 12:24:18,495 DEBUG BasicResourcePool:404 - incremented pending_acquires: 1
+2019-05-02 12:24:18,499 DEBUG BasicResourcePool:404 - incremented pending_acquires: 2
+2019-05-02 12:24:18,503 DEBUG BasicResourcePool:404 - incremented pending_acquires: 3
+2019-05-02 12:24:18,508 DEBUG BasicResourcePool:404 - incremented pending_acquires: 4
+2019-05-02 12:24:18,511 DEBUG BasicResourcePool:404 - incremented pending_acquires: 5
+2019-05-02 12:24:18,513 DEBUG BasicResourcePool:404 - incremented pending_acquires: 6
+2019-05-02 12:24:18,516 DEBUG BasicResourcePool:404 - incremented pending_acquires: 7
+2019-05-02 12:24:18,518 DEBUG BasicResourcePool:404 - incremented pending_acquires: 8
+2019-05-02 12:24:18,519 DEBUG BasicResourcePool:404 - incremented pending_acquires: 9
+2019-05-02 12:24:18,520 DEBUG BasicResourcePool:404 - incremented pending_acquires: 10
+2019-05-02 12:24:18,522 DEBUG BasicResourcePool:289 - com.mchange.v2.resourcepool.BasicResourcePool@5815cd3f config: [start -> 10; min -> 3; max -> 20; inc -> 5; num_acq_attempts -> 30; acq_attempt_delay -> 1000; check_idle_resources_delay -> 0; mox_resource_age -> 0; max_idle_time -> 0; excess_max_idle_time -> 0; destroy_unreturned_resc_time -> 0; expiration_enforcement_delay -> 0; break_on_acquisition_failure -> false; debug_store_checkout_exceptions -> false]
+2019-05-02 12:24:18,533  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31unxka2wyia8pi2qiqh|67b08f0a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31unxka2wyia8pi2qiqh|67b08f0a, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> com.mysql.jdbc.Driver, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2019-05-02 12:24:18,538 DEBUG BasicResourcePool:538 - acquire test -- pool size: 0; target_pool_size: 10; desired target? 1
+2019-05-02 12:24:18,548 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:18,547 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:18,548 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:18,559 DEBUG BasicResourcePool:1291 - awaitAvailable(): [unknown]
+2019-05-02 12:24:18,596 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@5815cd3f [managed: 0, unused: 0, excluded: 0]
+2019-05-02 12:24:19,599 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:19,599 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:19,599 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:20,600 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:20,630 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:20,651 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:21,611 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:21,632 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:21,652 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:22,613 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:22,636 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:22,654 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:23,615 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:23,639 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:23,656 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:24,616 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:24,641 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:24,658 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:25,619 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:25,644 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:24:25,659 DEBUG BasicResourcePool:1831 - An exception occurred while acquiring a poolable resource. Will retry.
+java.sql.SQLException: No suitable driver
+	at java.sql.DriverManager.getDriver(DriverManager.java:315)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.driver(DriverManagerDataSource.java:223)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:134)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:182)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:171)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:137)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1014)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$800(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$AcquireTask.run(BasicResourcePool.java:1810)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:547)
+2019-05-02 12:25:18,189  INFO MLog:80 - MLog clients using log4j logging.
+2019-05-02 12:25:18,289  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2019-05-02 12:25:18,365 DEBUG DynamicPooledDataSourceManagerMBean:236 - MBean: com.mchange.v2.c3p0:type=PooledDataSource[31unxka2wyjzjqmyargn|66cffbc] registered.
+2019-05-02 12:25:42,247 DEBUG BasicResourcePool:404 - incremented pending_acquires: 1
+2019-05-02 12:25:42,254 DEBUG BasicResourcePool:404 - incremented pending_acquires: 2
+2019-05-02 12:25:42,260 DEBUG BasicResourcePool:404 - incremented pending_acquires: 3
+2019-05-02 12:25:42,263 DEBUG BasicResourcePool:404 - incremented pending_acquires: 4
+2019-05-02 12:25:42,268 DEBUG BasicResourcePool:404 - incremented pending_acquires: 5
+2019-05-02 12:25:42,273 DEBUG BasicResourcePool:404 - incremented pending_acquires: 6
+2019-05-02 12:25:42,280 DEBUG BasicResourcePool:404 - incremented pending_acquires: 7
+2019-05-02 12:25:42,284 DEBUG BasicResourcePool:404 - incremented pending_acquires: 8
+2019-05-02 12:25:42,289 DEBUG BasicResourcePool:404 - incremented pending_acquires: 9
+2019-05-02 12:25:42,294 DEBUG BasicResourcePool:404 - incremented pending_acquires: 10
+2019-05-02 12:25:42,302 DEBUG BasicResourcePool:289 - com.mchange.v2.resourcepool.BasicResourcePool@2e84f298 config: [start -> 10; min -> 3; max -> 20; inc -> 5; num_acq_attempts -> 30; acq_attempt_delay -> 1000; check_idle_resources_delay -> 0; mox_resource_age -> 0; max_idle_time -> 0; excess_max_idle_time -> 0; destroy_unreturned_resc_time -> 0; expiration_enforcement_delay -> 0; break_on_acquisition_failure -> false; debug_store_checkout_exceptions -> false]
+2019-05-02 12:25:42,324  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31unxka2wyjzjqmyargn|66cffbc, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31unxka2wyjzjqmyargn|66cffbc, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/animal?userUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2019-05-02 12:25:42,340 DEBUG BasicResourcePool:538 - acquire test -- pool size: 0; target_pool_size: 10; desired target? 1
+2019-05-02 12:25:42,375 DEBUG BasicResourcePool:1291 - awaitAvailable(): [unknown]
+2019-05-02 12:25:42,386 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@2e84f298 [managed: 0, unused: 0, excluded: 0]
+2019-05-02 12:25:43,220 DEBUG C3P0PooledConnectionPool:217 - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@5696efae.acquireResource() returning. 
+2019-05-02 12:25:43,220 DEBUG C3P0PooledConnectionPool:217 - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@5696efae.acquireResource() returning. 
+2019-05-02 12:25:43,221 DEBUG C3P0PooledConnectionPool:217 - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@5696efae.acquireResource() returning. 
+2019-05-02 12:25:43,225 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@2e84f298 [managed: 1, unused: 1, excluded: 0]
+2019-05-02 12:25:43,228 DEBUG BasicResourcePool:422 - decremented pending_acquires: 9
+2019-05-02 12:25:43,228 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@2e84f298 [managed: 2, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@4ad40fa6)
+2019-05-02 12:25:43,229 DEBUG BasicResourcePool:422 - decremented pending_acquires: 8
+2019-05-02 12:25:43,230 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@2e84f298 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@4ad40fa6)
+2019-05-02 12:25:43,230 DEBUG BasicResourcePool:422 - decremented pending_acquires: 7
+2019-05-02 12:25:43,231 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@2e84f298 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@4ad40fa6)
+2019-05-02 12:25:43,263 DEBUG C3P0PooledConnectionPool:217 - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@5696efae.acquireResource() returning. 
+2019-05-02 12:25:43,264 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@2e84f298 [managed: 4, unused: 3, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@4ad40fa6)
+2019-05-02 12:25:43,265 DEBUG BasicResourcePool:422 - decremented pending_acquires: 6
+2019-05-02 12:25:43,273 DEBUG C3P0PooledConnectionPool:217 - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@5696efae.acquireResource() returning. 
+2019-05-02 12:25:43,274 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@2e84f298 [managed: 5, unused: 4, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@4ad40fa6)
+2019-05-02 12:25:43,275 DEBUG BasicResourcePool:422 - decremented pending_acquires: 5
+2019-05-02 12:25:43,296 DEBUG C3P0PooledConnectionPool:217 - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@5696efae.acquireResource() returning. 
+2019-05-02 12:25:43,297 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@2e84f298 [managed: 6, unused: 5, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@4ad40fa6)
+2019-05-02 12:25:43,298 DEBUG BasicResourcePool:422 - decremented pending_acquires: 4
+2019-05-02 12:25:43,306 DEBUG C3P0PooledConnectionPool:217 - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@5696efae.acquireResource() returning. 
+2019-05-02 12:25:43,307 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@2e84f298 [managed: 7, unused: 6, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@4ad40fa6)
+2019-05-02 12:25:43,308 DEBUG BasicResourcePool:422 - decremented pending_acquires: 3
+2019-05-02 12:25:43,327 DEBUG C3P0PooledConnectionPool:217 - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@5696efae.acquireResource() returning. 
+2019-05-02 12:25:43,328 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@2e84f298 [managed: 8, unused: 7, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@4ad40fa6)
+2019-05-02 12:25:43,329 DEBUG BasicResourcePool:422 - decremented pending_acquires: 2
+2019-05-02 12:25:43,340 DEBUG C3P0PooledConnectionPool:217 - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@5696efae.acquireResource() returning. 
+2019-05-02 12:25:43,341 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@2e84f298 [managed: 9, unused: 8, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@4ad40fa6)
+2019-05-02 12:25:43,342 DEBUG BasicResourcePool:422 - decremented pending_acquires: 1
+2019-05-02 12:25:43,356 DEBUG C3P0PooledConnectionPool:217 - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@5696efae.acquireResource() returning. 
+2019-05-02 12:25:43,357 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@2e84f298 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@4ad40fa6)
+2019-05-02 12:25:43,358 DEBUG BasicResourcePool:422 - decremented pending_acquires: 0
+2019-05-02 12:25:43,562 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@2e84f298 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@4ad40fa6)
+2019-05-02 12:25:49,200 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@2e84f298 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@4ad40fa6)
+2019-05-02 12:25:49,243 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@2e84f298 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@4ad40fa6)
+2019-05-02 12:25:49,245 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@2e84f298 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@4ad40fa6)
+2019-05-02 12:25:49,313 DEBUG NewPooledConnection:430 - com.mchange.v2.c3p0.impl.NewPooledConnection@70d671a2 handling a throwable.
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'upade animal_visits set animal_visits=1
+        where animal_name='鹧鸪' and w' at line 1
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:939)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.execute(NewProxyPreparedStatement.java:989)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	at com.sun.proxy.$Proxy57.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:295)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy58.updateAnimalVisit(Unknown Source)
+	at com.li.service.SelectServiceImpl.selectName(SelectServiceImpl.java:43)
+	at com.li.controller.SelectController.selectAdmin(SelectController.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:936)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-05-02 12:25:49,348 DEBUG SqlUtils:85 - Attempted to convert SQLException to SQLException. Leaving it alone. [SQLState: 42000; errorCode: 1064]
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'upade animal_visits set animal_visits=1
+        where animal_name='鹧鸪' and w' at line 1
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:939)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.execute(NewProxyPreparedStatement.java:989)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	at com.sun.proxy.$Proxy57.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:295)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy58.updateAnimalVisit(Unknown Source)
+	at com.li.service.SelectServiceImpl.selectName(SelectServiceImpl.java:43)
+	at com.li.controller.SelectController.selectAdmin(SelectController.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:936)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-05-02 12:25:49,362 DEBUG DefaultConnectionTester:126 - Testing a Connection in response to an Exception:
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'upade animal_visits set animal_visits=1
+        where animal_name='鹧鸪' and w' at line 1
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:939)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.execute(NewProxyPreparedStatement.java:989)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	at com.sun.proxy.$Proxy57.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:295)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy58.updateAnimalVisit(Unknown Source)
+	at com.li.service.SelectServiceImpl.selectName(SelectServiceImpl.java:43)
+	at com.li.controller.SelectController.selectAdmin(SelectController.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:936)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-05-02 12:25:49,388 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@2e84f298 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@4ad40fa6)
+2019-05-02 12:25:49,557 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@2e84f298 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@4ad40fa6)
+2019-05-02 12:25:49,560 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@2e84f298 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@4ad40fa6)
+2019-05-02 12:27:40,314  INFO MLog:80 - MLog clients using log4j logging.
+2019-05-02 12:27:40,403  INFO C3P0Registry:204 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2019-05-02 12:27:40,473 DEBUG DynamicPooledDataSourceManagerMBean:236 - MBean: com.mchange.v2.c3p0:type=PooledDataSource[31unxka2wyn17ahup16g|170869b3] registered.
+2019-05-02 12:27:53,861 DEBUG BasicResourcePool:404 - incremented pending_acquires: 1
+2019-05-02 12:27:53,866 DEBUG BasicResourcePool:404 - incremented pending_acquires: 2
+2019-05-02 12:27:53,867 DEBUG BasicResourcePool:404 - incremented pending_acquires: 3
+2019-05-02 12:27:53,869 DEBUG BasicResourcePool:404 - incremented pending_acquires: 4
+2019-05-02 12:27:53,870 DEBUG BasicResourcePool:404 - incremented pending_acquires: 5
+2019-05-02 12:27:53,871 DEBUG BasicResourcePool:404 - incremented pending_acquires: 6
+2019-05-02 12:27:53,872 DEBUG BasicResourcePool:404 - incremented pending_acquires: 7
+2019-05-02 12:27:53,873 DEBUG BasicResourcePool:404 - incremented pending_acquires: 8
+2019-05-02 12:27:53,874 DEBUG BasicResourcePool:404 - incremented pending_acquires: 9
+2019-05-02 12:27:53,875 DEBUG BasicResourcePool:404 - incremented pending_acquires: 10
+2019-05-02 12:27:53,876 DEBUG BasicResourcePool:289 - com.mchange.v2.resourcepool.BasicResourcePool@554641a3 config: [start -> 10; min -> 3; max -> 20; inc -> 5; num_acq_attempts -> 30; acq_attempt_delay -> 1000; check_idle_resources_delay -> 0; mox_resource_age -> 0; max_idle_time -> 0; excess_max_idle_time -> 0; destroy_unreturned_resc_time -> 0; expiration_enforcement_delay -> 0; break_on_acquisition_failure -> false; debug_store_checkout_exceptions -> false]
+2019-05-02 12:27:53,887  INFO AbstractPoolBackedDataSource:462 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31unxka2wyn17ahup16g|170869b3, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31unxka2wyn17ahup16g|170869b3, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/animal?userUnicode=true&characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2019-05-02 12:27:53,889 DEBUG BasicResourcePool:538 - acquire test -- pool size: 0; target_pool_size: 10; desired target? 1
+2019-05-02 12:27:53,893 DEBUG BasicResourcePool:1291 - awaitAvailable(): [unknown]
+2019-05-02 12:27:53,894 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 0, unused: 0, excluded: 0]
+2019-05-02 12:27:54,654 DEBUG C3P0PooledConnectionPool:217 - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@38e3597a.acquireResource() returning. 
+2019-05-02 12:27:54,654 DEBUG C3P0PooledConnectionPool:217 - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@38e3597a.acquireResource() returning. 
+2019-05-02 12:27:54,654 DEBUG C3P0PooledConnectionPool:217 - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@38e3597a.acquireResource() returning. 
+2019-05-02 12:27:54,657 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 1, unused: 1, excluded: 0]
+2019-05-02 12:27:54,657 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 1, unused: 0, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:27:54,659 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 2, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:27:54,659 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:27:54,662 DEBUG BasicResourcePool:422 - decremented pending_acquires: 9
+2019-05-02 12:27:54,679 DEBUG BasicResourcePool:422 - decremented pending_acquires: 8
+2019-05-02 12:27:54,681 DEBUG BasicResourcePool:422 - decremented pending_acquires: 7
+2019-05-02 12:27:54,700 DEBUG C3P0PooledConnectionPool:217 - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@38e3597a.acquireResource() returning. 
+2019-05-02 12:27:54,702 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 4, unused: 3, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:27:54,702 DEBUG BasicResourcePool:422 - decremented pending_acquires: 6
+2019-05-02 12:27:54,714 DEBUG C3P0PooledConnectionPool:217 - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@38e3597a.acquireResource() returning. 
+2019-05-02 12:27:54,715 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 5, unused: 4, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:27:54,715 DEBUG BasicResourcePool:422 - decremented pending_acquires: 5
+2019-05-02 12:27:54,717 DEBUG C3P0PooledConnectionPool:217 - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@38e3597a.acquireResource() returning. 
+2019-05-02 12:27:54,718 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 6, unused: 5, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:27:54,718 DEBUG BasicResourcePool:422 - decremented pending_acquires: 4
+2019-05-02 12:27:54,726 DEBUG C3P0PooledConnectionPool:217 - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@38e3597a.acquireResource() returning. 
+2019-05-02 12:27:54,729 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 7, unused: 6, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:27:54,735 DEBUG C3P0PooledConnectionPool:217 - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@38e3597a.acquireResource() returning. 
+2019-05-02 12:27:54,735 DEBUG C3P0PooledConnectionPool:217 - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@38e3597a.acquireResource() returning. 
+2019-05-02 12:27:54,736 DEBUG BasicResourcePool:422 - decremented pending_acquires: 3
+2019-05-02 12:27:54,740 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 8, unused: 7, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:27:54,741 DEBUG BasicResourcePool:422 - decremented pending_acquires: 2
+2019-05-02 12:27:54,742 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 9, unused: 8, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:27:54,742 DEBUG BasicResourcePool:422 - decremented pending_acquires: 1
+2019-05-02 12:27:54,757 DEBUG C3P0PooledConnectionPool:217 - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@38e3597a.acquireResource() returning. 
+2019-05-02 12:27:54,758 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:27:54,758 DEBUG BasicResourcePool:422 - decremented pending_acquires: 0
+2019-05-02 12:27:54,818 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:27:54,820 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:27:54,833 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:27:56,147 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:27:56,157 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:02,058 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:02,064 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:02,065 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 8, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:02,071 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:02,726 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:02,728 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:05,469 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:05,475 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:05,476 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:05,498 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:06,097 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:06,099 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:08,241 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:08,244 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:08,244 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 8, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:08,254 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 8, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:08,616 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:08,619 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:13,809 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:13,811 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:13,812 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 8, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:13,822 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 8, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:14,298 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:14,300 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:18,252 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:18,256 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:18,257 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 8, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:18,262 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 8, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:18,743 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:18,749 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:28:18,750 DEBUG NewProxyConnection:1260 - com.mchange.v2.c3p0.impl.NewProxyConnection@2f8b9bf0: close() called more than once.
+2019-05-02 12:31:08,384 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:31:08,388 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:31:08,390 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:31:08,407 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:31:08,409 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 8, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:31:08,417 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:31:09,072 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:31:09,077 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:40,112 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:40,124 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:40,126 DEBUG NewProxyConnection:1260 - com.mchange.v2.c3p0.impl.NewProxyConnection@37fa9fc0: close() called more than once.
+2019-05-02 12:35:40,129 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:40,141 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:40,660 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:40,665 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:43,354 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:43,380 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:43,382 DEBUG NewProxyConnection:1260 - com.mchange.v2.c3p0.impl.NewProxyConnection@710c655e: close() called more than once.
+2019-05-02 12:35:43,383 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:43,393 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:43,941 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:43,947 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:45,955 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:45,963 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:45,970 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 8, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:45,981 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:46,642 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:46,646 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:46,886 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:46,893 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:46,894 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 8, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:46,938 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:47,478 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:35:47,483 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:37:47,518 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:37:47,533 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:37:47,534 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 8, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:37:47,539 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:37:48,056 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:37:48,070 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:37:51,237 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:37:51,243 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:37:51,249 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 8, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:37:51,261 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 8, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:37:52,171 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:37:52,178 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:38:04,050 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:38:04,059 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:38:04,060 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 8, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:38:04,076 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:38:04,611 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)
+2019-05-02 12:38:04,619 DEBUG BasicResourcePool:1644 - trace com.mchange.v2.resourcepool.BasicResourcePool@554641a3 [managed: 10, unused: 9, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@2d957789)

@@ -281,16 +281,16 @@
                     },
                     tooltip: {},
                     legend: {
-                        data:['千']
+                        data:['次']
                     },
                     xAxis: {
-                        data: ["周一","周二","周3","周四","周五","周六","周日"]
+                        data: ["周一","周二","周三","周四","周五","周六","周日"]
                     },
                     yAxis: {},
                     series: [{
-                        name: '千',
+                        name: '次',
                         type: 'bar',
-                        data: [Math.floor(Math.random()*10),Math.floor(Math.random()*10),Math.floor(Math.random()*10),Math.floor(Math.random()*10),Math.floor(Math.random()*10),Math.floor(Math.random()*10),Math.floor(Math.random()*10)]
+                        data: ${anialVisits}
                     }]
                 };
                 myChart.setOption(option);
