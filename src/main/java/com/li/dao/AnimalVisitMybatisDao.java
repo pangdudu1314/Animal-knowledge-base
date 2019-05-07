@@ -9,6 +9,7 @@ public interface AnimalVisitMybatisDao {
     /**
      * 查询动物访问量,注意多参数，必须制定
      */
+    /*　如果要正确的传入参数，那么就要给参数命名，因为不用xml配置文件，那么我们就要用别的方式来给参数命名，这个方式就是@Param注解*/
     public AnimalVisit queryAnimalVisitByNameAndWeek(@Param("animalName") String animalName,@Param("weekDay") String weekDay);
     public List<AnimalVisit> queryAnimalVisitByName(@Param("animalName") String animalName);
 

@@ -12,7 +12,11 @@
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
         http://www.springframework.org/schema/tx
-        http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+        http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+
+        "
+
+	   >
 	<!--1.引入属性文件,再配置中占位使用-->
 	<context:property-placeholder location="classpath*:db.properties"/>
 	<!--2.配置查C3P0数据源-->

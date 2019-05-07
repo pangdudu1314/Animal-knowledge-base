@@ -3,9 +3,6 @@ package com.li.entities;
 public class AnimalVisit {
     private String animalName;
 
-    public int getAnimalVisits() {
-        return animalVisits;
-    }
 
     private int animalVisits;
     private String weekDay;
@@ -14,7 +11,9 @@ public class AnimalVisit {
 
         return animalName;
     }
-
+    public int getAnimalVisits() {
+        return animalVisits;
+    }
     public void setAnimalName(String animalName) {
         this.animalName = animalName;
     }

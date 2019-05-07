@@ -1,7 +1,7 @@
 package com.li.controller;
 
 import com.baidu.aip.imageclassify.AipImageClassify;
-import com.li.service.SelectService;
+import com.li.service.IAnimalService;
 import com.li.utils.JsonUtils;
 import com.li.vo.AnimalInfo;
 import org.apache.commons.io.FileUtils;
@@ -41,7 +41,7 @@ public class FileUploadController   {
   public static final String SECRET_KEY = "TMe1max8p1YMwGGO0Oon3W4wZuMwZZpV";
 
     @Autowired
-    public SelectService selectService;
+    public IAnimalService IAnimalService;
 
   /**
    * 上传单个文件
