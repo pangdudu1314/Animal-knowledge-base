@@ -19,4 +19,9 @@
         update animal_visits set animal_visits=#{animalVisits}
         where animal_name=#{animalName} and week_day=#{weekDay}
     </update>
+
+    <select id="queryAnimalSumVisit" resultType="java.util.HashMap">
+        select animal_name,SUM(animal_visits) as sum_animal_visits FROM animal_visits GROUP BY animal_name ORDER BY SUM(animal_visits) DESC;
+    </select>
+
 </mapper>

@@ -22,4 +22,5 @@ public interface IAnimalService {
     public void updateAnimal(String name,String image,String intro);
     public List<String> queryAnimalVisit(String name);
 
+    public List<AnimalInfo> getTpo8();
 }

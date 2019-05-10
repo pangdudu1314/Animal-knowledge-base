@@ -1,6 +1,5 @@
 package com.li.controller;
 
-import com.li.dao.RdfOwlDao;
 import com.li.service.IAnimalService;
 import com.li.utils.JsonUtils;
 import com.li.vo.AnimalInfo;
@@ -24,9 +23,9 @@ import java.util.Map;
 public class AnimalController {
     @Autowired
     public IAnimalService iAnimalService;
-    @Autowired
+   /* @Autowired
     public RdfOwlDao rdfOwlDao;
-
+*/
     @RequestMapping("/queryClassLevel")
     public void spinnerName(String name, HttpServletResponse response) throws IOException {
         iAnimalService.spinnerName(name, response);
@@ -183,6 +182,21 @@ public class AnimalController {
             map.put("result", "删除成功");
             //传给前台json数据
             String json = JsonUtils.getString(map);
+            System.out.println(json);
+            response.setContentType("text/javascript;charset=utf-8");
+            response.getWriter().write(json);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @RequestMapping("/getTpo8")
+    public void getTpo8(HttpServletRequest request, HttpServletResponse response) {
+        try {
+            System.out.println("========================");
+
+            String json = JsonUtils.getString(iAnimalService.getTpo8());
             System.out.println(json);
             response.setContentType("text/javascript;charset=utf-8");
             response.getWriter().write(json);

@@ -4,6 +4,7 @@ import com.li.entities.AnimalVisit;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 public interface AnimalVisitMybatisDao {
     /**
@@ -18,4 +19,10 @@ public interface AnimalVisitMybatisDao {
 
     //更新到动物访问量
     public void updateAnimalVisit(AnimalVisit animalVisit);
+
+    //统计访问量进行排序
+    public List<Map> queryAnimalSumVisit();
+
+
 }
+

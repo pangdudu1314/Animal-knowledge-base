@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Stream;
 
+import com.li.entities.AnimalVisit;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.io.StringDocumentSource;
 import org.semanticweb.owlapi.model.AddAxiom;
@@ -38,6 +39,7 @@ import org.semanticweb.owlapi.model.RemoveAxiom;
 import org.semanticweb.owlapi.util.AutoIRIMapper;
 import org.semanticweb.owlapi.util.OWLEntityRemover;
 import org.semanticweb.owlapi.util.PriorityCollection;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import uk.ac.manchester.cs.owl.owlapi.OWLClassAssertionAxiomImpl;
 import uk.ac.manchester.cs.owl.owlapi.OWLClassImpl;
@@ -410,9 +412,10 @@ public class RdfOwlDao {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
-/*  public static void main(String[] str) {
+ /*public static void main(String[] str) {
     RdfOwlDao rdfOwlDao = new RdfOwlDao();
     //查询
     //System.out.println(rdfOwlDao.getIndividualInfo("稚科"));
@@ -422,9 +425,9 @@ public class RdfOwlDao {
     //删除\
     //rdfOwlDao.removeIndividualInfo("黑鹇",RdfOwlDao.INDIVIDUAL_LINK,"similarity","测试");
     //修改
-     rdfOwlDao.updateIndividualInfo("黑鹇",RdfOwlDao.INDIVIDUAL_PROPERTY,"image",null,"测试11");
+     //rdfOwlDao.updateIndividualInfo("黑鹇",RdfOwlDao.INDIVIDUAL_PROPERTY,"image",null,"测试11");
     //查询级联关系
-    System.out.println(rdfOwlDao.queryLink("鸟类"));
+    //System.out.println(rdfOwlDao.queryLink("鸟类"));
     //查询稚科下面的动物
      //System.out.println(rdfOwlDao.queryIndividualsType("矮脚鸡"));;
     //添加测试个体挂在稚科下面
@@ -437,7 +440,6 @@ public class RdfOwlDao {
     //rdfOwlDao.addClass("动物", "两栖动物");
     //删除类关系
    // rdfOwlDao.removeClass("动物", "两栖动物");
-
   }*/
 
 }

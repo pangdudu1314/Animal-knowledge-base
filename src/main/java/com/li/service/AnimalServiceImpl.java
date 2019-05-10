@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Service("iAnimalService")
 public class AnimalServiceImpl implements IAnimalService {
@@ -152,4 +153,25 @@ public class AnimalServiceImpl implements IAnimalService {
 
         return result;
     }
+
+    @Override
+    public List<AnimalInfo> getTpo8() {
+        List<Map>  listTemp=animalVisitMybatisDao.queryAnimalSumVisit();
+        List<AnimalInfo> result=new ArrayList<AnimalInfo>();
+
+        for(Map map:listTemp){
+            String name=map.get("animal_name").toString();
+            try{
+                AnimalInfo animalInfo= animalDao.selectAllInfo(name);
+                result.add(animalInfo);
+            }catch (Exception e){
+
+            }
+
+        }
+        return result;
+    }
+
+
+
 }
