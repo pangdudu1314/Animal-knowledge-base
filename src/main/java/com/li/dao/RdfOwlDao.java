@@ -55,6 +55,8 @@ public class RdfOwlDao {
 
     //文件路径
     public static final String FILE_PATH = "d://dongwuku.rdf";
+    //个体科目
+    public static final String INDIVIDUAL_TYPE = "0";
     //个体属性
     public static final String INDIVIDUAL_PROPERTY = "1";
     //个体关系
@@ -199,6 +201,12 @@ public class RdfOwlDao {
                 // Finally, add the axiom to our ontology and save
                 AddAxiom addAxiomChange = new AddAxiom(o, assertion);
                 m.applyChange(addAxiomChange);
+            } else if (INDIVIDUAL_TYPE.equals(type)) {//科目
+                //个体关系
+                OWLClass typeClass = df.getOWLClass(DONGWU + "#", value);
+                OWLAxiom assertion = df.getOWLClassAssertionAxiom(typeClass, individual);
+                AddAxiom addAxiomChange = new AddAxiom(o, assertion);
+                m.applyChange(addAxiomChange);
             }
             //将本地信息保存到文件
             File output = new File(FILE_PATH);
@@ -237,6 +245,13 @@ public class RdfOwlDao {
                 OWLIndividual linkIndividual = df.getOWLNamedIndividual(DONGWU + "#", value);
                 OWLObjectPropertyAssertionAxiom assertion = df
                         .getOWLObjectPropertyAssertionAxiom(linkProperty, individual, linkIndividual);
+                //删除操作
+                RemoveAxiom removeAxiomChange = new RemoveAxiom(o, assertion);
+                //执行变更
+                m.applyChange(removeAxiomChange);
+            } else if (INDIVIDUAL_TYPE.equals(type)) {
+                OWLClass typeClass = df.getOWLClass(DONGWU + "#", value);
+                OWLAxiom assertion = df.getOWLClassAssertionAxiom(typeClass, individual);
                 //删除操作
                 RemoveAxiom removeAxiomChange = new RemoveAxiom(o, assertion);
                 //执行变更
@@ -415,7 +430,7 @@ public class RdfOwlDao {
 
     }
 
- /*public static void main(String[] str) {
+ public static void main(String[] str) {
     RdfOwlDao rdfOwlDao = new RdfOwlDao();
     //查询
     //System.out.println(rdfOwlDao.getIndividualInfo("稚科"));
@@ -437,9 +452,9 @@ public class RdfOwlDao {
     //删除个体
    //  rdfOwlDao.removeIndividualInfo("测试");
     //添加类关系
-    //rdfOwlDao.addClass("动物", "两栖动物");
+    rdfOwlDao.addClass("动物", "两栖动物");
     //删除类关系
    // rdfOwlDao.removeClass("动物", "两栖动物");
-  }*/
+  }
 
 }

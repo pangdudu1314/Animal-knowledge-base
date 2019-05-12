@@ -25,6 +25,22 @@
             <filter-name>characterEncodingFilter</filter-name>
             <url-pattern>/*</url-pattern>
         </filter-mapping>
+
+    <filter>
+        <filter-name>SessionFilter</filter-name>
+        <filter-class>com.li.filter.LoginFilter</filter-class>
+        <init-param>
+            <param-name>filterUrl</param-name><!-- 需要对那些请求做过滤,多个用;隔开 -->
+            <param-value>/animalCheck/gotoIndex</param-value>
+        </init-param>
+
+    </filter>
+    <filter-mapping>
+        <filter-name>SessionFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
     
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>

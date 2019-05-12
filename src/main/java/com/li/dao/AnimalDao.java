@@ -22,7 +22,7 @@ public class AnimalDao {
     RdfOwlDao rdfOwlDao = new RdfOwlDao();
 
     //查询所有信息
-    public AnimalInfo selectAllInfo(String name) throws UnsupportedEncodingException {
+    public AnimalInfo selectAllInfo(String name){
         AnimalInfo animalInfo = new AnimalInfo();
         animalInfo.setName(name);
         Map<String, List<String>> mapListInfo = rdfOwlDao.getIndividualInfo(name);
@@ -77,7 +77,7 @@ public class AnimalDao {
         return animalInfo;
     }
 
-    public void spinner(String name, HttpServletResponse resp) throws IOException {
+    public void spinner(String name, HttpServletResponse resp)  {
         List<Map<String, String>> resultList = new ArrayList<Map<String, String>>();//不懂
 
         if (name != null && !name.equals("")) {//name!="" 字符串判断是都相等或者不相等，不是这么判断的
@@ -110,8 +110,13 @@ public class AnimalDao {
         }
         String json = JsonUtils.getString(resultList);
         System.out.println(json);
-        resp.setContentType("text/javascript;charset=utf-8");
-        resp.getWriter().write(json);
+        try{
+            resp.setContentType("text/javascript;charset=utf-8");
+            resp.getWriter().write(json);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     public void spinnerKe(String name, HttpServletResponse resp) throws IOException {
@@ -131,4 +136,7 @@ public class AnimalDao {
         rdfOwlDao.updateIndividualInfo(name,RdfOwlDao.INDIVIDUAL_PROPERTY,"image",null,image);
         rdfOwlDao.updateIndividualInfo(name,RdfOwlDao.INDIVIDUAL_PROPERTY,"intro",null,intro);
     }
+    public void updateAnimal(String name,String type,String field,String oldValue,String value){
+        rdfOwlDao.updateIndividualInfo(name,type,field,oldValue,value);
+     }
 }

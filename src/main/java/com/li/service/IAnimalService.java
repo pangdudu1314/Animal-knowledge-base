@@ -23,4 +23,10 @@ public interface IAnimalService {
     public List<String> queryAnimalVisit(String name);
 
     public List<AnimalInfo> getTpo8();
+
+    /**
+     * 从百度获取动物信息，并保存到rdf文件中
+     * @param animalInfos
+     */
+    public void getAnimalFromBaidu2Drf(List<AnimalInfo> animalInfos);
 }

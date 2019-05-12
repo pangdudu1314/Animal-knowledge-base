@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间应该是接口的包名+接口名-->
+<mapper namespace="com.li.dao.AnimalCheckMybatisDao">
+
+    <insert id="addAnimalCheck">
+        insert into animal_check(id,animal_name,data_from,status,animal_image,animal_intro)
+        VALUE (#{id},#{animalName},#{dataFrom},#{status},#{animalImage},#{animalIntro})
+    </insert>
+
+    <select id="getAnimalCheckCount"  resultType="int">
+select count(1) _count from animal_check
+    </select>
+    <select id="getAnimalChecks" resultType="com.li.entities.AnimalCheck">
+select id,animal_name as animalName,data_from as dataFrom,status ,animal_image as animalImage,animal_intro as animalIntro from animal_check
+order by status desc  limit #{start},#{size}
+    </select>
+    <update id="updateAnimalCheckStatus" >
+update animal_check set status ='已处理' where id=#{id}
+    </update>
+</mapper>

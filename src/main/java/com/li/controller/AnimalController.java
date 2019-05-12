@@ -1,6 +1,7 @@
 package com.li.controller;
 
 import com.li.service.IAnimalService;
+import com.li.utils.Config;
 import com.li.utils.JsonUtils;
 import com.li.vo.AnimalInfo;
 import net.sf.json.JSONArray;
@@ -219,7 +220,7 @@ public class AnimalController {
                 //原来上传的 文件，也需要删除掉，因为已经先上传了图片，再添加的动物，动物没添加上，图片是不是需要删除呢？
                 //但是动物没上传成功
                 //一般都是需要做一下删除的，我修改一下动物名称，不换图片，就不能上传了吗，必须换图片吗？对不对,所以要删除原来上传的图片
-                String absolutePath = "E:\\git\\Animal-knowledge-base\\src\\main\\webapp\\images";
+                String absolutePath = Config.ABSOLUTE_PATH;
                 File existFile = new File(absolutePath + File.separator + file);
                 existFile.delete();
             } else {
