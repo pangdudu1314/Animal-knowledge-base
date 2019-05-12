@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="${ctx}/js/jquery-easyui-1.7.0/demo/demo.css">
     <script type="text/javascript" src="${ctx}/js/jquery-easyui-1.7.0/jquery.min.js"></script>
     <script type="text/javascript" src="${ctx}/js/jquery-easyui-1.7.0/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="${ctx}/js/jquery-easyui-1.7.0/locale/easyui-lang-zh_CN.js"></script>
 </head>
 <body>
 <table id="dg" class="easyui-datagrid" title="动物列表" style="width:100%;height:500px"
@@ -88,16 +89,14 @@ var rows=$("#dg").datagrid("getRows");
             url:"${ctx}/animalCheck/updateCheckAnimal?id="+clickId,
 
           onSubmit: function(){
-              //关闭对话框
-            $('#dlg').dialog('close')
-            //重新查询
-            $('#dg').datagrid({
-              url:'${ctx}/animalCheck/getAminalCheck'
 
-            });
           },
       success:function(data){
         alert("保存成功")
+        //关闭对话框
+        $('#dlg').dialog('close')
+        //重新加载数据
+        $('#dg').datagrid('reload');
       }
     });
     }

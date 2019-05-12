@@ -43,6 +43,7 @@ public class AnimalCheckServiceImpl implements IAnimalCheckService {
       rdfOwlDao.addClass(kemuPath[i],kemuPath[i+1]);
     }
     rdfOwlDao.updateIndividualInfo(name,RdfOwlDao.INDIVIDUAL_TYPE,"CLASS_",null,kemuPath[kemuPath.length-1]);
+    //更新表字段状态为已处理
     animalCheckMybatisDao.updateAnimalCheckStatus(id);
   }
 }

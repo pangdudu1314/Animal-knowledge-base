@@ -41,6 +41,7 @@
     <center>
         <a href="${ctx}/queryClass/queryAnimal" class="shitu-btn">查询</a>
         <a href="${ctx}/queryClass/updateAnimal"  class="shitu-btn">修改</a>
+        <a href="${ctx}/animalCheck/gotoIndex" target="_parent" class="shitu-btn">管理员</a>
     </center>
 </div>
 </body>
