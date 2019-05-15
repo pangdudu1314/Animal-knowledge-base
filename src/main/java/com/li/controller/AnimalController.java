@@ -4,6 +4,7 @@ import com.li.service.IAnimalService;
 import com.li.utils.Config;
 import com.li.utils.JsonUtils;
 import com.li.vo.AnimalInfo;
+import com.li.vo.AnimalTree;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,42 +28,16 @@ public class AnimalController {
    /* @Autowired
     public RdfOwlDao rdfOwlDao;
 */
-
-    /**
-     *
-     * @param name
-     * @param response
-     * @throws IOException
-     *
-     * 动物名称查询
-     */
-
     @RequestMapping("/queryClassLevel")
     public void spinnerName(String name, HttpServletResponse response) throws IOException {
         iAnimalService.spinnerName(name, response);
     }
 
-    /**
-     *
-     * @param name
-     * @param response
-     * @throws IOException
-     *动物科目查询
-     */
     @RequestMapping("/queryClassLevel1")
     public void spinnerKe(String name, HttpServletResponse response) throws IOException {
         iAnimalService.spinnerKe(name, response);
     }
 
-    /**
-     *
-     * @param name
-     * @param request
-     * @param response
-     * @return
-     * @throws UnsupportedEncodingException
-     * 查询动物信息
-     */
     @RequestMapping("/selectAdmin")
     public String selectAdmin(String name, HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
         JSONArray nodes = new JSONArray();
@@ -170,15 +145,13 @@ public class AnimalController {
         return "tupianchaxun";
     }
 
-    /**
-     *
-     * @param name
-     * @param request
-     * @param response
-     * @return
-     * @throws IOException
-     * 编辑动物信息
-     */
+    @RequestMapping("/systemDiagram")
+    public String systemDiagram(HttpServletRequest request, HttpServletResponse response){
+        AnimalTree animalTree= iAnimalService.systemDiagram();
+        request.setAttribute("animalTree",JsonUtils.getString(animalTree));
+        return "systemDiagram";
+    }
+
     @RequestMapping("/bianji")
     public String bianji(String name, HttpServletRequest request, HttpServletResponse response) throws IOException {
 
@@ -190,14 +163,6 @@ public class AnimalController {
         return "bianji";
     }
 
-    /**
-     *
-     * @param name
-     * @param file
-     * @param intro
-     * @param response
-     * 更新动物信息
-     */
     @RequestMapping("/updateAnimalMethod")
     public void updateAnimalMethod(String name, String file, String intro, HttpServletResponse response) {
         try {
@@ -217,13 +182,7 @@ public class AnimalController {
 
     }
 
-    /**
-     *
-     * @param name
-     * @param request
-     * @param response
-     * 删除动物信息
-     */
+
     @RequestMapping("/deleteAnimalMethod")
     public void deleteAnimalMethod(String name, HttpServletRequest request, HttpServletResponse response) {
         try {
@@ -241,16 +200,11 @@ public class AnimalController {
 
     }
 
-    /**
-     *
-     * @param request
-     * @param response
-     *动物访问量排行榜
-     */
     @RequestMapping("/getTpo8")
     public void getTpo8(HttpServletRequest request, HttpServletResponse response) {
         try {
             System.out.println("========================");
+
             String json = JsonUtils.getString(iAnimalService.getTpo8());
             System.out.println(json);
             response.setContentType("text/javascript;charset=utf-8");
@@ -261,16 +215,6 @@ public class AnimalController {
 
     }
 
-    /**
-     *
-     * @param kemu
-     * @param name
-     * @param file
-     * @param message
-     * @param request
-     * @param response
-     * 添加动物信息
-     */
     @RequestMapping("/addAnimalMethod")
     public void addAnimalMethod(String kemu, String name, String file, String message, HttpServletRequest request, HttpServletResponse response) {
         try {

@@ -14,6 +14,8 @@ import com.li.vo.AnimalInfo;
 import java.io.File;
 import java.io.InputStream;
 import java.util.HashMap;
+
+import com.li.vo.AnimalTree;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +42,7 @@ public class AnimalServiceImpl implements IAnimalService {
   private AnimalCheckMybatisDao animalCheckMybatisDao;
 
   @Override
-  public AnimalInfo selectName(String name) throws UnsupportedEncodingException {
+  public AnimalInfo selectName(String name){
     //创建AnimalInfo对象
     AnimalInfo animalInfo = animalDao.selectAllInfo(name);
     //判断如果animalInfo有图片信息，那么认为是访问的动物，需要更新动物访问量
@@ -83,7 +85,7 @@ public class AnimalServiceImpl implements IAnimalService {
 
   //查询动物或者科目信息
   private List<AnimalInfo> getAnimalInfos(List<AnimalInfo> animalInfos)
-      throws UnsupportedEncodingException {
+     {
     /*此处报错不知怎么修改
      * List<AnimalInfo> kindsQuery = new ArrayList<>()；*/
     List<AnimalInfo> kindsQuery = new ArrayList<AnimalInfo>();
@@ -105,7 +107,7 @@ public class AnimalServiceImpl implements IAnimalService {
   }
 
   @Override
-  public void spinnerName(String name, HttpServletResponse resp)   {
+  public void spinnerName(String name, HttpServletResponse resp)  {
     animalDao.spinner(name, resp);
   }
 
@@ -233,4 +235,33 @@ public class AnimalServiceImpl implements IAnimalService {
       }
     }
   }
+
+  @Override
+  public AnimalTree systemDiagram() {
+    AnimalTree animalTree= new AnimalTree();
+    animalTree.setName("动物");//动物层级
+    List<String> childNames_1= rdfOwlDao.queryLink(animalTree.getName());
+    for(int i=0;i<childNames_1.size();i++){
+      String childName_1=childNames_1.get(i);//鸟类层级
+      AnimalTree child_1= new AnimalTree();
+      child_1.setName(childName_1);
+      animalTree.addChild(child_1);
+      List<String> childNames_2= rdfOwlDao.queryLink(childName_1);
+      for(int j=0;j<childNames_2.size();j++){
+        String childName_2=childNames_2.get(j);//鸟类层级
+        AnimalTree child_2= new AnimalTree();
+        child_2.setName(childName_2);
+        child_1.addChild(child_2);
+        List<String> childNames_3 = rdfOwlDao.queryIndividualsByType(childName_2);
+        for(int k=0;k<childNames_3.size();k++){
+          String childName_3=childNames_3.get(k);//动物名称
+          AnimalTree child_3= new AnimalTree();
+          child_3.setName(childName_3);
+          child_2.addChild(child_3);
+        }
+      }
+    }
+    return animalTree;
+  }
+
 }

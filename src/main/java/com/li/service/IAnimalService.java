@@ -1,6 +1,7 @@
 package com.li.service;
 
 import com.li.vo.AnimalInfo;
+import com.li.vo.AnimalTree;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -14,9 +15,9 @@ public interface IAnimalService {
      * @return 动物详细信息或者类别信息
      */
     /*, HttpServletRequest req,*/
-    public AnimalInfo selectName(String name ) throws UnsupportedEncodingException;
-    public void spinnerName(String name,HttpServletResponse resp) throws IOException;
-    public void spinnerKe(String name,HttpServletResponse response) throws IOException;
+    public AnimalInfo selectName(String name )  ;
+    public void spinnerName(String name,HttpServletResponse resp)  ;
+    public void spinnerKe(String name,HttpServletResponse response) ;
     public void deleteAnimalByName(String name);
     public void addAnimal(AnimalInfo animalInfo,String type);
     public void updateAnimal(String name,String image,String intro);
@@ -29,4 +30,6 @@ public interface IAnimalService {
      * @param animalInfos
      */
     public void getAnimalFromBaidu2Drf(List<AnimalInfo> animalInfos);
+
+    public AnimalTree systemDiagram();
 }
