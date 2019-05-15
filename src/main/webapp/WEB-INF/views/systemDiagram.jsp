@@ -62,7 +62,7 @@
 
 </head>
 <body style="width:1300px;">
-<div id="main" style="width: 100%;height:100%;xiangdu"></div>
+<div id="main" style="width: 100%;height:100%;"></div>
 <script src="js/echarts.js"></script>
 <script src="js/jquery.min.js"></script>
 <script type="text/javascript">
@@ -120,8 +120,8 @@
                                     }
                                 },
                                 lineStyle: {
-                                    color: '#ccc',
-                                    type: 'broken' // 'curve'|'broken'|'solid'|'dotted'|'dashed'
+                                  // color: '#ccc',
+                                    type: 'curve' // 'curve'|'broken'|'solid'|'dotted'|'dashed'
 
                                 }
                             },
