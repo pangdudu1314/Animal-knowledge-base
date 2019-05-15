@@ -5,13 +5,10 @@ import com.li.service.IAnimalService;
 import com.li.utils.Config;
 import com.li.utils.JsonUtils;
 import com.li.vo.AnimalInfo;
-import java.util.ArrayList;
-import java.util.List;
-import jdk.nashorn.internal.ir.LiteralNode;
-import org.apache.commons.io.FileUtils;
-import org.apache.log4j.Logger;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +23,7 @@ import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 /**
  * 上传控制类
@@ -48,7 +43,7 @@ public class FileUploadController {
   public IAnimalService IAnimalService;
 
   /**
-   * 上传单个文件
+   *上传图片，识别动物信息。
    */
   @SuppressWarnings("rawtypes")
   @RequestMapping(value = "singleUpload", method = RequestMethod.POST)

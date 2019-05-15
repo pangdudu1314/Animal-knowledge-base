@@ -4,8 +4,8 @@
 <mapper namespace="com.li.dao.AnimalCheckMybatisDao">
 
     <insert id="addAnimalCheck">
-        insert into animal_check(id,animal_name,data_from,status,animal_image,animal_intro)
-        VALUE (#{id},#{animalName},#{dataFrom},#{status},#{animalImage},#{animalIntro})
+        insert into animal_check(id,animal_name,data_from,status,animal_image,animal_intro,admin_id)
+        VALUE (#{id},#{animalName},#{dataFrom},#{status},#{animalImage},#{animalIntro},#{adminid})
     </insert>
 
     <select id="getAnimalCheckCount"  resultType="int">

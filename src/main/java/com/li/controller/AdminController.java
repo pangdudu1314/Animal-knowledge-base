@@ -2,24 +2,15 @@ package com.li.controller;
 
 import com.li.entities.AdminUser;
 import com.li.service.IAdminService;
-import com.li.service.IAnimalService;
-import com.li.utils.Config;
-import com.li.utils.JsonUtils;
-import com.li.vo.AnimalInfo;
-import java.io.File;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
 
 @Controller
 @RequestMapping("/admin")
@@ -30,6 +21,16 @@ public class AdminController {
   @Autowired
   private IAdminService adminService;
 
+  /**
+   *
+   * @param username
+   * @param password
+   * @param request
+   * @param response
+   * @return
+   * @throws IOException
+   * 管理员登录
+   */
     @RequestMapping("/login")
     public String login(String username,String password,HttpServletRequest request,HttpServletResponse response) throws IOException {
       String username0000=(String)request.getSession().getAttribute("username0000");

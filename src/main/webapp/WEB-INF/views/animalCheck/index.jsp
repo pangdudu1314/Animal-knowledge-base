@@ -26,6 +26,7 @@
         <th data-options="field:'animalName',width:100">动物名称</th>
         <th data-options="field:'dataFrom',width:80,align:'right'">数据来源</th>
         <th data-options="field:'status',width:80,align:'right'">状态</th>
+        <th data-options="field:'photo',width:80,height:80,formatter:_showPhoto">动物图片</th>
         <th data-options="field:'animalIntro',width:600">动物介绍</th>
         <th data-options="field:'id',width:240,formatter:opAnimal">操作</th>
     </tr>
@@ -101,8 +102,19 @@ var rows=$("#dg").datagrid("getRows");
     });
     }
 
+    function _showPhoto(value,rows, index) {
+        if(value){
+            for(var i=0;i<rows.length;i++){
+                if(id==rows[i].id){
 
+                    return "<img src='"+rows[i].animalImage+"'style='width:80px;height:80px'";
+                }
+            }
 
+        }else {
+            return null
+        }
+    }
     function clearForm(){
       $('#ff').form('clear');
     }

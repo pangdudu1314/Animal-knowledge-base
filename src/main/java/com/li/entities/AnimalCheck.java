@@ -8,6 +8,16 @@ public class AnimalCheck {
   private String status;//已审核，未审核
   private String animalImage;
   private String animalIntro;
+  private String adminid;
+
+  public String getAdminid() {
+    return adminid;
+  }
+
+  public void setAdminid(String adminid) {
+    this.adminid = adminid;
+  }
+
   public String getId() {
     return id;
   }

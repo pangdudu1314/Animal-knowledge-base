@@ -1,15 +1,14 @@
 package com.li.service;
 
-import com.li.dao.AdminUserMybatisDao;
 import com.li.dao.AnimalCheckMybatisDao;
 import com.li.dao.RdfOwlDao;
-import com.li.entities.AdminUser;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Service("animalCheckService")
 public class AnimalCheckServiceImpl implements IAnimalCheckService {
@@ -22,7 +21,12 @@ public class AnimalCheckServiceImpl implements IAnimalCheckService {
   @Autowired
   private RdfOwlDao rdfOwlDao;
 
-
+  /**
+   *
+   * @param start
+   * @param size
+   * @return 动物审核
+   */
   @Override
   public Map getAnimalCheck(int start,int size) {
     //查询总数
@@ -35,6 +39,13 @@ public class AnimalCheckServiceImpl implements IAnimalCheckService {
     return map;
   }
 
+  /**
+   *
+   * @param id
+   * @param name
+   * @param kemu
+   *
+   */
   @Override
   public void updateAnimalImageFrom(String id,String name, String kemu) {
     String[]kemuPath=kemu.split("-");

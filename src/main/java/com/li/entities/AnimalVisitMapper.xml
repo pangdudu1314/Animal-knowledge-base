@@ -21,7 +21,7 @@
     </update>
 
     <select id="queryAnimalSumVisit" resultType="java.util.HashMap">
-        select animal_name,SUM(animal_visits) as sum_animal_visits FROM animal_visits GROUP BY animal_name ORDER BY SUM(animal_visits) DESC;
+        select animal_name,SUM(animal_visits) as sum_animal_visits FROM animal_visits GROUP BY animal_name ORDER BY SUM(animal_visits) DESC LIMIT 0, 8;
     </select>
 
 </mapper>

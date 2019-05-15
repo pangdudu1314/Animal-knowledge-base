@@ -8,7 +8,7 @@ import java.net.URL;
 
 public class ImageDownload {
 
-  //链接url下载图片
+  //链接url下载图片，从网站上下载图片
   public static String downloadPicture(String urlList, String imageName) {
     URL url = null;
     int imageNumber = 0;
