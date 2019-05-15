@@ -105,12 +105,12 @@ public class AnimalServiceImpl implements IAnimalService {
   }
 
   @Override
-  public void spinnerName(String name, HttpServletResponse resp) throws IOException {
+  public void spinnerName(String name, HttpServletResponse resp)   {
     animalDao.spinner(name, resp);
   }
 
   @Override
-  public void spinnerKe(String name, HttpServletResponse response) throws IOException {
+  public void spinnerKe(String name, HttpServletResponse response)  {
     animalDao.spinnerKe(name, response);
   }
 
