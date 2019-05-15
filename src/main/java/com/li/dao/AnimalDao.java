@@ -119,7 +119,7 @@ public class AnimalDao {
 
     }
 
-    public void spinnerKe(String name, HttpServletResponse resp) throws IOException {
+    public void spinnerKe(String name, HttpServletResponse resp) {
         spinner(name, resp);
     }
 
