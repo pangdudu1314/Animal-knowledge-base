@@ -217,6 +217,8 @@ public class AnimalServiceImpl implements IAnimalService {
           }
           animalInfo.setImage("images//" + animalInfo.getImage());
         }
+        rdfOwlDao.loadOWLOntology();
+
         rdfOwlDao.addIndividualInfo(animalInfo.getName(),"动物");
         rdfOwlDao.updateIndividualInfo(animalInfo.getName(),RdfOwlDao.INDIVIDUAL_PROPERTY,"image",null,animalInfo.getImage());
         rdfOwlDao.updateIndividualInfo(animalInfo.getName(),RdfOwlDao.INDIVIDUAL_PROPERTY,"intro",null,animalInfo.getIntro());
@@ -224,6 +226,8 @@ public class AnimalServiceImpl implements IAnimalService {
           String ss=similartys.get(j);
           rdfOwlDao.updateIndividualInfo(animalInfo.getName(),RdfOwlDao.INDIVIDUAL_LINK,"similarity",ss,ss);
         }
+        rdfOwlDao.saveOWLOntology();
+
         AnimalCheck animalCheck=new AnimalCheck();
         animalCheck.setId(IDRandomUtils.createRandomStr());
         animalCheck.setAnimalName(animalInfo.getName());
@@ -240,23 +244,30 @@ public class AnimalServiceImpl implements IAnimalService {
   public AnimalTree systemDiagram() {
     AnimalTree animalTree= new AnimalTree();
     animalTree.setName("动物");//动物层级
+    animalTree.setLevel(0);
+    rdfOwlDao.loadOWLOntology();
     List<String> childNames_1= rdfOwlDao.queryLink(animalTree.getName());
     for(int i=0;i<childNames_1.size();i++){
       String childName_1=childNames_1.get(i);//鸟类层级
       AnimalTree child_1= new AnimalTree();
       child_1.setName(childName_1);
+      child_1.setLevel(1);
       animalTree.addChild(child_1);
       List<String> childNames_2= rdfOwlDao.queryLink(childName_1);
       for(int j=0;j<childNames_2.size();j++){
         String childName_2=childNames_2.get(j);//鸟类层级
         AnimalTree child_2= new AnimalTree();
         child_2.setName(childName_2);
+        child_2.setLevel(2);
+
         child_1.addChild(child_2);
+
         List<String> childNames_3 = rdfOwlDao.queryIndividualsByType(childName_2);
         for(int k=0;k<childNames_3.size();k++){
           String childName_3=childNames_3.get(k);//动物名称
           AnimalTree child_3= new AnimalTree();
           child_3.setName(childName_3);
+          child_3.setLevel(3);
           child_2.addChild(child_3);
         }
       }

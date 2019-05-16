@@ -25,6 +25,7 @@ public class AnimalDao {
     public AnimalInfo selectAllInfo(String name){
         AnimalInfo animalInfo = new AnimalInfo();
         animalInfo.setName(name);
+        rdfOwlDao.loadOWLOntology();
         Map<String, List<String>> mapListInfo = rdfOwlDao.getIndividualInfo(name);
         //如果查询的动物名称不存在，那么结果也是0，科目也是0，怎么区分呢？
 
@@ -79,7 +80,7 @@ public class AnimalDao {
 
     public void spinner(String name, HttpServletResponse resp)  {
         List<Map<String, String>> resultList = new ArrayList<Map<String, String>>();//不懂
-
+        rdfOwlDao.loadOWLOntology();
         if (name != null && !name.equals("")) {//name!="" 字符串判断是都相等或者不相等，不是这么判断的
             //说明查询的是动物科目，比如稚科，雀科等
             List<String> list = rdfOwlDao.queryIndividualsByType(name);
@@ -124,19 +125,29 @@ public class AnimalDao {
     }
 
     public void deleteAnimalByName(String name) {
+        rdfOwlDao.loadOWLOntology();
         rdfOwlDao.removeIndividualInfo(name);
+        rdfOwlDao.saveOWLOntology();
     }
 
     public void addAnimal(AnimalInfo animalInfo, String type) {
+        rdfOwlDao.loadOWLOntology();
         rdfOwlDao.addIndividualInfo(animalInfo.getName(), type);
         rdfOwlDao.addIndividualInfo(animalInfo.getName(), RdfOwlDao.INDIVIDUAL_PROPERTY, "image", animalInfo.getImage());
         rdfOwlDao.addIndividualInfo(animalInfo.getName(), RdfOwlDao.INDIVIDUAL_PROPERTY, "intro", animalInfo.getIntro());
+        rdfOwlDao.saveOWLOntology();
     }
     public void updateAnimal(String name,String image,String intro){
+        rdfOwlDao.loadOWLOntology();
         rdfOwlDao.updateIndividualInfo(name,RdfOwlDao.INDIVIDUAL_PROPERTY,"image",null,image);
         rdfOwlDao.updateIndividualInfo(name,RdfOwlDao.INDIVIDUAL_PROPERTY,"intro",null,intro);
+        rdfOwlDao.saveOWLOntology();
+
     }
     public void updateAnimal(String name,String type,String field,String oldValue,String value){
+        rdfOwlDao.loadOWLOntology();
         rdfOwlDao.updateIndividualInfo(name,type,field,oldValue,value);
-     }
+        rdfOwlDao.saveOWLOntology();
+
+    }
 }

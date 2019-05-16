@@ -63,7 +63,11 @@ public class RdfOwlDao {
     public static final String INDIVIDUAL_LINK = "2";
     //OWLManager为owi api的管理类，
     OWLDataFactory df = OWLManager.getOWLDataFactory();
-    //本地引用
+
+    OWLOntology o=null;
+
+    OWLOntologyManager m =null;
+            //本地引用
     //每一个本地都有一个唯一标识  前缀和后缀拼在一起，正好和xml本体是一致的
 
     IRI DONGWU = IRI
@@ -99,24 +103,21 @@ public class RdfOwlDao {
     /**
      * 获取本体管理类
      */
-    public OWLOntologyManager create() {
-        //创建owl api的管理类
-        OWLOntologyManager m = OWLManager.createOWLOntologyManager();
-        //获取mapper映射
-        PriorityCollection<OWLOntologyIRIMapper> iriMappers = m.getIRIMappers();
-        //这行我也不懂，嘿嘿，官网就是这么个例子
-        iriMappers.add(new AutoIRIMapper(new File("materializedOntologies"), true));
-        return m;
-    }
+    public void loadOWLOntology() {
+        try{
+            //创建owl api的管理类
+            m = OWLManager.createOWLOntologyManager();
+            //获取mapper映射
+            PriorityCollection<OWLOntologyIRIMapper> iriMappers = m.getIRIMappers();
+            //这行我也不懂，嘿嘿，官网就是这么个例子
+            iriMappers.add(new AutoIRIMapper(new File("materializedOntologies"), true));
+            String content = readTxtFile(FILE_PATH);//读取动物信息 rdf内容
+            o= m.loadOntologyFromOntologyDocument(
+                    new StringDocumentSource(content));//将rdf内容进行加载管理，这样 wolapi就能知道里面有什么内容
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
-    /**
-     * 加载动物信息
-     */
-    private OWLOntology loadDongwu(OWLOntologyManager m)
-            throws OWLOntologyCreationException {
-        String content = readTxtFile(FILE_PATH);//读取动物信息 rdf内容
-        return m.loadOntologyFromOntologyDocument(
-                new StringDocumentSource(content));//将rdf内容进行加载管理，这样 wolapi就能知道里面有什么内容
     }
 
     /**
@@ -125,8 +126,7 @@ public class RdfOwlDao {
     public Map<String, List<String>> getIndividualInfo(String name) {
         Map<String, List<String>> map = new HashMap<String, List<String>>();
         try {
-            OWLOntologyManager m = create();//获取管理类
-            OWLOntology o = loadDongwu(m);//加载动物文件内容
+
             //查询数据
             OWLIndividual matthew = df.getOWLNamedIndividual(DONGWU + "#", name);//获得一个个体信息
             Set<OWLIndividualAxiom> qses = o.getAxioms(matthew);//查询这个个体信息
@@ -176,8 +176,7 @@ public class RdfOwlDao {
     public void addIndividualInfo(String individualName, String type, String fieldName,
                                   String value) {
         try {
-            OWLOntologyManager m = create();
-            OWLOntology o = loadDongwu(m);
+
             //个体信息
             OWLIndividual individual = df.getOWLNamedIndividual(DONGWU + "#", individualName);
             if (INDIVIDUAL_PROPERTY.equals(type)) {//属性
@@ -208,10 +207,7 @@ public class RdfOwlDao {
                 AddAxiom addAxiomChange = new AddAxiom(o, assertion);
                 m.applyChange(addAxiomChange);
             }
-            //将本地信息保存到文件
-            File output = new File(FILE_PATH);
-            IRI documentIRI2 = IRI.create(output);
-            m.saveOntology(o, documentIRI2);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -223,8 +219,7 @@ public class RdfOwlDao {
     public void removeIndividualInfo(String individualName, String type, String fieldName,
                                      String value) {
         try {
-            OWLOntologyManager m = create();
-            OWLOntology o = loadDongwu(m);
+
             //个体信息
             OWLIndividual individual = df.getOWLNamedIndividual(DONGWU + "#", individualName);
             if (INDIVIDUAL_PROPERTY.equals(type)) {
@@ -257,9 +252,7 @@ public class RdfOwlDao {
                 //执行变更
                 m.applyChange(removeAxiomChange);
             }
-            File output = new File(FILE_PATH);
-            IRI documentIRI2 = IRI.create(output);
-            m.saveOntology(o, documentIRI2);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -310,8 +303,7 @@ public class RdfOwlDao {
     public List<String> queryLink(String name) {
         List<String> resultList = new ArrayList<String>();
         try {
-            OWLOntologyManager m = create();
-            OWLOntology o = loadDongwu(m);
+
             OWLClass dfOWLClass = df.getOWLClass(DONGWU + "#", name);
             //查询父子结构数据
             Set<OWLSubClassOfAxiom> owlSubClassOfAxioms = o.getSubClassAxiomsForSuperClass(dfOWLClass);
@@ -331,8 +323,7 @@ public class RdfOwlDao {
     public List<String> queryIndividualsByType(String name) {
         List<String> resultList = new ArrayList<String>();
         try {
-            OWLOntologyManager m = create();
-            OWLOntology o = loadDongwu(m);
+
             Object[] oo = o.individualsInSignature().toArray();
             for (Object obj : oo) {
                 String nameTemp = ((OWLNamedIndividualImpl) obj).getIRI().getRemainder().get();
@@ -355,16 +346,13 @@ public class RdfOwlDao {
      */
     public void addIndividualInfo(String individualName, String type) {
         try {
-            OWLOntologyManager m = create();
-            OWLOntology o = loadDongwu(m);
+
             OWLClass typeClass = df.getOWLClass(DONGWU + "#", type);
             OWLIndividual linkIndividual = df.getOWLNamedIndividual(DONGWU + "#", individualName);
             OWLAxiom ax = df.getOWLClassAssertionAxiom(typeClass, linkIndividual);
             AddAxiom addAxiom = new AddAxiom(o, ax);
             m.applyChange(addAxiom);
-            File output = new File(FILE_PATH);
-            IRI documentIRI2 = IRI.create(output);
-            m.saveOntology(o, documentIRI2);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -375,8 +363,7 @@ public class RdfOwlDao {
      */
     public void removeIndividualInfo(String individualName) {
         try {
-            OWLOntologyManager m = create();
-            OWLOntology o = loadDongwu(m);
+
             OWLEntityRemover remover = new OWLEntityRemover(Collections.singleton(o));
 
             Object[] oo = o.individualsInSignature().toArray();
@@ -387,9 +374,7 @@ public class RdfOwlDao {
                 }
             }
             m.applyChanges(remover.getChanges());
-            File output = new File(FILE_PATH);
-            IRI documentIRI2 = IRI.create(output);
-            m.saveOntology(o, documentIRI2);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -397,16 +382,13 @@ public class RdfOwlDao {
 
     public void addClass(String type, String subType) {
         try {
-            OWLOntologyManager m = create();
-            OWLOntology o = loadDongwu(m);
+
             OWLClass clsType = df.getOWLClass(IRI.create(DONGWU + "#", type));
             OWLClass clsSubType = df.getOWLClass(IRI.create(DONGWU + "#", subType));
             OWLAxiom axiom = df.getOWLSubClassOfAxiom(clsSubType, clsType);
             AddAxiom addAxiom = new AddAxiom(o, axiom);
             m.applyChange(addAxiom);
-            File output = new File(FILE_PATH);
-            IRI documentIRI2 = IRI.create(output);
-            m.saveOntology(o, documentIRI2);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -414,17 +396,25 @@ public class RdfOwlDao {
 
     public void removeClass(String type, String subType) {
         try {
-            OWLOntologyManager m = create();
-            OWLOntology o = loadDongwu(m);
+
             OWLClass clsType = df.getOWLClass(IRI.create(DONGWU + "#", type));
             OWLClass clsSubType = df.getOWLClass(IRI.create(DONGWU + "#", subType));
             OWLAxiom axiom = df.getOWLSubClassOfAxiom(clsSubType, clsType);
             RemoveAxiom removeAxiom = new RemoveAxiom(o, axiom);
             m.applyChange(removeAxiom);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void saveOWLOntology(){
+        try{
             File output = new File(FILE_PATH);
             IRI documentIRI2 = IRI.create(output);
             m.saveOntology(o, documentIRI2);
-        } catch (Exception e) {
+        }catch (Exception e){
             e.printStackTrace();
         }
 

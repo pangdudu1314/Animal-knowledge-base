@@ -101,12 +101,12 @@
                         name: '树图',
                         type: 'tree',
                         orient: 'horizontal',  // vertical horizontal
-                        rootLocation: {x: 100, y: 230}, // 根节点位置  {x: 100, y: 'center'}
-                        nodePadding: 8,
+                        rootLocation: {x: 200, y: 350}, // 根节点位置  {x: 100, y: 'center'}
+                        nodePadding: 12,
                         layerPadding: 200,
                         hoverable: false,
                         roam: true,
-                        symbolSize: 6,
+                        symbolSize: 10,
                         itemStyle: {
                             normal: {
                                 color: '#4883b4',
@@ -116,7 +116,7 @@
                                     formatter: "{b}",
                                     textStyle: {
                                         color: '#000',
-                                        fontSize: 5
+                                        fontSize: 10
                                     }
                                 },
                                 lineStyle: {
@@ -140,6 +140,15 @@
                     }
                 ]
             };
+            var ecConfig = require('echarts/config');
+            myChart.on(ecConfig.EVENT.CLICK, focus)
+            function focus(param) {
+               // console.log(param);
+                if(param.data.level==2||param.data.level==3){
+                    window.location.href="${pageContext.request.contextPath}/queryClass/selectAdmin?name="+param.name;//取出名称进行查询
+                }
+
+            }
             myChart.setOption(option);
         }
     );</script>

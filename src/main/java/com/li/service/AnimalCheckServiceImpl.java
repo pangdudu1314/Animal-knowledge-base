@@ -49,11 +49,13 @@ public class AnimalCheckServiceImpl implements IAnimalCheckService {
   @Override
   public void updateAnimalImageFrom(String id,String name, String kemu) {
     String[]kemuPath=kemu.split("-");
+    rdfOwlDao.loadOWLOntology();
     for(int i=0;i<kemuPath.length-1;i++){
       //重复添加，不会造成问题，owlapi已经处理了重复问题了
       rdfOwlDao.addClass(kemuPath[i],kemuPath[i+1]);
     }
     rdfOwlDao.updateIndividualInfo(name,RdfOwlDao.INDIVIDUAL_TYPE,"CLASS_",null,kemuPath[kemuPath.length-1]);
+    rdfOwlDao.saveOWLOntology();
     //更新表字段状态为已处理
     animalCheckMybatisDao.updateAnimalCheckStatus(id);
   }
