@@ -58,9 +58,8 @@
 </head>
 <body>
 <div align="center">
-    <h1 style="color:#0000FF">动物领域多模态查询系统</h1>
     <form id="ff" method="post">
-        <table cellpadding="0" cellspacing="30" border="0">
+        <table cellpadding="0" cellspacing="10" border="0">
             <tr>
                 <td>动物名称:</td>
                 <td>

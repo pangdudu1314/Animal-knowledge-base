@@ -10,51 +10,64 @@
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
 
 <html>
-  <head>
+<head>
     <title>首页</title>
     <style type="text/css">
-      img{
-        width: 270px;
-        height: 400px;
-      }
-      iframe{
-        border:0;
-      }
+        img {
+            width: 270px;
+            height: 400px;
+        }
+
+        iframe {
+            border: 0;
+        }
     </style>
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
-  </head>
-  <body>
-    <iframe src="${ctx}/queryClass/gotoFrame" width="100%" height="400px"></iframe>
-    <div style="background-color: #cccccc">
-      <div id="imageShow"  style="width: 100%;height: 200px;" align="center">
+    <link rel="stylesheet" href="${ctx}/js/layui-v2.4.5/layui/css/layui.css" media="all">
+</head>
+<body>
+<div style="width: 100%;height:60px;background-color: #2F4056;">
+    <h1><p style="color:#0000FF;width: 400px;float: left;padding-top: 10px;padding-left: 10px;">
+        动物领域多模态知识库查询系统</p></h1>
+    <ul class="layui-nav layui-bg-cyan" style="float: left;width: 800px;">
+        <li class="layui-nav-item layui-this"><a href="${ctx}/home.jsp" target="frameName">首页</a></li>
+        <li class="layui-nav-item"><a href="${ctx}/queryClass/systemDiagram"  target="frameName">动物体系图</a></li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">查询</a>
+            <dl class="layui-nav-child">
+                <dd><a href="${ctx}/queryClass/wenzi" target="frameName">文字查询</a></dd>
+                <dd><a href="${ctx}/queryClass/tupian" target="frameName">图片查询</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">修改</a>
+            <dl class="layui-nav-child">
+                <dd><a href="${ctx}/queryClass/addAnimal" target="frameName">添加</a></dd>
+                <dd><a href="${ctx}/queryClass/deleteAnimal" target="frameName">删除</a></dd>
+            </dl>
+        </li>
 
-      <%--  <c:forEach items="${animalInfo.siblings}" var="item">
-          <div style="float: left;width: 82px;height: 100px;cursor: pointer;"  onclick="queryAnimal('${item.name}')">
-            <img src="${item.image}"  style="width: 80px;height: 80px;float: left">
-            <span style="height: 20px;width: 80px;float: left">${item.name}</span>
-          </div>
-        </c:forEach>--%>
-      </div>
-      <script>
-          $(document).ready(function(){
-              $.post("${ctx}/queryClass/getTpo8", {},
-                  function(data){
-                      data=JSON.parse(data);//把json字符串转化成json对象
-                      var html="";
-                      for(var i=0;i<data.length;i++){
-                          var  eachData=data[i];
-                          var name=eachData.name;
-                          var image=eachData.image;
-                          html=html+'<img src="'+image+'" onclick="queryAnimal(\''+name+'\')" alt="'+name+'">';
-                      }
-                      $("#imageShow").html(html);
-                  });
-          });
+        <li class="layui-nav-item"><a href="${ctx}/animalCheck/gotoIndex"  target="frameName">管理员</a></li>
+    </ul>
+</div>
+<iframe id="iframeid" name="frameName" src="${ctx}/home.jsp" width="100%"></iframe>
+<script src="${ctx}/js/layui-v2.4.5/layui/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+  $(document).ready(function(){
+    $("#iframeid").attr("height",$(window).height()-60)
+  });
 
-          function queryAnimal(name){
-              window.location.href = "${ctx}/queryClass/selectAdmin?name=" + encodeURI(name);
-          }
-      </script>
-    </div>
-  </body>
+
+  layui.use('element', function(){
+    var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+    //监听导航点击
+    element.on('nav(demo)', function(elem){
+      //console.log(elem)
+      layer.msg(elem.text());
+    });
+  });
+</script>
+</body>
 </html>

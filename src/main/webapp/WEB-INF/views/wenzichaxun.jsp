@@ -27,11 +27,11 @@
             if(s2==""||s2==undefined){
 
               /* window.parent.location.href = "/queryClass/queryClassLevel?queryClassLevel=1&name=" + s1;*/
-                window.parent.location.href = "${ctx}/queryClass/selectAdmin?name=" + encodeURI(s1);
+                window.location.href = "${ctx}/queryClass/selectAdmin?name=" + encodeURI(s1);
             }else {
               /*  window.parent.location.href = "/tuxiangzhanshi/selectAdmin?name=" + s2;*/
                /* window.parent.location.href = /queryClass/queryClassLevel?queryClassLevel=2&name=" + s2;*/
-                window.parent.location.href = "${ctx}/queryClass/selectAdmin?name=" + encodeURI(s2);
+                window.location.href = "${ctx}/queryClass/selectAdmin?name=" + encodeURI(s2);
             }
         }
         /*function kemu() {

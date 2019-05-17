@@ -46,7 +46,7 @@
     <script src="${ctx}/js/ajaxfileupload.js" type="text/javascript"></script>
 </head>
 <body>
-<div style="margin:50px">
+<div style="">
     <h1>
         <center>
             <font style="color:#0000FF">动物图像搜索</font>
@@ -60,7 +60,7 @@
 
         </div>
         <div id="preview">
-            <img src="" alt="" id="imghead5" height="200" width="200" />
+            <img src="${ctx}/images/nopic.jpg" alt="" id="imghead5" height="200" width="200" />
 
         </div>
         <div id="animalInfoId" style="float: left;width: 100%;">

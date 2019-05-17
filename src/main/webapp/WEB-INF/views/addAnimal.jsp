@@ -69,7 +69,7 @@
                         <td></td>
                         <td>
                             <div id="preview">
-                                <img src="" alt="" id="imghead5" height="200" width="200"/>
+                                <img src="${ctx}/images/nopic.jpg" alt="" id="imghead5" height="200" width="200"/>
                             </div>
                         </td>
                     </tr>

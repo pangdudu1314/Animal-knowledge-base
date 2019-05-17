@@ -56,9 +56,7 @@
 
 </head>
 <body  style="width:1300px;">
-<center>
-    <h1 style="color:#0000FF">动物领域多模态知识库的查询系统</h1>
-</center>
+
 
 <div id="main" style="width: 800px;height:500px;float:left;"></div>
 <script src="js/echarts.js"></script>
@@ -309,7 +307,7 @@
             alert("动物的所属科目不能修改");
         }else{
 
-            window.parent.location.href="${pageContext.request.contextPath}/queryClass/bianji?name="+encodeURI(name);
+            window.location.href="${pageContext.request.contextPath}/queryClass/bianji?name="+encodeURI(name);
         }
     }
 

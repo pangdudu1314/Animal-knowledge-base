@@ -101,7 +101,7 @@
                         name: '树图',
                         type: 'tree',
                         orient: 'horizontal',  // vertical horizontal
-                        rootLocation: {x: 200, y: 350}, // 根节点位置  {x: 100, y: 'center'}
+                        rootLocation: {x: 200, y: 200}, // 根节点位置  {x: 100, y: 'center'}
                         nodePadding: 12,
                         layerPadding: 200,
                         hoverable: false,
