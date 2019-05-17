@@ -236,6 +236,8 @@ public class AnimalServiceImpl implements IAnimalService {
         animalCheck.setAnimalImage(animalInfo.getImage());
         animalCheck.setAnimalIntro(animalInfo.getIntro());
         animalCheckMybatisDao.addAnimalCheck(animalCheck);
+      }else{
+        animalInfo.setImage(animalInfoRdf.getImage());
       }
     }
   }

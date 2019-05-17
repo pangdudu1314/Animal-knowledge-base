@@ -10,6 +10,16 @@ public class AnimalInfo {
     List<AnimalInfo> similartys;//相似度
     String image;//图片信息
     String intro;//描述
+
+    public String getScore() {
+        return score;
+    }
+
+    public void setScore(String score) {
+        this.score = score;
+    }
+
+    String score;//相似度，百度识图返回信息使用
     List<AnimalInfo> siblings;//雉科动物的图片
 
     public List<AnimalInfo> getSiblings() {

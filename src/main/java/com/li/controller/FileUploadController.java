@@ -75,10 +75,8 @@ public class FileUploadController {
 
         //将文件放到一个文件目录中去
         FileUtils.copyInputStreamToFile(inputFile, saveFile);
-        AnimalInfo animalInfo = getBaiduAnimalInfo(originalFilename);
-        //查询一下要查看的动物是否在rdf中存在，如果存在则不处理，不存在，进行添加到到审核表中
+        List<AnimalInfo> animalInfo = getBaiduAnimalInfo(originalFilename);
 
-        //   response.setCharacterEncoding("UTF-8");
         response.getWriter().write(JsonUtils.getString(animalInfo));
       }
       logger.info("save file success");
@@ -134,9 +132,8 @@ public class FileUploadController {
 
   }
 
-  public AnimalInfo getBaiduAnimalInfo(String originalFilename) throws Exception {
-    AnimalInfo animalInfo = new AnimalInfo();
-    // 初始化一个AipImageClassifyClient
+  public List<AnimalInfo> getBaiduAnimalInfo(String originalFilename) throws Exception {
+     // 初始化一个AipImageClassifyClient
     AipImageClassify client = new AipImageClassify(APP_ID, API_KEY, SECRET_KEY);
 
     // 可选：设置网络连接参数
@@ -149,34 +146,25 @@ public class FileUploadController {
 
     DiskFileItemFactory factory = new DiskFileItemFactory();
     ServletFileUpload upload = new ServletFileUpload(factory);
-
     String filePath = Config.IMP_PATH+File.separator + originalFilename;
     File file = new File(filePath);
     InputStream input = new FileInputStream(file);
-
     byte[] byt = new byte[input.available()];
     input.read(byt);
     JSONObject res = client.animalDetect(byt, options);
-
     JSONArray result = (JSONArray) res.get("result");
-    if (result.length() > 0) {
-      //有数据，取第一个数据
-      JSONObject r = (JSONObject) result.get(0);
-      String name = r.get("name").toString();
-      String imageUrl = ((JSONObject) r.get("baike_info")).get("image_url").toString();
-      String description = ((JSONObject) r.get("baike_info")).get("description").toString();
-      animalInfo.setName(name);
-      animalInfo.setImage(imageUrl);
-      animalInfo.setIntro(description);
-    }
-
     List<AnimalInfo> animalInfos = new ArrayList<AnimalInfo>();
     if (result.length() > 0) {
       for (int i = 0; i < result.length(); i++) {
         JSONObject r = (JSONObject) result.get(i);
         String name = r.get("name").toString();
-        String imageUrl = ((JSONObject) r.get("baike_info")).get("image_url").toString();
-        String description = ((JSONObject) r.get("baike_info")).get("description").toString();
+        String score = r.get("score").toString();
+        String imageUrl = "";
+        String description = "";
+        if(r.get("baike_info")!=null){
+          imageUrl=((JSONObject) r.get("baike_info")).get("image_url").toString();
+          description=((JSONObject) r.get("baike_info")).get("description").toString();
+        }
         AnimalInfo animalInfoTemp=new AnimalInfo();
         animalInfoTemp.setName(name);
         if (i==0){
@@ -184,13 +172,13 @@ public class FileUploadController {
         }else{
           animalInfoTemp.setImage(imageUrl);
         }
+        animalInfoTemp.setScore(score);
         animalInfoTemp.setIntro(description);
         animalInfos.add(animalInfoTemp);
       }
       IAnimalService.getAnimalFromBaidu2Drf(animalInfos);
     }
-    return animalInfo;
-
+    return animalInfos;
   }
     /*public static void main(String []aa)throws Exception{
         FileUploadController fileUploadController=new FileUploadController();

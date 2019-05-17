@@ -40,7 +40,7 @@
         </h1>
         <center>
             <a href="${ctx}/queryClass/wenzi" class="shitu-btn">文字查询</a>
-            <a href="${ctx}/queryClass/tupian" class="shitu-btn">图片查询</a>
+            <a href="${ctx}/queryClass/tupian" target="_parent" class="shitu-btn">图片查询</a>
         </center>
     </div>
 </body>

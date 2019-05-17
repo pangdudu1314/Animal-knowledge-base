@@ -16,7 +16,31 @@
             /*background: url("images/beijingtupian.jpg") no-repeat 0 0;*/
             background-color: #ccc;
         }
-
+        table.hovertable {
+            font-family: verdana,arial,sans-serif;
+            width: 100%;
+            font-size:11px;
+            color:#333333;
+            border-width: 1px;
+            border-color: #999999;
+            border-collapse: collapse;
+        }
+        table.hovertable th {
+            background-color:#c3dde0;
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #a9c6c9;
+        }
+        table.hovertable tr {
+            background-color:#d4e3e5;
+        }
+        table.hovertable td {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #a9c6c9;
+        }
     </style>
     <script src="${ctx}/js/jquery.min.js" type="text/javascript"></script>
     <script src="${ctx}/js/ajaxfileupload.js" type="text/javascript"></script>
@@ -33,13 +57,26 @@
             <input name="evidence" onchange="uploadImg(this,'preview')" id="file"  type="file"/>
             <span class="dui" id="imgOrder_dui" style="display: none;"></span>
             <input  type="button" onclick="upload();" value="提交">
+
         </div>
         <div id="preview">
             <img src="" alt="" id="imghead5" height="200" width="200" />
 
         </div>
-        <div id="animalInfoId" style="float: left;width: 100px;"></div>
-        <%--<div id="animalInfoInfo" style="float: left;width: 300px;"></div>--%>
+        <div id="animalInfoId" style="float: left;width: 100%;">
+            <table class="hovertable">
+                <tr>
+                    <th width="100">动物名称</th><th width="100">相似度</th><th>图片</th><th>介绍</th>
+                </tr>
+                <tbody id="tbody">
+
+                </tbody>
+
+
+            </table>
+
+        </div>
+
     </center>
 </div>
 <script>
@@ -63,6 +100,9 @@
             reader.readAsDataURL(file.files[0]);
         }
     }
+    function gotoAnimal(animalName){
+      window.location.href="${pageContext.request.contextPath}/queryClass/selectAdmin?name="+animalName;
+    }
     function upload(){
         $.ajaxFileUpload
         (
@@ -74,9 +114,16 @@
                 success: function (data, status)  //服务器成功响应处理函数
                 {
                     console.log(data);
-                    $("#animalInfoId").html(data.name);
-                   /* $("#animalInfoInfo").html(data.intro);*/
-                    window.parent.location.href="${pageContext.request.contextPath}/queryClass/selectAdmin?name="+data.name;
+                  var html="";
+                    for(var i=0;i<data.length;i++){
+                      html=html+' <tr onmouseover="this.style.backgroundColor=\'#ffff66\';" onmouseout="this.style.backgroundColor=\'#d4e3e5\';">\n'
+                          + '<td><a href="javascript:void(0);" onclick="gotoAnimal(\''+data[i].name+'\');">'+data[i].name+'</a></td>' +
+                          '<td>'+data[i].score+'</td>' +
+                          '<td><img src="${ctx}/'+data[i].image+'"  onclick="gotoAnimal(\''+data[i].name+'\');" height="100" width="100" /></td>' +
+                          '<td>'+data[i].intro+'</td>\n'
+                          + '                </tr>';
+                    }
+$("#tbody").html(html);
 
                 },
                 error: function (data, status, e)//服务器响应失败处理函数
