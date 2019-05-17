@@ -39,7 +39,7 @@
         </center>
     </h1>
     <center>
-        <a href="${ctx}/queryClass/addAnimal" class="shitu-btn">添加动物</a>
+        <a href="${ctx}/queryClass/addAnimal" target="_parent" class="shitu-btn">添加动物</a>
         <a href="${ctx}/queryClass/deleteAnimal" class="shitu-btn">删除动物</a>
     </center>
 </div>

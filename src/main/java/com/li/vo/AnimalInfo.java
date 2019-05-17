@@ -10,6 +10,16 @@ public class AnimalInfo {
     List<AnimalInfo> similartys;//相似度
     String image;//图片信息
     String intro;//描述
+    String kemu;
+    public String getKemu() {
+        return kemu;
+    }
+
+    public void setKemu(String kemu) {
+        this.kemu = kemu;
+    }
+
+
 
     public String getScore() {
         return score;

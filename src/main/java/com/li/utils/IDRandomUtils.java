@@ -16,7 +16,7 @@ public class IDRandomUtils {
 		StringBuffer buffer = new StringBuffer();
 		Date date = new Date();
  		for (int i = 0; i < 30; i++) {
-			int num = (int) (Math.random() * 10);
+			int num = (int) (Math.random() * (str.length()-1));
 			buffer.append(str.substring(num, num + 1));
 		}
 		return buffer.toString();

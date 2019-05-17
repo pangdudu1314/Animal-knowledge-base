@@ -71,6 +71,8 @@ public class AnimalDao {
                         AnimalInfo siblings = new AnimalInfo();
                         siblings.setName(value);
                         animalInfo.addSibling(siblings);
+                    }else if (type.startsWith("CLASS_")) {
+                        animalInfo.setKemu(value);
                     }
                 }
             }

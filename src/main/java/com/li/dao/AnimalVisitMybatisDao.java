@@ -22,7 +22,8 @@ public interface AnimalVisitMybatisDao {
 
     //统计访问量进行排序
     public List<Map> queryAnimalSumVisit();
-
+    //删除动物访问量
+    public void deleteAnimalVisit(String name);
 
 }
 

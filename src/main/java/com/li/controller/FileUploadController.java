@@ -115,7 +115,7 @@ public class FileUploadController {
         File existFile = new File(Config.ABSOLUTE_PATH + File.separator + originalFilename);
         Map map = new HashMap();
         if (existFile.exists()) {
-          map.put("result", "文件已存在");
+          map.put("result", "文件已存在,请对文件重命名");
         } else {
           File saveFile = new File(Config.ABSOLUTE_PATH, originalFilename);
           //将文件放到一个文件目录中去

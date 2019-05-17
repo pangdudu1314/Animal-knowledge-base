@@ -8,6 +8,8 @@ public class AnimalCheck {
   private String status;//已审核，未审核
   private String animalImage;
   private String animalIntro;
+
+  private String kemu;
   private String adminid;
 
   public String getAdminid() {
@@ -67,5 +69,11 @@ public class AnimalCheck {
   }
 
 
+  public String getKemu() {
+    return kemu;
+  }
 
+  public void setKemu(String kemu) {
+    this.kemu = kemu;
+  }
 }

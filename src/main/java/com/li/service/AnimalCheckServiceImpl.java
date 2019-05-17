@@ -1,7 +1,10 @@
 package com.li.service;
 
 import com.li.dao.AnimalCheckMybatisDao;
+import com.li.dao.AnimalVisitMybatisDao;
 import com.li.dao.RdfOwlDao;
+import com.li.entities.AnimalCheck;
+import com.li.vo.AnimalInfo;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +20,12 @@ public class AnimalCheckServiceImpl implements IAnimalCheckService {
 
   @Autowired
   private AnimalCheckMybatisDao animalCheckMybatisDao;
+
+  @Autowired
+  public IAnimalService animalService;
+
+  @Autowired
+  public AnimalVisitMybatisDao animalVisitMybatisDao;
 
   @Autowired
   private RdfOwlDao rdfOwlDao;
@@ -58,5 +67,38 @@ public class AnimalCheckServiceImpl implements IAnimalCheckService {
     rdfOwlDao.saveOWLOntology();
     //更新表字段状态为已处理
     animalCheckMybatisDao.updateAnimalCheckStatus(id);
+  }
+
+  @Override
+  public boolean existUnCheckAnimal(String name) {
+    return animalCheckMybatisDao.existUnCheckAnimalCount(name)>0?true:false;
+  }
+
+  @Override
+  public void addAnimalCheck(AnimalCheck animalCheck) {
+    animalCheckMybatisDao.addAnimalCheck(animalCheck);
+  }
+
+  @Override
+  public void reviewAnimal(String id) {
+    //先查询动物审批信息
+    AnimalCheck animalCheck= animalCheckMybatisDao.getAnimalCheckById(id);
+    AnimalInfo animalInfo=new AnimalInfo();
+    animalInfo.setName(animalCheck.getAnimalName());
+    animalInfo.setImage(animalCheck.getAnimalImage());
+    animalInfo.setIntro(animalCheck.getAnimalIntro());
+    if("添加信息".equalsIgnoreCase(animalCheck.getDataFrom())){
+      animalService.addAnimal(animalInfo,animalCheck.getKemu());
+    }
+    if("删除信息".equalsIgnoreCase(animalCheck.getDataFrom())){
+      animalService.deleteAnimalByName(animalInfo.getName());
+      animalVisitMybatisDao.deleteAnimalVisit(animalInfo.getName());
+
+    }
+    if("修改信息".equalsIgnoreCase(animalCheck.getDataFrom())){
+      animalService.updateAnimal(animalInfo.getName(),animalInfo.getImage(),animalInfo.getIntro());
+    }
+    animalCheckMybatisDao.updateAnimalCheckStatus(id);
+
   }
 }
