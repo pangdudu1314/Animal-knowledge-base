@@ -18,7 +18,7 @@
     <script type="text/javascript" src="${ctx}/js/jquery-easyui-1.7.0/jquery.easyui.min.js"></script>
 </head>
 <body>
-<div style="margin:0 auto;width: 400px;height: 500px;">
+<div style="margin:0 auto;width: 400px;height: 500px;padding-top: 100px;">
     <div class="easyui-panel" title="用户登录" style="width:100%;max-width:400px;padding:30px 60px;">
         <form id="ff" method="post" action="${ctx}/admin/login">
             <div style="margin-bottom:20px">
