@@ -6,14 +6,15 @@ CREATE TABLE `animal_visits` (
 
 
 
-
 CREATE TABLE `animal_check` (
   `id` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `animal_name` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `data_from` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `status` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `animal_image` varchar(255) COLLATE utf8_bin DEFAULT NULL,
-  `animal_intro` varchar(4000) COLLATE utf8_bin DEFAULT NULL
+  `animal_intro` varchar(4000) COLLATE utf8_bin DEFAULT NULL,
+  `admin_id` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `kemu` varchar(255) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 
