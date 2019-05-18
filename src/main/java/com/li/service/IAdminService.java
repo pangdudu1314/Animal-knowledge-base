@@ -9,6 +9,6 @@ import java.util.Map;
 import javax.servlet.http.HttpServletResponse;
 
 public interface IAdminService {
-    public List<Map> queryUser(AdminUser adminUser);
+    public List<AdminUser> queryUser(AdminUser adminUser);
 
 }

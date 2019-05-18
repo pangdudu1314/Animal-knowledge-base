@@ -12,18 +12,30 @@
 select count(1) _count from animal_check
     </select>
     <select id="getAnimalChecks" resultType="com.li.entities.AnimalCheck">
-select id,animal_name as animalName,data_from as dataFrom,status ,animal_image as animalImage,animal_intro as animalIntro,kemu from animal_check
-order by status desc  limit #{start},#{size}
+SELECT
+	a.id,
+	animal_name AS animalName,
+	data_from AS dataFrom,
+	STATUS,
+	animal_image AS animalImage,
+	animal_intro AS animalIntro,
+	kemu,
+b.username as adminUser
+FROM
+	animal_check a LEFT JOIN admin_user b
+on a.admin_id=b.id
+ORDER BY
+	STATUS DESC limit #{start},#{size}
     </select>
     <select id="getAnimalCheckById" resultType="com.li.entities.AnimalCheck">
 select id,animal_name as animalName,data_from as dataFrom,status ,animal_image as animalImage,animal_intro as animalIntro,kemu from animal_check
 where  id=#{id}
     </select>
     <update id="updateAnimalCheckStatus" >
-update animal_check set status ='已处理' where id=#{id}
+update animal_check set status ='已处理',admin_id=#{adminid} where id=#{id}
     </update>
     <update id="updateAnimalCheckStatusBack" >
-update animal_check set status ='不通过' where id=#{id}
+update animal_check set status ='不通过',admin_id=#{adminid} where id=#{id}
     </update>
     <select id="existUnCheckAnimalCount"  resultType="int">
 select count(1) _count from animal_check where status='未处理' and animal_name=#{animalName}

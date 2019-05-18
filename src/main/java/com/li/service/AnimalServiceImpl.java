@@ -10,6 +10,7 @@ import com.li.utils.Config;
 import com.li.utils.DateUtils;
 import com.li.utils.IDRandomUtils;
 import com.li.utils.ImageDownload;
+import com.li.utils.UserUtils;
 import com.li.vo.AnimalInfo;
 import java.io.File;
 import java.io.InputStream;
@@ -253,7 +254,7 @@ public class AnimalServiceImpl implements IAnimalService {
         animalCheck.setStatus("未处理");
         animalCheck.setAnimalImage(animalInfo.getImage());
         animalCheck.setAnimalIntro(animalInfo.getIntro());
-        animalCheckMybatisDao.addAnimalCheck(animalCheck);
+         animalCheckMybatisDao.addAnimalCheck(animalCheck);
       }else{
         animalInfo.setImage(animalInfoRdf.getImage());
       }

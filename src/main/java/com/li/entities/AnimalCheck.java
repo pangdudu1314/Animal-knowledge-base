@@ -11,6 +11,16 @@ public class AnimalCheck {
 
   private String kemu;
   private String adminid;
+  private String adminUser;
+  public String getAdminUser() {
+    return adminUser;
+  }
+
+  public void setAdminUser(String adminUser) {
+    this.adminUser = adminUser;
+  }
+
+
 
   public String getAdminid() {
     return adminid;

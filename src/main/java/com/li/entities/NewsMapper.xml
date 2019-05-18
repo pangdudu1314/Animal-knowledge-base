@@ -9,6 +9,6 @@
        select * from news where type='2' order by time desc limit 0,5
     </select>
   <insert id="addNews" parameterType="com.li.entities.News">
-    insert into news(id,type,news,time,theme)values(#{id},#{type},#{news},#{time, jdbcType=TIMESTAMP},#{theme});
+    insert into news(id,type,news,time,theme,admin_id)values(#{id},#{type},#{news},#{time, jdbcType=TIMESTAMP},#{theme},#{adminId});
   </insert>
 </mapper>

@@ -4,7 +4,7 @@
 <!--命名空间应该是接口的包名+接口名-->
 <mapper namespace="com.li.dao.AdminUserMybatisDao">
 
-  <select id="queryUser" resultType="java.util.HashMap">
+  <select id="queryUser" resultType="com.li.entities.AdminUser">
    select * from admin_user t where t.username=#{username} and t.password=#{password}
  </select>
 </mapper>

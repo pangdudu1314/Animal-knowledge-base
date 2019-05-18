@@ -45,10 +45,11 @@ public class AdminController {
           AdminUser adminUser=new AdminUser();
           adminUser.setUsername(username);
           adminUser.setPassword(password);
-         List queryUser= adminService.queryUser(adminUser);
+          List<AdminUser>  queryUser= adminService.queryUser(adminUser);
          if(queryUser!=null&&queryUser.size()>0){
            //用户存在
            request.getSession().setAttribute("username0000",username);
+           request.getSession().setAttribute("userid0000",queryUser.get(0).getId());
            return "redirect:/animalCheck/gotoIndex";
          }else{
            //用户名密码错误

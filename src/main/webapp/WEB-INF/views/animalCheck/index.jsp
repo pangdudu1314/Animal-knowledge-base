@@ -32,13 +32,14 @@
         <th data-options="field:'status',width:80,align:'right'">状态</th>
         <th data-options="field:'photo',width:80,height:80,formatter:_showPhoto">动物图片</th>
         <th data-options="field:'animalIntro',width:600">动物介绍</th>
+        <th data-options="field:'adminUser',width:60">操作人</th>
         <th data-options="field:'id',width:240,formatter:opAnimal">操作</th>
     </tr>
     </thead>
 </table>
 
 <div id="dlg" class="easyui-dialog" data-options="closed:true" title="动物信息"
-     style="width:800px;height:600px;padding:10px">
+     style="width:800px;height:400px;padding:10px">
     <form id="ff" method="post">
         <div style="margin-bottom:10px">
             <input class="easyui-textbox" name="animalName" style="width:100%"

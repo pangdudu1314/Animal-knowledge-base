@@ -35,7 +35,7 @@ public class AdminServiceImpl implements IAdminService {
 
 
   @Override
-  public List<Map> queryUser(AdminUser adminUser) {
+  public List<AdminUser> queryUser(AdminUser adminUser) {
     return adminUserMybatisDao.queryUser(adminUser);
   }
 

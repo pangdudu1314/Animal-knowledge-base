@@ -38,4 +38,5 @@
             <value>utf-8</value>
         </property>
     </bean>
+    <bean class="com.li.utils.UserUtils"></bean>
 </beans>

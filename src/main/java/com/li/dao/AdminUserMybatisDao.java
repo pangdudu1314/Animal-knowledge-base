@@ -8,7 +8,7 @@ import java.util.Map;
 public interface AdminUserMybatisDao {
 
     //添加待审核
-    public List<Map> queryUser(AdminUser adminUser);
+    public List<AdminUser> queryUser(AdminUser adminUser);
 
 
 }

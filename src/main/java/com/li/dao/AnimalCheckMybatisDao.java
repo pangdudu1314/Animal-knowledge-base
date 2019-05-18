@@ -12,8 +12,8 @@ public interface AnimalCheckMybatisDao {
     public void addAnimalCheck(AnimalCheck animalCheck);
     public int getAnimalCheckCount();
     public List<AnimalCheck> getAnimalChecks(@Param("start")int start,@Param("size")int size);
-    public  void updateAnimalCheckStatus(String id);
-    public  void updateAnimalCheckStatusBack(String id);
+    public  void updateAnimalCheckStatus(@Param("adminid")String adminid,@Param("id")String id);
+    public  void updateAnimalCheckStatusBack(@Param("adminid")String adminid,@Param("id")String id);
     public  AnimalCheck getAnimalCheckById(String id);
     public  int existUnCheckAnimalCount(String animalName);
 }

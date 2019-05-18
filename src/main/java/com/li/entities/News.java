@@ -5,9 +5,18 @@ import java.util.Date;
 public class News {
   private String id;
   private String type;//1 国内   2  国际
-  private String news;
+  private String news;//内容
   private Date time;
   private String theme;//主题
+  private String adminId;
+
+  public String getAdminId() {
+    return adminId;
+  }
+
+  public void setAdminId(String adminId) {
+    this.adminId = adminId;
+  }
 
   public String getId() {
     return id;

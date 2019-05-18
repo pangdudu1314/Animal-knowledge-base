@@ -43,7 +43,7 @@ public class FileUploadController {
   public IAnimalService IAnimalService;
 
   /**
-   *上传图片，识别动物信息。
+   * 上传图片，识别动物信息。
    */
   @SuppressWarnings("rawtypes")
   @RequestMapping(value = "singleUpload", method = RequestMethod.POST)
@@ -104,7 +104,7 @@ public class FileUploadController {
         options.put("baike_num", "5");
 
         //上传文件路径
-         logger.info("save file path=" + Config.ABSOLUTE_PATH);
+        logger.info("save file path=" + Config.ABSOLUTE_PATH);
         File savedir = new File(Config.ABSOLUTE_PATH);
         //判断是否存在，不存在新建
         if (!savedir.exists()) {
@@ -133,7 +133,7 @@ public class FileUploadController {
   }
 
   public List<AnimalInfo> getBaiduAnimalInfo(String originalFilename) throws Exception {
-     // 初始化一个AipImageClassifyClient
+    // 初始化一个AipImageClassifyClient
     AipImageClassify client = new AipImageClassify(APP_ID, API_KEY, SECRET_KEY);
 
     // 可选：设置网络连接参数
@@ -146,7 +146,7 @@ public class FileUploadController {
 
     DiskFileItemFactory factory = new DiskFileItemFactory();
     ServletFileUpload upload = new ServletFileUpload(factory);
-    String filePath = Config.IMP_PATH+File.separator + originalFilename;
+    String filePath = Config.IMP_PATH + File.separator + originalFilename;
     File file = new File(filePath);
     InputStream input = new FileInputStream(file);
     byte[] byt = new byte[input.available()];
@@ -161,20 +161,26 @@ public class FileUploadController {
         String score = r.get("score").toString();
         String imageUrl = "";
         String description = "";
-        if(r.get("baike_info")!=null){
-          imageUrl=((JSONObject) r.get("baike_info")).get("image_url").toString();
-          description=((JSONObject) r.get("baike_info")).get("description").toString();
+        if (r.get("baike_info") != null) {
+          try {
+            imageUrl = ((JSONObject) r.get("baike_info")).get("image_url").toString();
+            description = ((JSONObject) r.get("baike_info")).get("description").toString();
+          } catch (Exception e) {
+            e.printStackTrace();
+          }
         }
-        AnimalInfo animalInfoTemp=new AnimalInfo();
+        AnimalInfo animalInfoTemp = new AnimalInfo();
         animalInfoTemp.setName(name);
-        if (i==0){
+        if (i == 0) {
           animalInfoTemp.setImage(originalFilename);
-        }else{
+        } else {
           animalInfoTemp.setImage(imageUrl);
         }
         animalInfoTemp.setScore(score);
         animalInfoTemp.setIntro(description);
-        animalInfos.add(animalInfoTemp);
+        if(description.trim().length()>0) {
+          animalInfos.add(animalInfoTemp);
+        }
       }
       IAnimalService.getAnimalFromBaidu2Drf(animalInfos);
     }

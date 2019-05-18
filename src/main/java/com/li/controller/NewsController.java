@@ -5,6 +5,7 @@ import com.li.service.IAnimalCheckService;
 import com.li.service.INewsService;
 import com.li.utils.IDRandomUtils;
 import com.li.utils.JsonUtils;
+import com.li.utils.UserUtils;
 import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
@@ -51,6 +52,7 @@ public class NewsController {
       news1.setTheme(theme);
       news1.setType(type);
       news1.setTime(new Date());
+      news1.setAdminId(UserUtils.getUserId());
       newsService.addNews(news1);
       String json = JsonUtils.getString(news1);
       System.out.println(json);

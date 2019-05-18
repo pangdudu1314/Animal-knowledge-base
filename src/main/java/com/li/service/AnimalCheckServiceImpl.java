@@ -4,6 +4,7 @@ import com.li.dao.AnimalCheckMybatisDao;
 import com.li.dao.AnimalVisitMybatisDao;
 import com.li.dao.RdfOwlDao;
 import com.li.entities.AnimalCheck;
+import com.li.utils.UserUtils;
 import com.li.vo.AnimalInfo;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,7 +67,7 @@ public class AnimalCheckServiceImpl implements IAnimalCheckService {
     rdfOwlDao.updateIndividualInfo(name,RdfOwlDao.INDIVIDUAL_TYPE,"CLASS_",null,kemuPath[kemuPath.length-1]);
     rdfOwlDao.saveOWLOntology();
     //更新表字段状态为已处理
-    animalCheckMybatisDao.updateAnimalCheckStatus(id);
+    animalCheckMybatisDao.updateAnimalCheckStatus(UserUtils.getUserId(),id);
   }
 
   @Override
@@ -98,13 +99,13 @@ public class AnimalCheckServiceImpl implements IAnimalCheckService {
     if("修改信息".equalsIgnoreCase(animalCheck.getDataFrom())){
       animalService.updateAnimal(animalInfo.getName(),animalInfo.getImage(),animalInfo.getIntro());
     }
-    animalCheckMybatisDao.updateAnimalCheckStatus(id);
+    animalCheckMybatisDao.updateAnimalCheckStatus(UserUtils.getUserId(),id);
 
   }
 
   @Override
   public void reviewbackAnimal(String id) {
-    animalCheckMybatisDao.updateAnimalCheckStatusBack(id);
+    animalCheckMybatisDao.updateAnimalCheckStatusBack(UserUtils.getUserId(),id);
 
   }
 }
