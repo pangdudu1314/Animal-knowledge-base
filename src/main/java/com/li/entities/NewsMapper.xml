@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间应该是接口的包名+接口名-->
+<mapper namespace="com.li.dao.NewsMybatisDao">
+    <select id="getNews5" resultType="com.li.entities.News">
+       select * from news where type='1' order by time desc limit 0,5
+    </select>
+    <select id="getWroldNews5" resultType="com.li.entities.News">
+       select * from news where type='2' order by time desc limit 0,5
+    </select>
+  <insert id="addNews" parameterType="com.li.entities.News">
+    insert into news(id,type,news,time,theme)values(#{id},#{type},#{news},#{time, jdbcType=TIMESTAMP},#{theme});
+  </insert>
+</mapper>

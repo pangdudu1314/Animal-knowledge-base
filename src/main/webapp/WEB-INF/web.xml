@@ -32,7 +32,7 @@
         <filter-class>com.li.filter.LoginFilter</filter-class>
         <init-param>
             <param-name>filterUrl</param-name><!-- 需要对那些请求做过滤,多个用;隔开 -->
-            <param-value>/animalCheck/gotoIndex</param-value>
+            <param-value>/animalCheck/gotoIndex;/news/gotoAddNews</param-value>
         </init-param>
 
     </filter>

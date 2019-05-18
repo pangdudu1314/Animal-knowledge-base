@@ -33,7 +33,7 @@ public class AnimalCheckController {
   @RequestMapping("/getAminalCheck")
   public void getAminalCheck(int page, int rows, HttpServletRequest request,
       HttpServletResponse response) throws IOException {
-    Map map = animalCheckService.getAnimalCheck((page-1)*rows+1, rows);
+    Map map = animalCheckService.getAnimalCheck((page-1)*rows, rows);
     try {
       String json = JsonUtils.getString(map);
       System.out.println(json);
@@ -63,6 +63,20 @@ public class AnimalCheckController {
     try {
       Map map = new HashMap();
       animalCheckService.reviewAnimal(id);
+      //传给前台json数据
+      String json = JsonUtils.getString(map);
+      System.out.println(json);
+      response.setContentType("text/javascript;charset=utf-8");
+      response.getWriter().write(json);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+  @RequestMapping("/reviewbackAnimal")
+  public void reviewbackAnimal(String id, HttpServletRequest request, HttpServletResponse response) {
+    try {
+      Map map = new HashMap();
+      animalCheckService.reviewbackAnimal(id);
       //传给前台json数据
       String json = JsonUtils.getString(map);
       System.out.println(json);

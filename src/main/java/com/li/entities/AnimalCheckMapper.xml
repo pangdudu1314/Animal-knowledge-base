@@ -22,6 +22,9 @@ where  id=#{id}
     <update id="updateAnimalCheckStatus" >
 update animal_check set status ='已处理' where id=#{id}
     </update>
+    <update id="updateAnimalCheckStatusBack" >
+update animal_check set status ='不通过' where id=#{id}
+    </update>
     <select id="existUnCheckAnimalCount"  resultType="int">
 select count(1) _count from animal_check where status='未处理' and animal_name=#{animalName}
     </select>

@@ -40,7 +40,7 @@ public class AnimalCheckServiceImpl implements IAnimalCheckService {
   public Map getAnimalCheck(int start,int size) {
     //查询总数
     int total = animalCheckMybatisDao.getAnimalCheckCount();
-    List rows=animalCheckMybatisDao.getAnimalChecks(start-1,size);
+    List rows=animalCheckMybatisDao.getAnimalChecks(start,size);
     //分页查询
     Map map=new HashMap();
     map.put("total",total);
@@ -99,6 +99,12 @@ public class AnimalCheckServiceImpl implements IAnimalCheckService {
       animalService.updateAnimal(animalInfo.getName(),animalInfo.getImage(),animalInfo.getIntro());
     }
     animalCheckMybatisDao.updateAnimalCheckStatus(id);
+
+  }
+
+  @Override
+  public void reviewbackAnimal(String id) {
+    animalCheckMybatisDao.updateAnimalCheckStatusBack(id);
 
   }
 }

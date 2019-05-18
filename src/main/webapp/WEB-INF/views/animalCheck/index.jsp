@@ -79,7 +79,8 @@
       if (row.dataFrom == "图片识图") {
         return "<a href=\"javascript:void(0);\" onclick=\"editAnimal('" + val + "');\">编辑</a>\n";
       } else {
-        return "<a href=\"javascript:void(0);\" onclick=\"reviewAnimal('" + val + "');\">审核</a>\n";
+        return "<a href=\"javascript:void(0);\" onclick=\"reviewAnimal('" + val + "');\">审核通过</a>&nbsp;&nbsp;" +
+            "<a href=\"javascript:void(0);\" onclick=\"reviewbackAnimal('" + val + "');\">审核不通过</a>";
       }
     }
 
@@ -87,6 +88,15 @@
 
   function reviewAnimal(id) {
     $.post("${ctx}/animalCheck/reviewAnimal", {id:id},
+        function(data){
+          alert("审批成功")
+          //重新加载数据
+          $('#dg').datagrid('reload');
+        });
+
+  }
+  function reviewbackAnimal(id) {
+    $.post("${ctx}/animalCheck/reviewbackAnimal", {id:id},
         function(data){
           alert("审批成功")
           //重新加载数据

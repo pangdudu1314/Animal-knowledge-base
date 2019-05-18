@@ -13,8 +13,7 @@
     <title>添加动物</title>
     <style type="text/css">
         body {
-            background-color: #ccc;
-            margin: 0;
+             margin: 0;
             padding: 0;
         }
     </style>
@@ -31,9 +30,7 @@
 </head>
 <body>
 <div>
-    <div style="margin:20px 0;"></div>
-    <div class="easyui-panel" title="添加动物" style="width:800px">
-        <div style="padding:10px 60px 20px 60px">
+     <div class="easyui-panel" title="添加动物" style="width:100%">
             <form id="ff" method="post">
                 <table cellpadding="5">
                     <tr>
@@ -85,7 +82,6 @@
                 <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">提交</a>
                 <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">清空</a>
             </div>
-        </div>
     </div>
     <script>
         function uploadImg(file, imgNum) {

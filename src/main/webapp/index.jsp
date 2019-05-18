@@ -13,10 +13,6 @@
 <head>
     <title>首页</title>
     <style type="text/css">
-        img {
-            width: 270px;
-            height: 400px;
-        }
 
         iframe {
             border: 0;
@@ -27,7 +23,7 @@
 </head>
 <body>
 <div style="width: 100%;height:60px;background-color: #2F4056;">
-    <h1><p style="color:#0000FF;width: 400px;float: left;padding-top: 10px;padding-left: 10px;">
+    <h1><p style="color:white;width: 400px;float: left;padding-top: 10px;padding-left: 10px;">
         动物领域多模态知识库查询系统</p></h1>
     <ul class="layui-nav layui-bg-cyan" style="float: left;width: 800px;">
         <li class="layui-nav-item layui-this"><a href="${ctx}/home.jsp" target="frameName">首页</a></li>
@@ -46,11 +42,16 @@
                 <dd><a href="${ctx}/queryClass/deleteAnimal" target="frameName">删除</a></dd>
             </dl>
         </li>
-
-        <li class="layui-nav-item"><a href="${ctx}/animalCheck/gotoIndex"  target="frameName">管理员</a></li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">管理员</a>
+            <dl class="layui-nav-child">
+                <dd><a href="${ctx}/animalCheck/gotoIndex"  target="frameName">审核数据</a></dd>
+                <dd><a href="${ctx}/news/gotoAddNews" target="frameName">添加新闻</a></dd>
+            </dl>
+        </li>
     </ul>
 </div>
-<iframe id="iframeid" name="frameName" src="${ctx}/home.jsp" width="100%"></iframe>
+<iframe id="iframeid" name="frameName" src="${ctx}/home.jsp" width="100%" style="background-color: #FFFFFF"></iframe>
 <script src="${ctx}/js/layui-v2.4.5/layui/layui.js" charset="utf-8"></script>
 <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
 <script>

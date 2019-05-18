@@ -44,7 +44,7 @@
     </script>
     <link rel="stylesheet" type="text/css" href="${ctx}/js/jquery-easyui-1.7.0/themes/default/easyui.css">
 </head>
-<body style="margin-top: 100px; background-color: #cccccc">
+<body style="margin-top: 100px;">
 <div>
     <h1 style="color:#0000FF;text-align:center; width: 100%;">动物名称和所属科目搜索</h1>
     <div style="width: 100%;height:50px;">

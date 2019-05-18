@@ -24,4 +24,10 @@ public interface IAnimalCheckService {
       */
      public void reviewAnimal(String id);
 
+     /**
+      * 审批动物信息不通过
+      * @param id
+      */
+     public void reviewbackAnimal(String id);
+
 }

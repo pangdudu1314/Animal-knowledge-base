@@ -24,8 +24,7 @@
     <style type="text/css">
         body {
             /*  background: url("images/beijingtupian.jpg");*/
-            background-color: #ccc;
-        }
+         }
 
         #main {
             /*background: url("images/beijingtupian.jpg");*/
