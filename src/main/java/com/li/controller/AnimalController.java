@@ -190,7 +190,11 @@ public class AnimalController {
         animalCheck.setAnimalName(name);
         animalCheck.setDataFrom("修改信息");
         animalCheck.setStatus("未处理");
-        animalCheck.setAnimalImage("images//" + file);
+        if(file!=null&&file.trim().length()>0){
+          animalCheck.setAnimalImage("images//" + file);
+        }else{
+          animalCheck.setAnimalImage(animalInfo.getImage());
+        }
         animalCheck.setAnimalIntro(intro);
         animalCheck.setKemu(animalInfo.getKemu());
         animalCheckService.addAnimalCheck(animalCheck);
