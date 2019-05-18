@@ -23,3 +23,13 @@ CREATE TABLE `admin_user` (
   `password` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+CREATE TABLE `news` (
+  `id` varchar(255) COLLATE utf8_bin NOT NULL,
+  `theme` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `news` varchar(8000) COLLATE utf8_bin DEFAULT NULL,
+  `time` datetime DEFAULT NULL,
+  `type` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
