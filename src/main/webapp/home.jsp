@@ -24,8 +24,7 @@
         .newstitle{
             color: #FC9F05;
             font-size: 12px;
-            height: 20px;
-            background: -webkit-linear-gradient(left, #CDE7FC , #F9FCFF,#FFFFFF); /* Safari 5.1 - 6.0 */
+             background: -webkit-linear-gradient(left, #CDE7FC , #F9FCFF,#FFFFFF); /* Safari 5.1 - 6.0 */
             background: -o-linear-gradient(right, #CDE7FC , #F9FCFF,#FFFFFF);/* Opera 11.1 - 12.0 */
             background: -moz-linear-gradient(right, #CDE7FC , #F9FCFF,#FFFFFF); /* Firefox 3.6 - 15 */
             background: linear-gradient(to right,  #CDE7FC , #F9FCFF,#FFFFFF); /* 标准的语法 */
