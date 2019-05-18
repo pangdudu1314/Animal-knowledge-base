@@ -78,7 +78,25 @@ public class AnimalServiceImpl implements IAnimalService {
       List<AnimalInfo> siblingsQuery = getAnimalInfos(siblings);
       //相似信息，重新赋值
       animalInfo.setSiblings(siblingsQuery);
+    }
+    //根据动物种类，再次查询同科动物
+    String type=animalInfo.getKemu();
+    rdfOwlDao.loadOWLOntology();
+    List<String> siblingNames = rdfOwlDao.queryIndividualsByType(type);
+    for(String  sn:siblingNames){
+      AnimalInfo snAnimalInfo = animalDao.selectAllInfo(sn);
+      animalInfo.addSibling(snAnimalInfo);
+    }
+    if(animalInfo.getSimilartys()!=null){
+      while(animalInfo.getSimilartys().size()>8){
+        animalInfo.getSimilartys().remove(0);
+      }
+    }
 
+    if(animalInfo.getSiblings()!=null){
+      while(animalInfo.getSiblings().size()>8){
+        animalInfo.getSiblings().remove(0);
+      }
     }
     return animalInfo;
   }

@@ -39,11 +39,20 @@ public class AnimalInfo {
     public void setSiblings(List<AnimalInfo> siblings) {
         this.siblings = siblings;
     }
-    public void addSibling(AnimalInfo siblings) {
+    public void addSibling(AnimalInfo sibling) {
         if (this.siblings == null) {
             this.siblings = new ArrayList<AnimalInfo>();
         }
-        this.siblings.add(siblings);
+        String name=sibling.getName();
+        boolean exist=false;
+        for(AnimalInfo a:this.siblings){
+            if(a.getName().equalsIgnoreCase(name)){
+                exist=true;
+            }
+        }
+        if(!exist){
+            this.siblings.add(sibling);
+        }
     }
     @Override
     public String toString() {

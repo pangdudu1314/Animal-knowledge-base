@@ -160,6 +160,7 @@ public class RdfOwlDao {
                 }
             }
         } catch (Exception e) {
+            System.out.println("ERROE.name="+name);
             e.printStackTrace();
         }
         return map;

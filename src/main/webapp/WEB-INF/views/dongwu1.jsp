@@ -312,7 +312,7 @@
     }
 
     function  queryAnimal(name){
-        window.parent.location.href="${pageContext.request.contextPath}/queryClass/selectAdmin?name="+encodeURI(name);
+        window.location.href="${pageContext.request.contextPath}/queryClass/selectAdmin?name="+encodeURI(name);
     }
 </script>
 </body>

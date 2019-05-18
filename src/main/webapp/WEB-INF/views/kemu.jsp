@@ -56,11 +56,7 @@
 
 </head>
 <body  style="width:1300px;">
-<center>
-    <h1 style="color:#0000FF">动物领域多模态知识库的查询系统</h1>
-</center>
-
-<div id="main" style="width: 100%;height:100%;xiangdu"></div>
+<div id="main" style="width: 100%;height:500px;"></div>
 <script src="js/echarts.js"></script>
 <script src="js/jquery.min.js"></script>
 <script type="text/javascript">
@@ -158,7 +154,7 @@
                         minRadius : 30,
                         maxRadius : 50,
                         gravity: 0.1,
-                        scaling: 1.5,
+                        scaling: 1,
                         roam: 'move',
                        /* roam:'scale',*/
                         nodes:${nodes},
