@@ -14,8 +14,7 @@
     <style type="text/css">
         body{
             /*background: url("images/beijingtupian.jpg") no-repeat 0 0;*/
-            background-color: #ccc;
-        }
+         }
         table.hovertable {
             font-family: verdana,arial,sans-serif;
             width: 100%;
