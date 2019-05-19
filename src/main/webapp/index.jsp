@@ -57,7 +57,7 @@
     </ul>
 </div>
 <iframe id="iframeid" name="frameName" src="${ctx}/home.jsp" width="100%" style="background-color: #FFFFFF"></iframe>
-<div style="width: 500px;margin: 0 auto;color: #999;font-size: 12px"> 版权所有 李林杰       Copyright©毕业设计 (2019-2019)</div>
+<div style="width: 300px;margin: 0 auto;color: #999;font-size: 12px"> 版权所有 李林杰       Copyright©毕业设计 (2019-2019)</div>
 <script src="${ctx}/js/layui-v2.4.5/layui/layui.js" charset="utf-8"></script>
 <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
 <script>

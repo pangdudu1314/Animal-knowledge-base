@@ -57,7 +57,7 @@
     <script src="${ctx}/js/ajaxfileupload.js" type="text/javascript"></script>
 </head>
 <body>
-<div align="center">
+<div class="easyui-panel" title="编辑动物" style="width:100%">
     <form id="ff" method="post">
         <table cellpadding="0" cellspacing="10" border="0">
             <tr>
@@ -86,18 +86,18 @@
             <tr>
                 <td>动物介绍：</td>
                 <td>
-                <textarea id="intro" name="intro" style="width: 300px;height:200px;">
+                <textarea id="intro" name="intro" style="width: 300px;height:100px;">
 
                     ${animalInfo.intro}
                 </textarea>
                 </td>
             </tr>
-            <tr>
-                <td><input id="submitView1" onclick="update();" type="button" name="sub" value="提交"/></td>
-                <td align="center"><a href="${pageContext.request.contextPath}/index.jsp" class="shitu-btn">返回</a></td>
-            </tr>
+
         </table>
     </form>
+    <div style="text-align:center;padding:5px">
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">提交</a>
+     </div>
 </div>
 
 
@@ -125,7 +125,7 @@
 
     }
 
-    function update() {
+    function submitForm() {
         var name = $("#name").val();
         var file = $("#file").val();
         var intro = $("#intro").val();
