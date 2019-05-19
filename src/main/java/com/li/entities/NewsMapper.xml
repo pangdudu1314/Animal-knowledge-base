@@ -11,4 +11,14 @@
   <insert id="addNews" parameterType="com.li.entities.News">
     insert into news(id,type,news,time,theme,admin_id)values(#{id},#{type},#{news},#{time, jdbcType=TIMESTAMP},#{theme},#{adminId});
   </insert>
+  <select id="getNews" resultType="com.li.entities.News">
+       select * from news where id=#{id}
+    </select>
+  <select id="getNewsCount"  resultType="int">
+select count(1) _count from news where type=#{type}
+    </select>
+  <select id="getNewsPage" resultType="com.li.entities.News">
+       select * from news where type=#{type} order by time desc limit #{start},#{row}
+    </select>
+
 </mapper>

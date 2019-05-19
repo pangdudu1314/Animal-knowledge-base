@@ -13,5 +13,10 @@ public interface NewsMybatisDao {
 
   public void addNews(News news);
 
+  public News getNews(String id);
+
+  public int getNewsCount(String type);
+  public List<News> getNewsPage(@Param("type")String type,@Param("start")int start,@Param("row")int row);
+
 }
 

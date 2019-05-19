@@ -29,10 +29,44 @@ public class NewsController {
 
 
   @RequestMapping("/getnews")
-  public void getAminalCheck(String type, HttpServletRequest request,
+  public void getnews(String type, HttpServletRequest request,
       HttpServletResponse response) throws IOException {
     try {
-      List<News> newsList =newsService.getTpo5(type);
+      List<News> newsList = newsService.getTpo5(type);
+      for (int i = 0; i < newsList.size(); i++) {
+        News newsTemp = newsList.get(i);
+        if (newsTemp.getNews().length() > 150) {
+          newsTemp.setNews(newsTemp.getNews().substring(0, 150) + "......");
+        }
+        if (newsTemp.getTheme().length() > 50) {
+          newsTemp.setTheme(newsTemp.getTheme().substring(0, 50) + "...");
+        }
+      }
+
+      String json = JsonUtils.getString(newsList);
+      System.out.println(json);
+      response.setContentType("text/javascript;charset=utf-8");
+      response.getWriter().write(json);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+
+  @RequestMapping("/getnewsPage")
+  public void getnewsPage(String type, int page, int rows, HttpServletRequest request,
+      HttpServletResponse response) throws IOException {
+    try {
+      List<News> newsList = newsService.getTpo5(type);
+      for (int i = 0; i < newsList.size(); i++) {
+        News newsTemp = newsList.get(i);
+        if (newsTemp.getNews().length() > 50) {
+          newsTemp.setNews(newsTemp.getNews().substring(0, 50) + "......");
+        }
+        if (newsTemp.getTheme().length() > 50) {
+          newsTemp.setTheme(newsTemp.getTheme().substring(0, 50) + "...");
+        }
+      }
+
       String json = JsonUtils.getString(newsList);
       System.out.println(json);
       response.setContentType("text/javascript;charset=utf-8");
@@ -43,12 +77,13 @@ public class NewsController {
   }
 
   @RequestMapping("/addNews")
-  public void addNews(String theme,String type,String news, HttpServletRequest request,
+  public void addNews(String theme, String type, String news, HttpServletRequest request,
       HttpServletResponse response) throws IOException {
     try {
-      News news1=new News();
+      News news1 = new News();
       news1.setId(IDRandomUtils.createRandomStr());
-      news1.setNews(news);
+      news1.setNews(news.replace("\r\n", "<br/>").replace(" ", "&nbsp;")
+          .replace("\t", "&nbsp;&nbsp;&nbsp;&nbsp;"));
       news1.setTheme(theme);
       news1.setType(type);
       news1.setTime(new Date());
@@ -61,6 +96,26 @@ public class NewsController {
     } catch (Exception e) {
       e.printStackTrace();
     }
+  }
+
+  @RequestMapping("/gotoNewDetail")
+  public String gotoNewDetail(String id, HttpServletRequest request,
+      HttpServletResponse response) throws IOException {
+    request.setAttribute("news", newsService.getNews(id));
+    return "news/newsDetail";
+  }
+
+  @RequestMapping("/gotoNewList")
+  public String gotoNewList(String type, HttpServletRequest request,
+      HttpServletResponse response) throws IOException {
+    request.setAttribute("typeEn", type);
+    if("1".equalsIgnoreCase(type)){
+      request.setAttribute("typeCn", "国内");
+    }else{
+      request.setAttribute("typeCn", "国际");
+    }
+    return "news/list";
+
   }
 
   @RequestMapping("/gotoAddNews")

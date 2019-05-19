@@ -24,6 +24,7 @@ public class NewsServiceImpl implements INewsService {
   private NewsMybatisDao newsMybatisDao;
   @Override
   public List<News> getTpo5(String type) {
+
     if("1".equalsIgnoreCase(type)){
       return newsMybatisDao.getNews5();
     }else{
@@ -33,7 +34,24 @@ public class NewsServiceImpl implements INewsService {
   }
 
   @Override
+  public Map getPage(String type, int page, int size) {
+    //查询总数
+    int total =newsMybatisDao.getNewsCount(type);
+    List rows=newsMybatisDao.getNewsPage(type,page,size);
+    //分页查询
+    Map map=new HashMap();
+    map.put("total",total);
+    map.put("rows",rows);
+    return map;
+  }
+
+  @Override
   public void addNews(News news) {
     newsMybatisDao.addNews(news);
+  }
+
+  @Override
+  public News getNews(String id) {
+    return newsMybatisDao.getNews(id);
   }
 }

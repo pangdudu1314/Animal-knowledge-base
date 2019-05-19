@@ -56,7 +56,7 @@
                     <td>新闻内容</td>
                     <td><input class="easyui-textbox" name="news"
                                data-options="multiline:true,required:true"
-                               style="height:200px"></input></td>
+                               style="height:300px;width: 800px;"></input></td>
                 </tr>
 
             </table>
