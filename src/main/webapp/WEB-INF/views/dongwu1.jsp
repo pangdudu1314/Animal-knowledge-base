@@ -23,14 +23,13 @@
     <style type="text/css">
         body{
             /*  background: url("images/beijingtupian.jpg");*/
-            background-color: #ccc;
-        }
+         }
         #main{
             /*background: url("images/beijingtupian.jpg");*/
             width: 1300px;
             height:400px;
             float:left;
-            background-color: #ccc;
+
         }
         *{
             margin:0;
@@ -205,7 +204,7 @@
             myChart.setOption(option);
         }
     );</script>
-<div id="" style="width:400px; float:left; background-color: #ccc;">
+<div id="" style="width:400px; float:left;">
 
     <div <%--style="float: left"--%>>
         <H2 style="color:#4b1cff; display: inline-block;" >相似动物</H2>

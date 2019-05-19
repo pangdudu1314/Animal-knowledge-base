@@ -14,7 +14,7 @@
     <title>Title</title>
     <style>
         body {
-            background-color: #cccccc;
+
         }
 
         .shitu-btn {

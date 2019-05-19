@@ -80,6 +80,10 @@ public class AnimalCheckServiceImpl implements IAnimalCheckService {
     animalCheckMybatisDao.addAnimalCheck(animalCheck);
   }
 
+  /**
+   * 审批通过函数
+   * @param id
+   */
   @Override
   public void reviewAnimal(String id) {
     //先查询动物审批信息
@@ -102,7 +106,7 @@ public class AnimalCheckServiceImpl implements IAnimalCheckService {
     animalCheckMybatisDao.updateAnimalCheckStatus(UserUtils.getUserId(),id);
 
   }
-
+  //审批不通过函数
   @Override
   public void reviewbackAnimal(String id) {
     animalCheckMybatisDao.updateAnimalCheckStatusBack(UserUtils.getUserId(),id);

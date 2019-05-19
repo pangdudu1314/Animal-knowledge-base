@@ -1,32 +1,38 @@
 package com.li.filter;
 
-import java.io.IOException;
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpServletResponseWrapper;
+import java.io.IOException;
 
 public class LoginFilter implements Filter {
   public FilterConfig config;
+
+
   @Override
   public void init(FilterConfig filterConfig) throws ServletException {
+    //初始化以后config存有数据。
     config = filterConfig;
   }
+
+  /**
+   *
+   * @param servletRequest
+   * @param servletResponse
+   * @param filterChain   过滤连
+   * @throws IOException
+   * @throws ServletException
+   */
 
   @Override
   public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse,
       FilterChain filterChain) throws IOException, ServletException {
     String logonStrings = config.getInitParameter("filterUrl");        // 登录登陆页面
     HttpServletRequest hrequest = (HttpServletRequest) servletRequest;
-
-    String url=hrequest.getServletPath();
+     String url=hrequest.getServletPath();
      if((";"+logonStrings+";").contains(";"+url+";")){
-      //需要拦截的url
+        //需要拦截的url
       //判断是否有登录信息
       String username=(String)hrequest.getSession().getAttribute("username0000");
       if(username==null){

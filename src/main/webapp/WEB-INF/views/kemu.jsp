@@ -23,14 +23,14 @@
     <style type="text/css">
         body{
           /*  background: url("images/beijingtupian.jpg");*/
-            background-color: #ccc;
+
         }
         #main{
             /*background: url("images/beijingtupian.jpg");*/
             width: 1300px;
             height:400px;
             float:left;
-            background-color: #ccc;
+
         }
         *{
             margin:0;

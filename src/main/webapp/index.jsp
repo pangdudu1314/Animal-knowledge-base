@@ -13,7 +13,10 @@
 <head>
     <title>首页</title>
     <style type="text/css">
-
+        body{
+            padding: 0;
+            margin: 0;
+        }
         iframe {
             border: 0;
         }
@@ -23,11 +26,13 @@
 </head>
 <body>
 <div style="width: 100%;height:60px;background-color: #2F4056;">
-    <h1><p style="color:white;width: 400px;float: left;padding-top: 10px;padding-left: 10px;">
-        动物领域多模态知识库查询系统</p></h1>
+    <h1>
+        <img src="images/logo.gif" style="width: 60px;float: left;height: 60px">
+        <p style="color:white;width: 400px;float: left;padding-top: 10px;padding-left: 10px;">
+        动物领域多模态知识库</p></h1>
     <ul class="layui-nav layui-bg-cyan" style="float: left;width: 800px;">
         <li class="layui-nav-item layui-this"><a href="${ctx}/home.jsp" target="frameName">首页</a></li>
-        <li class="layui-nav-item"><a href="${ctx}/queryClass/systemDiagram"  target="frameName">动物体系图</a></li>
+        <li class="layui-nav-item"><a href="${ctx}/queryClass/systemDiagram"  target="frameName">动物图谱</a></li>
         <li class="layui-nav-item">
             <a href="javascript:;">查询</a>
             <dl class="layui-nav-child">

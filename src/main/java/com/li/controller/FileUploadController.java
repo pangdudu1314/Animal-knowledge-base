@@ -54,18 +54,14 @@ public class FileUploadController {
     try {
       for (Iterator it = multipartRequest.getFileNames(); it.hasNext(); ) {
         String key = (String) it.next();
-        MultipartFile file = multipartRequest.getFile(key);
-        String originalFilename = file.getOriginalFilename();
-
-        HashMap<String, String> options = new HashMap<String, String>();
-        options.put("top_num", "3");
-        options.put("baike_num", "5");
+        MultipartFile file = multipartRequest.getFile(key);//上传的 文件
+        String originalFilename = file.getOriginalFilename();//上传图片名称
 
         //上传文件路径
         String absolutePath = Config.IMP_PATH;
         logger.info("save file path=" + absolutePath);
         File savedir = new File(absolutePath);
-        //判断是否存在，不存在新建
+        //判断文件路径是否存在，不存在新建
         if (!savedir.exists()) {
           savedir.mkdirs();
         }
@@ -141,7 +137,7 @@ public class FileUploadController {
     client.setSocketTimeoutInMillis(60000);
     // 传入可选参数调用接口
     HashMap<String, String> options = new HashMap<String, String>();
-    options.put("top_num", "3");
+    options.put("top_num", "4");
     options.put("baike_num", "5");
 
     DiskFileItemFactory factory = new DiskFileItemFactory();
@@ -171,13 +167,16 @@ public class FileUploadController {
         }
         AnimalInfo animalInfoTemp = new AnimalInfo();
         animalInfoTemp.setName(name);
+
         if (i == 0) {
+          //存储相似度最高的图片
           animalInfoTemp.setImage(originalFilename);
         } else {
           animalInfoTemp.setImage(imageUrl);
         }
         animalInfoTemp.setScore(score);
         animalInfoTemp.setIntro(description);
+        //判断描述是否存在
         if(description.trim().length()>0) {
           animalInfos.add(animalInfoTemp);
         }

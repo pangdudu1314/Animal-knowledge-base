@@ -1,8 +1,8 @@
 package com.li.service;
 
 import com.li.dao.AnimalCheckMybatisDao;
-import com.li.dao.AnimalVisitMybatisDao;
 import com.li.dao.AnimalDao;
+import com.li.dao.AnimalVisitMybatisDao;
 import com.li.dao.RdfOwlDao;
 import com.li.entities.AnimalCheck;
 import com.li.entities.AnimalVisit;
@@ -10,12 +10,7 @@ import com.li.utils.Config;
 import com.li.utils.DateUtils;
 import com.li.utils.IDRandomUtils;
 import com.li.utils.ImageDownload;
-import com.li.utils.UserUtils;
 import com.li.vo.AnimalInfo;
-import java.io.File;
-import java.io.InputStream;
-import java.util.HashMap;
-
 import com.li.vo.AnimalTree;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
@@ -23,8 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -140,7 +134,7 @@ public class AnimalServiceImpl implements IAnimalService {
     animalDao.deleteAnimalByName(name);
   }
 
-  //获取要查找的动物信息
+  //增加动物信息
   public void addAnimal(AnimalInfo animalInfo, String type) {
     animalDao.addAnimal(animalInfo, type);
   }
@@ -205,7 +199,7 @@ public class AnimalServiceImpl implements IAnimalService {
     }
     return result;
   }
-
+ //判断下载百度图片
   @Override
   public void getAnimalFromBaidu2Drf(List<AnimalInfo> animalInfos) {
     //先获取相似图片集合
@@ -215,6 +209,7 @@ public class AnimalServiceImpl implements IAnimalService {
     }
     for (int i = 0; i < animalInfos.size(); i++) {
       AnimalInfo animalInfo = animalInfos.get(i);
+      //查询rdf中是否存在上传动物与相似度的动物
       AnimalInfo animalInfoRdf = animalDao.selectAllInfo(animalInfo.getName());
       if (animalInfoRdf.getName() == null) {
         //说明没有此动物
@@ -236,8 +231,8 @@ public class AnimalServiceImpl implements IAnimalService {
           }
           animalInfo.setImage("images//" + animalInfo.getImage());
         }
+        //让数据保存到RDF
         rdfOwlDao.loadOWLOntology();
-
         rdfOwlDao.addIndividualInfo(animalInfo.getName(),"动物");
         rdfOwlDao.updateIndividualInfo(animalInfo.getName(),RdfOwlDao.INDIVIDUAL_PROPERTY,"image",null,animalInfo.getImage());
         rdfOwlDao.updateIndividualInfo(animalInfo.getName(),RdfOwlDao.INDIVIDUAL_PROPERTY,"intro",null,animalInfo.getIntro());
@@ -246,7 +241,7 @@ public class AnimalServiceImpl implements IAnimalService {
           rdfOwlDao.updateIndividualInfo(animalInfo.getName(),RdfOwlDao.INDIVIDUAL_LINK,"similarity",ss,ss);
         }
         rdfOwlDao.saveOWLOntology();
-
+        //审核表总存储的数据
         AnimalCheck animalCheck=new AnimalCheck();
         animalCheck.setId(IDRandomUtils.createRandomStr());
         animalCheck.setAnimalName(animalInfo.getName());

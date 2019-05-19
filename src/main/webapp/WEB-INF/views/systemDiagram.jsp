@@ -20,7 +20,7 @@
 <html>
 <head>
     <base href="<%=basePath%>">
-    <title>动物体系图</title>
+    <title>动物图谱</title>
     <style type="text/css">
         body {
             /*  background: url("images/beijingtupian.jpg");*/
@@ -84,7 +84,7 @@
 
             option = {
                 title: {
-                    text: '动物体系图'
+                    text: '动物图谱'
                 },
                 toolbox: {
                     show: true,

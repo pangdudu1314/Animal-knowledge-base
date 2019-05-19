@@ -1,10 +1,11 @@
 package com.li.utils;
 
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
 import org.springframework.web.context.ServletContextAware;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
 
 public class UserUtils implements ServletContextAware {
   public static ServletContext sc;
@@ -26,6 +27,7 @@ public class UserUtils implements ServletContextAware {
     return userId;
   }
   public static HttpServletRequest getRequest() {
+    //RequestContextHolder是Spring提供的可以获取HttpServletRequest的一个工具
     return ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
   }
 }

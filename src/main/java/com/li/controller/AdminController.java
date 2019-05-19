@@ -33,6 +33,9 @@ public class AdminController {
    */
     @RequestMapping("/login")
     public String login(String username,String password,HttpServletRequest request,HttpServletResponse response) throws IOException {
+
+     //当两个Web组件之间为转发关系时，转发目标组件通过getAttribute()方法来和转发源组件共享request范围内的数据。
+      //getAttribute是返回对象,getParameter返回字符串
       String username0000=(String)request.getSession().getAttribute("username0000");
       if(username0000!=null){
         //用户信息存在，跳转到管理员界面
@@ -50,7 +53,9 @@ public class AdminController {
            //用户存在
            request.getSession().setAttribute("username0000",username);
            request.getSession().setAttribute("userid0000",queryUser.get(0).getId());
-           return "redirect:/animalCheck/gotoIndex";
+           String url= (String) request.getSession().getAttribute("lastUrl");
+
+           return "redirect:"+url;
          }else{
            //用户名密码错误
            request.setAttribute("errorInfo","用户名或者密码错误");
