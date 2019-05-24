@@ -291,4 +291,10 @@ public class AnimalServiceImpl implements IAnimalService {
     return animalTree;
   }
 
+  @Override
+  public List<String> queryAllAnimalName() {
+
+    return rdfOwlDao.queryAllAnimalName();
+  }
+
 }

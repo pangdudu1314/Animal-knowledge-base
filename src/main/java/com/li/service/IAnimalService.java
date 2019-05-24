@@ -32,4 +32,6 @@ public interface IAnimalService {
     public void getAnimalFromBaidu2Drf(List<AnimalInfo> animalInfos);
 
     public AnimalTree systemDiagram();
+
+    public List<String> queryAllAnimalName();
 }

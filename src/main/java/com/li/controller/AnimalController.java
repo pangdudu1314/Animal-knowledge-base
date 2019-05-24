@@ -8,6 +8,7 @@ import com.li.utils.IDRandomUtils;
 import com.li.utils.JsonUtils;
 import com.li.vo.AnimalInfo;
 import com.li.vo.AnimalTree;
+import java.util.ArrayList;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -152,7 +153,7 @@ public class AnimalController {
   public String tupian() {
     return "tupianchaxun";
   }
-
+  //动物图谱
   @RequestMapping("/systemDiagram")
   public String systemDiagram(HttpServletRequest request, HttpServletResponse response) {
     AnimalTree animalTree = iAnimalService.systemDiagram();
@@ -251,6 +252,32 @@ public class AnimalController {
       System.out.println("========================");
 
       String json = JsonUtils.getString(iAnimalService.getTpo8());
+      System.out.println(json);
+      response.setContentType("text/javascript;charset=utf-8");
+      response.getWriter().write(json);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+
+  }
+
+  @RequestMapping("/queryAllAnmalName")
+  public void queryAllAnmalName(String q,HttpServletRequest request, HttpServletResponse response) {
+    try {
+      System.out.println("========================");
+      List<String>allName=iAnimalService.queryAllAnimalName();
+
+      List<Map<String,String>> result=new ArrayList<Map<String, String>>();
+      for(String name:allName){
+        if(name.contains(q)){
+          Map<String,String> map=new HashMap<String, String>();
+          map.put("name",name);
+          map.put("name",name);
+          result.add(map);
+        }
+      }
+
+      String json = JsonUtils.getString(result);
       System.out.println(json);
       response.setContentType("text/javascript;charset=utf-8");
       response.getWriter().write(json);

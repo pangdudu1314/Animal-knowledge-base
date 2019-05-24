@@ -21,7 +21,12 @@
             border: 0;
         }
     </style>
-    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="${ctx}/js/jquery-easyui-1.7.0/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="${ctx}/js/jquery-easyui-1.7.0/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="${ctx}/js/jquery-easyui-1.7.0/demo/demo.css">
+    <script type="text/javascript" src="${ctx}/js/jquery-easyui-1.7.0/jquery.min.js"></script>
+    <script type="text/javascript" src="${ctx}/js/jquery-easyui-1.7.0/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="${ctx}/js/jquery-easyui-1.7.0/locale/easyui-lang-zh_CN.js"></script>
     <link rel="stylesheet" href="${ctx}/js/layui-v2.4.5/layui/css/layui.css" media="all">
 </head>
 <body>
@@ -30,7 +35,7 @@
         <img src="images/logo.gif" style="width: 60px;float: left;height: 60px">
         <p style="color:white;width: 400px;float: left;padding-top: 10px;padding-left: 10px;">
         动物领域多模态知识库</p></h1>
-    <ul class="layui-nav layui-bg-cyan" style="float: left;width: 800px;">
+    <ul class="layui-nav layui-bg-cyan" style="float: left;width: 500px;">
         <li class="layui-nav-item layui-this"><a href="${ctx}/home.jsp" target="frameName">首页</a></li>
         <li class="layui-nav-item"><a href="${ctx}/queryClass/systemDiagram"  target="frameName">动物图谱</a></li>
         <li class="layui-nav-item">
@@ -55,7 +60,16 @@
             </dl>
         </li>
     </ul>
-</div>
+    <div style="width:300px;float: right;margin-top: 15px;">
+        <input class="easyui-combobox" data-options="
+                    loader: myloader,
+                    mode: 'remote',
+                    valueField: 'id',
+                    textField: 'name',
+                    onSelect: onSelect
+                    ">
+    </div>
+   </div>
 <iframe id="iframeid" name="frameName" src="${ctx}/home.jsp" width="100%" style="background-color: #FFFFFF"></iframe>
 <div style="width: 300px;margin: 0 auto;color: #999;font-size: 12px"> 版权所有 李林杰       Copyright©毕业设计 (2019-2019)</div>
 <script src="${ctx}/js/layui-v2.4.5/layui/layui.js" charset="utf-8"></script>
@@ -64,7 +78,34 @@
   $(document).ready(function(){
     $("#iframeid").attr("height",$(window).height()-80)
   });
+  var onSelect = function(rec){
+    $("#iframeid").attr("src","${ctx}/queryClass/selectAdmin?name=" + encodeURI(rec.name));
+  }
 
+
+    var myloader = function(param,success,error){
+    var q = param.q || '';
+    if (q.length < 1){return false}
+    $.ajax({
+      url: '${ctx}/queryClass/queryAllAnmalName',
+      dataType: 'json',
+      data: {
+        q: q
+      },
+      success: function(data){
+        var items = $.map(data, function(item,index){
+          return {
+            id: item.name,
+            name: item.name
+          };
+        });
+        success(items);
+      },
+      error: function(){
+        error.apply(this, arguments);
+      }
+    });
+  }
 
   layui.use('element', function(){
     var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块

@@ -342,6 +342,24 @@ public class RdfOwlDao {
   }
 
   /**
+   * 查询科对应的动物
+   */
+  public List<String> queryAllAnimalName() {
+    List<String> resultList = new ArrayList<String>();
+
+    Object[] oo = o.individualsInSignature().toArray();
+    for (Object obj : oo) {
+      try {
+        String nameTemp = ((OWLNamedIndividualImpl) obj).getIRI().getRemainder().get();
+        resultList.add(nameTemp);
+      } catch (Exception e) {
+      }
+    }
+
+    return resultList;
+  }
+
+  /**
    * 添加个体
    */
   public void addIndividualInfo(String individualName, String type) {
