@@ -64,10 +64,10 @@ public class RdfOwlDao {
     //OWLManager为owi api的管理类，
     OWLDataFactory df = OWLManager.getOWLDataFactory();
 
-    OWLOntology o=null;
+    OWLOntology o = null;
 
-    OWLOntologyManager m =null;
-            //本地引用
+    OWLOntologyManager m = null;
+    //本地引用
     //每一个本地都有一个唯一标识  前缀和后缀拼在一起，正好和xml本体是一致的
 
     IRI DONGWU = IRI
@@ -104,7 +104,7 @@ public class RdfOwlDao {
      * 获取本体管理类
      */
     public void loadOWLOntology() {
-        try{
+        try {
             //创建owl api的管理类
             m = OWLManager.createOWLOntologyManager();
             //获取mapper映射
@@ -112,9 +112,9 @@ public class RdfOwlDao {
             //这行我也不懂，嘿嘿，官网就是这么个例子
             iriMappers.add(new AutoIRIMapper(new File("materializedOntologies"), true));
             String content = readTxtFile(FILE_PATH);//读取动物信息 rdf内容
-            o= m.loadOntologyFromOntologyDocument(
+            o = m.loadOntologyFromOntologyDocument(
                     new StringDocumentSource(content));//将rdf内容进行加载管理，这样 wolapi就能知道里面有什么内容
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -160,7 +160,7 @@ public class RdfOwlDao {
                 }
             }
         } catch (Exception e) {
-            System.out.println("ERROE.name="+name);
+            System.out.println("ERROE.name=" + name);
             e.printStackTrace();
         }
         return map;
@@ -336,7 +336,7 @@ public class RdfOwlDao {
                 }
             }
         } catch (Exception e) {
-            System.out.println("name="+name);
+            System.out.println("name=" + name);
             e.printStackTrace();
         }
         return resultList;
@@ -410,19 +410,20 @@ public class RdfOwlDao {
 
     }
 
-    public void saveOWLOntology(){
-        try{
+    public void saveOWLOntology() {
+        try {
             File output = new File(FILE_PATH);
             IRI documentIRI2 = IRI.create(output);
             m.saveOntology(o, documentIRI2);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
     }
+}
 
- public static void main(String[] str) {
-    RdfOwlDao rdfOwlDao = new RdfOwlDao();
+ /*public static void main(String[] str) {
+    RdfOwlDao rdfOwlDao = new RdfOwlDao();*/
     //查询
     //System.out.println(rdfOwlDao.getIndividualInfo("稚科"));
    // System.out.println(rdfOwlDao.getIndividualInfo("矮脚鸡"));
@@ -443,9 +444,9 @@ public class RdfOwlDao {
     //删除个体
    //  rdfOwlDao.removeIndividualInfo("测试");
     //添加类关系
-    rdfOwlDao.addClass("动物", "两栖动物");
+    /*rdfOwlDao.addClass("动物", "两栖动物");*/
     //删除类关系
    // rdfOwlDao.removeClass("动物", "两栖动物");
-  }
+ /* }
 
-}
+}*/

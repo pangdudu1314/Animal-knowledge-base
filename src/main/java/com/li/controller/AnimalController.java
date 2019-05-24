@@ -152,7 +152,7 @@ public class AnimalController {
   public String tupian() {
     return "tupianchaxun";
   }
-
+  //动物图谱
   @RequestMapping("/systemDiagram")
   public String systemDiagram(HttpServletRequest request, HttpServletResponse response) {
     AnimalTree animalTree = iAnimalService.systemDiagram();
