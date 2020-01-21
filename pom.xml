@@ -14,7 +14,7 @@
 
   <properties>
     <!-- 这里使用5.1.5的发行版本-->
-    <spring.version>5.1.5.RELEASE</spring.version>
+    <spring.version>5.2.3.RELEASE</spring.version>
   </properties>
   <dependencies>
 
